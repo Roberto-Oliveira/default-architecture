@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Transparencia">
+  <DataContextMoniker Name="/TransparenciaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="20e4acd1-6efa-471c-8dfb-677bce32d541" absoluteBounds="1.125, 0.5, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_folha_pagamento_servidore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b64dc361-646b-4070-a6d1-57da10ec089c" absoluteBounds="1.1400000000000001, 0.96, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
