@@ -1,6 +1,5 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Transparencia.SiteMaster" %>
 
-<%@ Import Namespace="System.Web.Optimization" %>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -15,23 +14,29 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
     <%:Styles.Render("~/Content/bootstrap.min.css") %>
     <%:Styles.Render("~/Content/Site.css") %>
     <%:Styles.Render("~/Content/ej/web/ej.widgets.core.min.css") %>
-    <%:Styles.Render("~/Content/ej/web/default-theme/ej.theme.min.css") %>
+    <%:Styles.Render("~/Content/ej/web/bootstrap-theme/ej.theme.min.css") %>
+    
+
     <%: Scripts.Render("~/Scripts/jquery-1.10.2.min.js")%>
     <%: Scripts.Render("~/Scripts/jsrender.min.js")%>
     <%: Scripts.Render("~/Scripts/ej/ej.web.all.min.js")%>
     <%: Scripts.Render("~/Scripts/ej/ej.webform.min.js")%>
     <%: Scripts.Render("~/Scripts/bootstrap-dropdown.js")%>
+
     <script>
         $('.dropdown-toggle').dropdown()
     </script>
+
     <style type="text/css">
         .dropdown:hover .dropdown-menu {
             display: block;
         }
     </style>
+
 </head>
 <body>
     <form runat="server">
@@ -44,7 +49,7 @@
                     <a class="navbar-brand" href="#">Transparência</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Contratos e Convênios</a></li>
+                    <li><a href="/pages/contrato_convenio.aspx">Contratos e Convênios</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestão de Pessoal<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -53,7 +58,7 @@
                             <li><a href="#">Cargos em Comissão</a></li>
                             <li><a href="#">Vencimento Cargos Efetivos</a></li>
                             <li><a href="#">Vencimento Cargos Comissão</a></li>
-                            <li><a href="pages/folha_pagamento.aspx">Consulta Remuneração</a></li>
+                            <li><a href="/pages/folha_pagamento.aspx">Consulta Remuneração</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">

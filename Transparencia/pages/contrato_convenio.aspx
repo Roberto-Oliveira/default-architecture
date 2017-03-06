@@ -28,58 +28,55 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Contratos e Convênios</h2>
     <br />
-    <div id="ControlRegion">
-        <div class="frame">
-            <div style="margin-left: 40px; position: relative;">
-                <ej:Grid ID="gvContratosConvenios" runat="server"
-                    AllowSorting="True"
-                    AllowResizeToFit="True"
-                    AllowPaging="True"
-                    AllowFiltering="True"
-                    AllowSelection="False"
-                    EnableRowHover="False"
-                    ClientIDMode="Static">
 
-                    <Columns>
-                        <ej:Column Field="codigoProcesso" HeaderText="Código Processo" Visible="False">
-                        </ej:Column>
-                        <ej:Column Field="nomeArquivoPDF" HeaderText="Nome Arquivo PDF" Visible="False">
-                        </ej:Column>
-                        <ej:Column Field="ano" Width="8%" HeaderText="Ano">
-                        </ej:Column>
-                        <ej:Column Field="numeroProcesso" HeaderText="Número Processo">
-                        </ej:Column>
-                        <ej:Column Field="contratada" HeaderText="Contratada">
-                        </ej:Column>
-                        <ej:Column Field="modalidade" HeaderText="Modalidade">
-                        </ej:Column>
-                        <ej:Column Field="finalizado" HeaderText="Finalizado">
-                        </ej:Column>
-                        <ej:Column Field="vigenciaInicial" HeaderText="Vigência Inicial">
-                        </ej:Column>
-                        <ej:Column Field="vigenciaFinal" HeaderText="Vigência Final">
-                        </ej:Column>
-                        <ej:Column Field="dataContrato" HeaderText="Data do Contrato">
-                        </ej:Column>
-                        <ej:Column Field="vigenciaProrrogada" HeaderText="Vigência Prorrogada">
-                        </ej:Column>
-                        <ej:Column Field="objeto" HeaderText="Objeto">
-                        </ej:Column>
-                        <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="150" Field="">
-                            <Command>
-                                <ej:Commands Type="detail">
-                                    <ButtonOptions Text="Detalhes" Width="100" Click="onClick"></ButtonOptions>
-                                </ej:Commands>
-                            </Command>
-                        </ej:Column>
-                    </Columns>
-                    <PageSettings PageSize="7"></PageSettings>
-                </ej:Grid>
-                <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="450" Title="Detalhes do Contrato" ShowOnInit="false"
-                    EnableResize="False" Target="#gvContratosConvenios">
-                </ej:Dialog>
-            </div>
-        </div>
+    <div position: relative;">
+        <ej:Grid ID="gvContratosConvenios" runat="server"
+            AllowSorting="True"
+            AllowResizeToFit="True"
+            AllowPaging="True"
+            AllowFiltering="True"
+            AllowSelection="False"
+            EnableRowHover="False"
+            ClientIDMode="Static">
+
+            <Columns>
+                <ej:Column Field="codigoProcesso" HeaderText="Código Processo" Visible="False">
+                </ej:Column>
+                <ej:Column Field="nomeArquivoPDF" HeaderText="Nome Arquivo PDF" Visible="False">
+                </ej:Column>
+                <ej:Column Field="ano" Width="8%" HeaderText="Ano">
+                </ej:Column>
+                <ej:Column Field="numeroProcesso" HeaderText="Número Processo">
+                </ej:Column>
+                <ej:Column Field="contratada" HeaderText="Contratada">
+                </ej:Column>
+                <ej:Column Field="modalidade" HeaderText="Modalidade">
+                </ej:Column>
+                <ej:Column Field="finalizado" HeaderText="Finalizado">
+                </ej:Column>
+                <ej:Column Field="vigenciaInicial" HeaderText="Vigência Inicial">
+                </ej:Column>
+                <ej:Column Field="vigenciaFinal" HeaderText="Vigência Final">
+                </ej:Column>
+                <ej:Column Field="dataContrato" HeaderText="Data do Contrato">
+                </ej:Column>
+                <ej:Column Field="vigenciaProrrogada" HeaderText="Vigência Prorrogada">
+                </ej:Column>
+                <ej:Column Field="objeto" HeaderText="Objeto">
+                </ej:Column>
+                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="150" Field="">
+                    <Command>
+                        <ej:Commands Type="detail">
+                            <ButtonOptions Text="Detalhes" Width="90%" Height="2%" Click="onClick"></ButtonOptions>
+                        </ej:Commands>
+                    </Command>
+                </ej:Column>
+            </Columns>
+            <PageSettings PageSize="10"></PageSettings>
+        </ej:Grid>
+        <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="450" Title="Detalhes do Contratao" ShowOnInit="false"
+            EnableResize="False" Target="#gvContratosConvenios">
+        </ej:Dialog>
     </div>
 </asp:Content>
 
@@ -92,7 +89,7 @@
                         Para visualizar clique
                     <a href="http://sistemas.defensoria.ms.gov.br/ajfile/arquivos/PROCESSOS/{{:codigoProcesso}}/{{:nomeArquivoPDF}}" target="_blank">aqui.</a>
                     </p>
-                </td>                
+                </td>
             </tr>
         </table>
     </script>
