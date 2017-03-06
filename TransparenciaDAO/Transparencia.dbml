@@ -1,26 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bd_Defensoria_Transparencia" Class="TransparenciaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=s744;Initial Catalog=bd_Defensoria_Transparencia;Persist Security Info=True;User ID=sa" SettingsObjectName="TransparenciaDAO.Properties.Settings" SettingsPropertyName="bd_Defensoria_TransparenciaConnectionString1" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.vw_folha_pagamento_servidores" Member="vw_folha_pagamento_servidores">
-    <Type Name="vw_folha_pagamento_servidore">
+  <Table Name="dbo.vw_contratos_convenios" Member="vw_contratos_convenios">
+    <Type Name="vw_contratos_convenio">
+      <Column Name="codigoProcesso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nomeArquivoPDF" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ano" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="numeroProcesso" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="contratada" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="modalidade" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="finalizado" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="vigenciaInicial" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="vigenciaFinal" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="dataContrato" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="vigenciaProrrogada" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="objeto" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_folha_pagamento_servidor" Member="vw_folha_pagamento_servidors">
+    <Type Name="vw_folha_pagamento_servidor">
       <Column Name="[Mês Competência]" Member="Mês_Competência" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="[Ano Competência]" Member="Ano_Competência" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Matrícula" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="[Nome Servidor]" Member="Nome_Servidor" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="Cargo" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="Classe" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="[Cargo Comissão]" Member="Cargo_Comissão" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="Vencimento" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Subsidio" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
-      <Column Name="[Vantagens Pessoais]" Member="Vantagens_Pessoais" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
-      <Column Name="[Vantagens Cargo]" Member="Vantagens_Cargo" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Férias" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
-      <Column Name="[13º Salário]" Member="_13º_Salário" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
-      <Column Name="TotalCreditos" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="Previdência" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Impostos" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
-      <Column Name="TotalDescontos" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="RendimentoLiquido" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="Indenizações" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Matrícula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="[Nome Beneficiário]" Member="Nome_Beneficiário" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Cargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Classe" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="[Cargo Comissão]" Member="Cargo_Comissão" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Vencimento" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="Subsidio" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="[Vantagens Pessoais]" Member="Vantagens_Pessoais" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="[Vantagens Cargo]" Member="Vantagens_Cargo" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="Férias" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="[Décimo Salário]" Member="Décimo_Salário" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="[Total Créditos]" Member="Total_Créditos" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="Previdência" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="Imposto" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="[Total Desconto]" Member="Total_Desconto" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="[Total Líquido]" Member="Total_Líquido" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="Indenizações" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

@@ -2,5 +2,5 @@
 
 namespace TransparenciaDAO
 {
-    public class FolhaPagamentoDao : GenericDao<vw_folha_pagamento_servidore, TransparenciaDataContext> { }
+    public class FolhaPagamentoDao : GenericDao<vw_folha_pagamento_servidor, TransparenciaDataContext> { }
 }

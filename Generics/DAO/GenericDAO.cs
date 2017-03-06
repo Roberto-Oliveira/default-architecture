@@ -72,6 +72,12 @@ namespace Generics.DAO
         }
 
         [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public List<T> GetNormalListWithParameters(int mes, int ano)
+        {
+            return _context.GetTable<T>().ToList();
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
         public IEnumerable<T> GetListIEnumerable()
         {
             return _context.GetTable<T>().ToList();

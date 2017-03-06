@@ -2,10 +2,16 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Transparencia">
   <DataContextMoniker Name="/TransparenciaDataContext" />
   <nestedChildShapes>
-    <classShape Id="20e4acd1-6efa-471c-8dfb-677bce32d541" absoluteBounds="1.125, 0.5, 2, 4.4631168619791666">
-      <DataClassMoniker Name="/TransparenciaDataContext/vw_folha_pagamento_servidore" />
+    <classShape Id="ef6f9928-c32e-4296-8a27-143f0acd5bd4" absoluteBounds="0.75, 0.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_contratos_convenio" />
       <nestedChildShapes>
-        <elementListCompartment Id="b64dc361-646b-4070-a6d1-57da10ec089c" absoluteBounds="1.1400000000000001, 0.96, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="26f1e1c7-f805-433f-8344-a29a0be14bc0" absoluteBounds="0.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="239596f8-4bd1-425f-a293-ede7793e45fe" absoluteBounds="3.75, 0.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_folha_pagamento_servidor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4caf5696-9ee4-431e-93c9-043eebba0c8a" absoluteBounds="3.765, 1.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

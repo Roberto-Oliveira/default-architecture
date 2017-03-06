@@ -10,13 +10,13 @@ namespace Transparencia.pages
 {
     public partial class FolhaPagamento : System.Web.UI.Page
     {
-        private List<vw_folha_pagamento_servidore> _fp = new List<vw_folha_pagamento_servidore>();
+        private List<vw_folha_pagamento_servidor> _fp = new List<vw_folha_pagamento_servidor>();
         private readonly FolhaPagamentoDao _fpDao = new FolhaPagamentoDao();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             BindDataSource();
         }
-
         private void BindDataSource()
         {
             _fp = _fpDao.GetNormalList();

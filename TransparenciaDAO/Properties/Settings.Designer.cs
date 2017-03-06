@@ -44,5 +44,16 @@ namespace TransparenciaDAO.Properties {
                 return ((string)(this["bd_Defensoria_TransparenciaConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=s744;Initial Catalog=bd_Defensoria_Transparencia;Persist Security Inf" +
+            "o=True;User ID=sa")]
+        public string bd_Defensoria_TransparenciaConnectionString2 {
+            get {
+                return ((string)(this["bd_Defensoria_TransparenciaConnectionString2"]));
+            }
+        }
     }
 }

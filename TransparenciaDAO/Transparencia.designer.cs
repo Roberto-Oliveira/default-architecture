@@ -62,17 +62,250 @@ namespace TransparenciaDAO
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<vw_folha_pagamento_servidore> vw_folha_pagamento_servidores
+		public System.Data.Linq.Table<vw_contratos_convenio> vw_contratos_convenios
 		{
 			get
 			{
-				return this.GetTable<vw_folha_pagamento_servidore>();
+				return this.GetTable<vw_contratos_convenio>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_folha_pagamento_servidor> vw_folha_pagamento_servidors
+		{
+			get
+			{
+				return this.GetTable<vw_folha_pagamento_servidor>();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_folha_pagamento_servidores")]
-	public partial class vw_folha_pagamento_servidore
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_contratos_convenios")]
+	public partial class vw_contratos_convenio
+	{
+		
+		private int _codigoProcesso;
+		
+		private string _nomeArquivoPDF;
+		
+		private string _ano;
+		
+		private string _numeroProcesso;
+		
+		private string _contratada;
+		
+		private string _modalidade;
+		
+		private string _finalizado;
+		
+		private string _vigenciaInicial;
+		
+		private string _vigenciaFinal;
+		
+		private string _dataContrato;
+		
+		private string _vigenciaProrrogada;
+		
+		private string _objeto;
+		
+		public vw_contratos_convenio()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoProcesso", DbType="Int NOT NULL")]
+		public int codigoProcesso
+		{
+			get
+			{
+				return this._codigoProcesso;
+			}
+			set
+			{
+				if ((this._codigoProcesso != value))
+				{
+					this._codigoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nomeArquivoPDF", DbType="VarChar(500)")]
+		public string nomeArquivoPDF
+		{
+			get
+			{
+				return this._nomeArquivoPDF;
+			}
+			set
+			{
+				if ((this._nomeArquivoPDF != value))
+				{
+					this._nomeArquivoPDF = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ano", DbType="VarChar(4)")]
+		public string ano
+		{
+			get
+			{
+				return this._ano;
+			}
+			set
+			{
+				if ((this._ano != value))
+				{
+					this._ano = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_numeroProcesso", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string numeroProcesso
+		{
+			get
+			{
+				return this._numeroProcesso;
+			}
+			set
+			{
+				if ((this._numeroProcesso != value))
+				{
+					this._numeroProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_contratada", DbType="VarChar(255)")]
+		public string contratada
+		{
+			get
+			{
+				return this._contratada;
+			}
+			set
+			{
+				if ((this._contratada != value))
+				{
+					this._contratada = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_modalidade", DbType="VarChar(255)")]
+		public string modalidade
+		{
+			get
+			{
+				return this._modalidade;
+			}
+			set
+			{
+				if ((this._modalidade != value))
+				{
+					this._modalidade = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_finalizado", DbType="VarChar(3)")]
+		public string finalizado
+		{
+			get
+			{
+				return this._finalizado;
+			}
+			set
+			{
+				if ((this._finalizado != value))
+				{
+					this._finalizado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vigenciaInicial", DbType="Char(30)")]
+		public string vigenciaInicial
+		{
+			get
+			{
+				return this._vigenciaInicial;
+			}
+			set
+			{
+				if ((this._vigenciaInicial != value))
+				{
+					this._vigenciaInicial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vigenciaFinal", DbType="Char(30)")]
+		public string vigenciaFinal
+		{
+			get
+			{
+				return this._vigenciaFinal;
+			}
+			set
+			{
+				if ((this._vigenciaFinal != value))
+				{
+					this._vigenciaFinal = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataContrato", DbType="Char(30)")]
+		public string dataContrato
+		{
+			get
+			{
+				return this._dataContrato;
+			}
+			set
+			{
+				if ((this._dataContrato != value))
+				{
+					this._dataContrato = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vigenciaProrrogada", DbType="Char(30)")]
+		public string vigenciaProrrogada
+		{
+			get
+			{
+				return this._vigenciaProrrogada;
+			}
+			set
+			{
+				if ((this._vigenciaProrrogada != value))
+				{
+					this._vigenciaProrrogada = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_objeto", DbType="VarChar(5000)")]
+		public string objeto
+		{
+			get
+			{
+				return this._objeto;
+			}
+			set
+			{
+				if ((this._objeto != value))
+				{
+					this._objeto = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_folha_pagamento_servidor")]
+	public partial class vw_folha_pagamento_servidor
 	{
 		
 		private string _Mês_Competência;
@@ -81,7 +314,7 @@ namespace TransparenciaDAO
 		
 		private string _Matrícula;
 		
-		private string _Nome_Servidor;
+		private string _Nome_Beneficiário;
 		
 		private string _Cargo;
 		
@@ -89,31 +322,31 @@ namespace TransparenciaDAO
 		
 		private string _Cargo_Comissão;
 		
-		private decimal _Vencimento;
+		private System.Nullable<decimal> _Vencimento;
 		
-		private decimal _Subsidio;
+		private System.Nullable<decimal> _Subsidio;
 		
-		private decimal _Vantagens_Pessoais;
+		private System.Nullable<decimal> _Vantagens_Pessoais;
 		
-		private decimal _Vantagens_Cargo;
+		private System.Nullable<decimal> _Vantagens_Cargo;
 		
-		private decimal _Férias;
+		private System.Nullable<decimal> _Férias;
 		
-		private decimal @__13º_Salário;
+		private System.Nullable<decimal> _Décimo_Salário;
 		
-		private System.Nullable<decimal> _TotalCreditos;
+		private System.Nullable<decimal> _Total_Créditos;
 		
-		private decimal _Previdência;
+		private System.Nullable<decimal> _Previdência;
 		
-		private decimal _Impostos;
+		private System.Nullable<decimal> _Imposto;
 		
-		private System.Nullable<decimal> _TotalDescontos;
+		private System.Nullable<decimal> _Total_Desconto;
 		
-		private System.Nullable<decimal> _RendimentoLiquido;
+		private System.Nullable<decimal> _Total_Líquido;
 		
-		private decimal _Indenizações;
+		private System.Nullable<decimal> _Indenizações;
 		
-		public vw_folha_pagamento_servidore()
+		public vw_folha_pagamento_servidor()
 		{
 		}
 		
@@ -149,7 +382,7 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Matrícula", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Matrícula", DbType="VarChar(255)")]
 		public string Matrícula
 		{
 			get
@@ -165,23 +398,23 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Nome Servidor]", Storage="_Nome_Servidor", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
-		public string Nome_Servidor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Nome Beneficiário]", Storage="_Nome_Beneficiário", DbType="VarChar(255)")]
+		public string Nome_Beneficiário
 		{
 			get
 			{
-				return this._Nome_Servidor;
+				return this._Nome_Beneficiário;
 			}
 			set
 			{
-				if ((this._Nome_Servidor != value))
+				if ((this._Nome_Beneficiário != value))
 				{
-					this._Nome_Servidor = value;
+					this._Nome_Beneficiário = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cargo", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cargo", DbType="VarChar(255)")]
 		public string Cargo
 		{
 			get
@@ -197,7 +430,7 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Classe", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Classe", DbType="VarChar(255)")]
 		public string Classe
 		{
 			get
@@ -213,7 +446,7 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Cargo Comissão]", Storage="_Cargo_Comissão", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Cargo Comissão]", Storage="_Cargo_Comissão", DbType="VarChar(255)")]
 		public string Cargo_Comissão
 		{
 			get
@@ -229,8 +462,8 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vencimento", DbType="Decimal(38,2) NOT NULL")]
-		public decimal Vencimento
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vencimento", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Vencimento
 		{
 			get
 			{
@@ -245,8 +478,8 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Subsidio", DbType="Decimal(38,2) NOT NULL")]
-		public decimal Subsidio
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Subsidio", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Subsidio
 		{
 			get
 			{
@@ -261,8 +494,8 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Vantagens Pessoais]", Storage="_Vantagens_Pessoais", DbType="Decimal(38,2) NOT NULL")]
-		public decimal Vantagens_Pessoais
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Vantagens Pessoais]", Storage="_Vantagens_Pessoais", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Vantagens_Pessoais
 		{
 			get
 			{
@@ -277,8 +510,8 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Vantagens Cargo]", Storage="_Vantagens_Cargo", DbType="Decimal(38,2) NOT NULL")]
-		public decimal Vantagens_Cargo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Vantagens Cargo]", Storage="_Vantagens_Cargo", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Vantagens_Cargo
 		{
 			get
 			{
@@ -293,8 +526,8 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Férias", DbType="Decimal(38,2) NOT NULL")]
-		public decimal Férias
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Férias", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Férias
 		{
 			get
 			{
@@ -309,40 +542,40 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[13º Salário]", Storage="__13º_Salário", DbType="Decimal(38,2) NOT NULL")]
-		public decimal _13º_Salário
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Décimo Salário]", Storage="_Décimo_Salário", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Décimo_Salário
 		{
 			get
 			{
-				return this.@__13º_Salário;
+				return this._Décimo_Salário;
 			}
 			set
 			{
-				if ((this.@__13º_Salário != value))
+				if ((this._Décimo_Salário != value))
 				{
-					this.@__13º_Salário = value;
+					this._Décimo_Salário = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalCreditos", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> TotalCreditos
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Total Créditos]", Storage="_Total_Créditos", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Total_Créditos
 		{
 			get
 			{
-				return this._TotalCreditos;
+				return this._Total_Créditos;
 			}
 			set
 			{
-				if ((this._TotalCreditos != value))
+				if ((this._Total_Créditos != value))
 				{
-					this._TotalCreditos = value;
+					this._Total_Créditos = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previdência", DbType="Decimal(38,2) NOT NULL")]
-		public decimal Previdência
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previdência", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Previdência
 		{
 			get
 			{
@@ -357,56 +590,56 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Impostos", DbType="Decimal(38,2) NOT NULL")]
-		public decimal Impostos
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imposto", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Imposto
 		{
 			get
 			{
-				return this._Impostos;
+				return this._Imposto;
 			}
 			set
 			{
-				if ((this._Impostos != value))
+				if ((this._Imposto != value))
 				{
-					this._Impostos = value;
+					this._Imposto = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalDescontos", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> TotalDescontos
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Total Desconto]", Storage="_Total_Desconto", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Total_Desconto
 		{
 			get
 			{
-				return this._TotalDescontos;
+				return this._Total_Desconto;
 			}
 			set
 			{
-				if ((this._TotalDescontos != value))
+				if ((this._Total_Desconto != value))
 				{
-					this._TotalDescontos = value;
+					this._Total_Desconto = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RendimentoLiquido", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> RendimentoLiquido
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Total Líquido]", Storage="_Total_Líquido", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Total_Líquido
 		{
 			get
 			{
-				return this._RendimentoLiquido;
+				return this._Total_Líquido;
 			}
 			set
 			{
-				if ((this._RendimentoLiquido != value))
+				if ((this._Total_Líquido != value))
 				{
-					this._RendimentoLiquido = value;
+					this._Total_Líquido = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Indenizações", DbType="Decimal(38,2) NOT NULL")]
-		public decimal Indenizações
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Indenizações", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> Indenizações
 		{
 			get
 			{

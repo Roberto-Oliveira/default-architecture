@@ -16,6 +16,15 @@
             text-align: left;
             white-space: nowrap;
         }
+
+        .e-grid .e-rowcell {
+            border-width: 1px 0 0 1px;
+            padding: 10px 0px 10px 3px;
+            line-height: 14px;
+            white-space: nowrap;
+            width: auto;
+            vertical-align: middle;
+        }
     </style>
 </asp:Content>
 
@@ -29,10 +38,11 @@
                     AllowResizeToFit="True"
                     AllowPaging="True"
                     OnServerExcelExporting="gvFolhaServidores_OnServerExcelExporting"
-                    ShowColumnChooser="True">
+                    ShowColumnChooser="True" 
+                    AllowFiltering="True">
 
 
-                    <PageSettings PageCount="10"></PageSettings>
+                    <PageSettings PageSize="10"></PageSettings>
                     <ToolbarSettings ShowToolbar="True" ToolbarItems="excelExport"></ToolbarSettings>
 
                 </ej:Grid>

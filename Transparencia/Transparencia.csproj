@@ -210,8 +210,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="pages\contrato_convenio.aspx" />
     <Content Include="pages\folha_pagamento.aspx" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap-dropdown.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -404,6 +406,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="pages\contrato_convenio.aspx.cs">
+      <DependentUpon>contrato_convenio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\contrato_convenio.aspx.designer.cs">
+      <DependentUpon>contrato_convenio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\folha_pagamento.aspx.cs">
       <DependentUpon>folha_pagamento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
