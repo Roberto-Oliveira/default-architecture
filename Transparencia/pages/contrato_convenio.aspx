@@ -29,7 +29,7 @@
     <h2>Contratos e Convênios</h2>
     <br />
 
-    <div position: relative;">
+    <div style="position: relative;">
         <ej:Grid ID="gvContratosConvenios" runat="server"
             AllowSorting="True"
             AllowResizeToFit="True"
