@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CargoComissaoDao.cs" />
+    <Compile Include="CargoComissionadoVencimentoDao.cs" />
+    <Compile Include="CargoDefensorDao.cs" />
+    <Compile Include="CargoEfetivoDao.cs" />
+    <Compile Include="CargoEfetivoVencimentoDao.cs" />
     <Compile Include="ContratoConvenioDao.cs" />
     <Compile Include="FolhaPagamentoDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -49,6 +54,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SubsidioDao.cs" />
     <Compile Include="Transparencia.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

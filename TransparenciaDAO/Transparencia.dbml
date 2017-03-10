@@ -39,4 +39,59 @@
       <Column Name="Indenizações" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.vw_cargo_comissao_servidor" Member="vw_cargo_comissao_servidors">
+    <Type Name="vw_cargo_comissao_servidor">
+      <Column Name="grupo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="simbolo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="vagasPrevistas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_cargo_defensor_servidor" Member="vw_cargo_defensor_servidors">
+    <Type Name="vw_cargo_defensor_servidor">
+      <Column Name="carreira" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="classe" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="simbolo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="vagasPreenchidas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="previstas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_cargo_efetivo_servidor" Member="vw_cargo_efetivo_servidors">
+    <Type Name="vw_cargo_efetivo_servidor">
+      <Column Name="carreira" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="quantitativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="classe" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_folha_subsidio" Member="vw_folha_subsidios">
+    <Type Name="vw_folha_subsidio">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL" CanBeNull="false" />
+      <Column Name="descricaoClasse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="valorReajuste" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vagasPrevistas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_cargo_efetivo_vencimento" Member="vw_cargo_efetivo_vencimentos">
+    <Type Name="vw_cargo_efetivo_vencimento">
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="classe" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="vencimentoBase" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_cargo_comissionado_vencimento" Member="vw_cargo_comissionado_vencimentos">
+    <Type Name="vw_cargo_comissionado_vencimento">
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricaoClasse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="valorReajuste" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="gratificacao" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="percentual" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>

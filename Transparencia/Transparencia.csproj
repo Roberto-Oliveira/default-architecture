@@ -210,8 +210,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="pages\cargos_comissao.aspx" />
+    <Content Include="pages\cargo_comissionado_vencimento.aspx" />
+    <Content Include="pages\cargo_efetivo.aspx" />
+    <Content Include="pages\cargo_efetivo_vencimento.aspx" />
     <Content Include="pages\contrato_convenio.aspx" />
     <Content Include="pages\folha_pagamento.aspx" />
+    <Content Include="pages\quantitativo_defensores.aspx" />
+    <Content Include="pages\subsidio.aspx" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap-dropdown.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -406,6 +412,34 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="pages\cargos_comissao.aspx.cs">
+      <DependentUpon>cargos_comissao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\cargos_comissao.aspx.designer.cs">
+      <DependentUpon>cargos_comissao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\cargo_comissionado_vencimento.aspx.cs">
+      <DependentUpon>cargo_comissionado_vencimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\cargo_comissionado_vencimento.aspx.designer.cs">
+      <DependentUpon>cargo_comissionado_vencimento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\cargo_efetivo.aspx.cs">
+      <DependentUpon>cargo_efetivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\cargo_efetivo.aspx.designer.cs">
+      <DependentUpon>cargo_efetivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\cargo_efetivo_vencimento.aspx.cs">
+      <DependentUpon>cargo_efetivo_vencimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\cargo_efetivo_vencimento.aspx.designer.cs">
+      <DependentUpon>cargo_efetivo_vencimento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\contrato_convenio.aspx.cs">
       <DependentUpon>contrato_convenio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -419,6 +453,20 @@
     </Compile>
     <Compile Include="pages\folha_pagamento.aspx.designer.cs">
       <DependentUpon>folha_pagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\quantitativo_defensores.aspx.cs">
+      <DependentUpon>quantitativo_defensores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\quantitativo_defensores.aspx.designer.cs">
+      <DependentUpon>quantitativo_defensores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\subsidio.aspx.cs">
+      <DependentUpon>subsidio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\subsidio.aspx.designer.cs">
+      <DependentUpon>subsidio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

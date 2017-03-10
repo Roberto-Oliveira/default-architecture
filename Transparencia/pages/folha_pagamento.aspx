@@ -35,6 +35,7 @@
         <div class="frame">
             <div>
                 <ej:Grid ID="gvFolhaServidores" runat="server"
+                    AllowSorting="True"
                     AllowResizeToFit="True"
                     AllowPaging="True"
                     OnServerExcelExporting="gvFolhaServidores_OnServerExcelExporting"

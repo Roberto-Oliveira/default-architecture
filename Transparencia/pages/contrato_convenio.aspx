@@ -23,6 +23,14 @@
             width: auto;
             vertical-align: middle;
         }
+
+        .td-grid {
+            width: 144px;
+        }
+
+        td.td-grid {
+            height: 29px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -54,17 +62,17 @@
                 </ej:Column>
                 <ej:Column Field="finalizado" HeaderText="Finalizado">
                 </ej:Column>
-                <ej:Column Field="vigenciaInicial" HeaderText="Vigência Inicial">
+                <ej:Column Field="vigenciaInicial" HeaderText="Vigência Inicial" AllowFiltering="False">
                 </ej:Column>
-                <ej:Column Field="vigenciaFinal" HeaderText="Vigência Final">
+                <ej:Column Field="vigenciaFinal" HeaderText="Vigência Final" AllowFiltering="False">
                 </ej:Column>
-                <ej:Column Field="dataContrato" HeaderText="Data do Contrato">
+                <ej:Column Field="dataContrato" HeaderText="Data do Contrato" AllowFiltering="False">
                 </ej:Column>
-                <ej:Column Field="vigenciaProrrogada" HeaderText="Vigência Prorrogada">
+                <ej:Column Field="vigenciaProrrogada" HeaderText="Vigência Prorrogada" AllowFiltering="False">
                 </ej:Column>
-                <ej:Column Field="objeto" HeaderText="Objeto">
+                <ej:Column Field="objeto" HeaderText="Objeto" Visible="False">
                 </ej:Column>
-                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="150" Field="">
+                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="150" Field="" AllowFiltering="False">
                     <Command>
                         <ej:Commands Type="detail">
                             <ButtonOptions Text="Detalhes" Width="90%" Height="2%" Click="onClick"></ButtonOptions>
@@ -74,8 +82,8 @@
             </Columns>
             <PageSettings PageSize="10"></PageSettings>
         </ej:Grid>
-        <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="450" Title="Detalhes do Contratao" ShowOnInit="false"
-            EnableResize="False" Target="#gvContratosConvenios">
+        <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="800" Title="Detalhes do Contrato" ShowOnInit="false"
+            EnableResize="False" Target="#gvContratosConvenios" ShowFooter="True">
         </ej:Dialog>
     </div>
 </asp:Content>
@@ -84,11 +92,53 @@
     <script id="templateData" type="text/x-jsrender">
         <table>
             <tr>
-                <td style="text-align: center">
-                    <p>
-                        Para visualizar clique
-                    <a href="http://sistemas.defensoria.ms.gov.br/ajfile/arquivos/PROCESSOS/{{:codigoProcesso}}/{{:nomeArquivoPDF}}" target="_blank">aqui.</a>
-                    </p>
+                <td class="td-grid">Número do Processo:</td>
+                <td>{{:numeroProcesso}} </td>
+            </tr>
+            <tr>
+                <td class="td-grid">Razão Social:</td>
+                <td>{{:contratada}} </td>
+            </tr>
+            <tr>
+                <td class="td-grid">Modalidade:</td>
+                <td>{{:modalidade}} </td>
+            </tr>
+            <tr>
+                <td class="td-grid">Data do Contrato:</td>
+                <td>{{:dataContrato}} </td>
+            </tr>
+            <tr>
+                <td class="td-grid">Vigência Inicial:</td>
+                <td>{{:vigenciaInicial}} </td>
+            </tr>
+            <tr>
+                <td class="td-grid">Vigência Final:</td>
+                <td>{{:vigenciaFinal}} </td>
+            </tr>
+            <tr>
+                <td class="td-grid">Vigência Prorrogada:</td>
+                <td>{{:vigenciaProrrogada}} </td>
+            </tr>
+            <tr>
+                <td class="td-grid">Objeto do Contrato:</td>
+                <td>{{:objeto}} </td>
+            </tr>
+            <tr>
+                <td class="td-grid">Encerrado?</td>
+                <td>{{:finalizado}} </td>
+            </tr>
+            <tr>
+                <td class="td-grid"></td>
+                <td>&#013;</td>
+            </tr>
+            <tr>
+                <td class="td-grid"></td>
+                <td>&#013;</td>
+            </tr>
+            <tr>
+                <td class="td-grid">Visualizar contrato:</td>
+                <td>
+                    <a href="http://sistemas.defensoria.ms.gov.br/ajfile/arquivos/PROCESSOS/{{:codigoProcesso}}/{{:nomeArquivoPDF}}" target="_blank">Clique aqui.</a>
                 </td>
             </tr>
         </table>
@@ -101,7 +151,7 @@
             var record = grid.getCurrentViewData()[index];
             record["BirthDate"] = ej.format(record["BirthDate"], "MM/dd/yyyy");
             $("#commanddialog").html($("#templateData").render(record))
-                .ejDialog("option", { position: { X: this.element.position().left - 455, Y: this.element.position().top } })
+                .ejDialog("option", { position: { X: this.element.position().left - 755, Y: this.element.position().top } })
                 .ejDialog("open");
             if (navigator.userAgent.indexOf("MSIE 8.0") != -1)
                 $("#commanddialog").find("img").width(150);

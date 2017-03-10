@@ -77,6 +77,54 @@ namespace TransparenciaDAO
 				return this.GetTable<vw_folha_pagamento_servidor>();
 			}
 		}
+		
+		public System.Data.Linq.Table<vw_cargo_comissao_servidor> vw_cargo_comissao_servidors
+		{
+			get
+			{
+				return this.GetTable<vw_cargo_comissao_servidor>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_cargo_defensor_servidor> vw_cargo_defensor_servidors
+		{
+			get
+			{
+				return this.GetTable<vw_cargo_defensor_servidor>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_cargo_efetivo_servidor> vw_cargo_efetivo_servidors
+		{
+			get
+			{
+				return this.GetTable<vw_cargo_efetivo_servidor>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_folha_subsidio> vw_folha_subsidios
+		{
+			get
+			{
+				return this.GetTable<vw_folha_subsidio>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_cargo_efetivo_vencimento> vw_cargo_efetivo_vencimentos
+		{
+			get
+			{
+				return this.GetTable<vw_cargo_efetivo_vencimento>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_cargo_comissionado_vencimento> vw_cargo_comissionado_vencimentos
+		{
+			get
+			{
+				return this.GetTable<vw_cargo_comissionado_vencimento>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_contratos_convenios")]
@@ -650,6 +698,618 @@ namespace TransparenciaDAO
 				if ((this._Indenizações != value))
 				{
 					this._Indenizações = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_cargo_comissao_servidor")]
+	public partial class vw_cargo_comissao_servidor
+	{
+		
+		private string _grupo;
+		
+		private string _simbolo;
+		
+		private string _cargo;
+		
+		private System.Nullable<int> _vagasPrevistas;
+		
+		public vw_cargo_comissao_servidor()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_grupo", DbType="VarChar(255)")]
+		public string grupo
+		{
+			get
+			{
+				return this._grupo;
+			}
+			set
+			{
+				if ((this._grupo != value))
+				{
+					this._grupo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_simbolo", DbType="VarChar(255)")]
+		public string simbolo
+		{
+			get
+			{
+				return this._simbolo;
+			}
+			set
+			{
+				if ((this._simbolo != value))
+				{
+					this._simbolo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cargo", DbType="VarChar(255)")]
+		public string cargo
+		{
+			get
+			{
+				return this._cargo;
+			}
+			set
+			{
+				if ((this._cargo != value))
+				{
+					this._cargo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vagasPrevistas", DbType="Int")]
+		public System.Nullable<int> vagasPrevistas
+		{
+			get
+			{
+				return this._vagasPrevistas;
+			}
+			set
+			{
+				if ((this._vagasPrevistas != value))
+				{
+					this._vagasPrevistas = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_cargo_defensor_servidor")]
+	public partial class vw_cargo_defensor_servidor
+	{
+		
+		private string _carreira;
+		
+		private string _cargo;
+		
+		private string _classe;
+		
+		private string _simbolo;
+		
+		private System.Nullable<int> _vagasPreenchidas;
+		
+		private System.Nullable<int> _previstas;
+		
+		private string _nomeBeneficiario;
+		
+		private string _matricula;
+		
+		public vw_cargo_defensor_servidor()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_carreira", DbType="VarChar(255)")]
+		public string carreira
+		{
+			get
+			{
+				return this._carreira;
+			}
+			set
+			{
+				if ((this._carreira != value))
+				{
+					this._carreira = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cargo", DbType="VarChar(255)")]
+		public string cargo
+		{
+			get
+			{
+				return this._cargo;
+			}
+			set
+			{
+				if ((this._cargo != value))
+				{
+					this._cargo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_classe", DbType="VarChar(255)")]
+		public string classe
+		{
+			get
+			{
+				return this._classe;
+			}
+			set
+			{
+				if ((this._classe != value))
+				{
+					this._classe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_simbolo", DbType="VarChar(255)")]
+		public string simbolo
+		{
+			get
+			{
+				return this._simbolo;
+			}
+			set
+			{
+				if ((this._simbolo != value))
+				{
+					this._simbolo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vagasPreenchidas", DbType="Int")]
+		public System.Nullable<int> vagasPreenchidas
+		{
+			get
+			{
+				return this._vagasPreenchidas;
+			}
+			set
+			{
+				if ((this._vagasPreenchidas != value))
+				{
+					this._vagasPreenchidas = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_previstas", DbType="Int")]
+		public System.Nullable<int> previstas
+		{
+			get
+			{
+				return this._previstas;
+			}
+			set
+			{
+				if ((this._previstas != value))
+				{
+					this._previstas = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nomeBeneficiario", DbType="VarChar(255)")]
+		public string nomeBeneficiario
+		{
+			get
+			{
+				return this._nomeBeneficiario;
+			}
+			set
+			{
+				if ((this._nomeBeneficiario != value))
+				{
+					this._nomeBeneficiario = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matricula", DbType="VarChar(255)")]
+		public string matricula
+		{
+			get
+			{
+				return this._matricula;
+			}
+			set
+			{
+				if ((this._matricula != value))
+				{
+					this._matricula = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_cargo_efetivo_servidor")]
+	public partial class vw_cargo_efetivo_servidor
+	{
+		
+		private string _carreira;
+		
+		private System.Nullable<int> _quantitativo;
+		
+		private string _classe;
+		
+		public vw_cargo_efetivo_servidor()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_carreira", DbType="VarChar(255)")]
+		public string carreira
+		{
+			get
+			{
+				return this._carreira;
+			}
+			set
+			{
+				if ((this._carreira != value))
+				{
+					this._carreira = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quantitativo", DbType="Int")]
+		public System.Nullable<int> quantitativo
+		{
+			get
+			{
+				return this._quantitativo;
+			}
+			set
+			{
+				if ((this._quantitativo != value))
+				{
+					this._quantitativo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_classe", DbType="VarChar(255)")]
+		public string classe
+		{
+			get
+			{
+				return this._classe;
+			}
+			set
+			{
+				if ((this._classe != value))
+				{
+					this._classe = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_folha_subsidio")]
+	public partial class vw_folha_subsidio
+	{
+		
+		private decimal _id;
+		
+		private string _descricaoClasse;
+		
+		private string _tipoServidor;
+		
+		private System.Nullable<decimal> _valorReajuste;
+		
+		private System.Nullable<int> _anoCompetencia;
+		
+		private System.Nullable<int> _vagasPrevistas;
+		
+		public vw_folha_subsidio()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Decimal(19,0) NOT NULL")]
+		public decimal id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoClasse", DbType="VarChar(255)")]
+		public string descricaoClasse
+		{
+			get
+			{
+				return this._descricaoClasse;
+			}
+			set
+			{
+				if ((this._descricaoClasse != value))
+				{
+					this._descricaoClasse = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipoServidor", DbType="VarChar(255)")]
+		public string tipoServidor
+		{
+			get
+			{
+				return this._tipoServidor;
+			}
+			set
+			{
+				if ((this._tipoServidor != value))
+				{
+					this._tipoServidor = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_valorReajuste", DbType="Decimal(19,2)")]
+		public System.Nullable<decimal> valorReajuste
+		{
+			get
+			{
+				return this._valorReajuste;
+			}
+			set
+			{
+				if ((this._valorReajuste != value))
+				{
+					this._valorReajuste = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoCompetencia", DbType="Int")]
+		public System.Nullable<int> anoCompetencia
+		{
+			get
+			{
+				return this._anoCompetencia;
+			}
+			set
+			{
+				if ((this._anoCompetencia != value))
+				{
+					this._anoCompetencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vagasPrevistas", DbType="Int")]
+		public System.Nullable<int> vagasPrevistas
+		{
+			get
+			{
+				return this._vagasPrevistas;
+			}
+			set
+			{
+				if ((this._vagasPrevistas != value))
+				{
+					this._vagasPrevistas = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_cargo_efetivo_vencimento")]
+	public partial class vw_cargo_efetivo_vencimento
+	{
+		
+		private System.Nullable<int> _anoCompetencia;
+		
+		private string _cargo;
+		
+		private string _classe;
+		
+		private System.Nullable<decimal> _vencimentoBase;
+		
+		public vw_cargo_efetivo_vencimento()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoCompetencia", DbType="Int")]
+		public System.Nullable<int> anoCompetencia
+		{
+			get
+			{
+				return this._anoCompetencia;
+			}
+			set
+			{
+				if ((this._anoCompetencia != value))
+				{
+					this._anoCompetencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cargo", DbType="VarChar(255)")]
+		public string cargo
+		{
+			get
+			{
+				return this._cargo;
+			}
+			set
+			{
+				if ((this._cargo != value))
+				{
+					this._cargo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_classe", DbType="VarChar(255)")]
+		public string classe
+		{
+			get
+			{
+				return this._classe;
+			}
+			set
+			{
+				if ((this._classe != value))
+				{
+					this._classe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vencimentoBase", DbType="Decimal(19,2)")]
+		public System.Nullable<decimal> vencimentoBase
+		{
+			get
+			{
+				return this._vencimentoBase;
+			}
+			set
+			{
+				if ((this._vencimentoBase != value))
+				{
+					this._vencimentoBase = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_cargo_comissionado_vencimento")]
+	public partial class vw_cargo_comissionado_vencimento
+	{
+		
+		private System.Nullable<int> _anoCompetencia;
+		
+		private string _descricaoClasse;
+		
+		private string _tipoServidor;
+		
+		private System.Nullable<decimal> _valorReajuste;
+		
+		private System.Nullable<decimal> _gratificacao;
+		
+		private string _percentual;
+		
+		public vw_cargo_comissionado_vencimento()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoCompetencia", DbType="Int")]
+		public System.Nullable<int> anoCompetencia
+		{
+			get
+			{
+				return this._anoCompetencia;
+			}
+			set
+			{
+				if ((this._anoCompetencia != value))
+				{
+					this._anoCompetencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoClasse", DbType="VarChar(255)")]
+		public string descricaoClasse
+		{
+			get
+			{
+				return this._descricaoClasse;
+			}
+			set
+			{
+				if ((this._descricaoClasse != value))
+				{
+					this._descricaoClasse = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipoServidor", DbType="VarChar(255)")]
+		public string tipoServidor
+		{
+			get
+			{
+				return this._tipoServidor;
+			}
+			set
+			{
+				if ((this._tipoServidor != value))
+				{
+					this._tipoServidor = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_valorReajuste", DbType="Decimal(19,2)")]
+		public System.Nullable<decimal> valorReajuste
+		{
+			get
+			{
+				return this._valorReajuste;
+			}
+			set
+			{
+				if ((this._valorReajuste != value))
+				{
+					this._valorReajuste = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gratificacao", DbType="Decimal(19,2)")]
+		public System.Nullable<decimal> gratificacao
+		{
+			get
+			{
+				return this._gratificacao;
+			}
+			set
+			{
+				if ((this._gratificacao != value))
+				{
+					this._gratificacao = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_percentual", DbType="VarChar(4) NOT NULL", CanBeNull=false)]
+		public string percentual
+		{
+			get
+			{
+				return this._percentual;
+			}
+			set
+			{
+				if ((this._percentual != value))
+				{
+					this._percentual = value;
 				}
 			}
 		}

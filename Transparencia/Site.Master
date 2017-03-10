@@ -53,11 +53,12 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestão de Pessoal<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Quadro da Defensoria Pública</a></li>
-                            <li><a href="#">Cargos Efetivos</a></li>
-                            <li><a href="#">Cargos em Comissão</a></li>
-                            <li><a href="#">Vencimento Cargos Efetivos</a></li>
-                            <li><a href="#">Vencimento Cargos Comissão</a></li>
+                            <li><a href="/pages/quantitativo_defensores.aspx">Quadro da Defensoria Pública</a></li>
+                            <li><a href="/pages/cargo_efetivo.aspx">Cargos Efetivos</a></li>
+                            <li><a href="/pages/cargos_comissao.aspx">Cargos em Comissão</a></li>
+                            <li><a href="/pages/subsidio.aspx">Subsidio</a></li>
+                            <li><a href="/pages/cargo_efetivo_vencimento.aspx">Vencimento Cargos Efetivos</a></li>
+                            <li><a href="/pages/cargo_comissionado_vencimento.aspx">Vencimento Cargos Comissão</a></li>
                             <li><a href="/pages/folha_pagamento.aspx">Consulta Remuneração</a></li>
                         </ul>
                     </li>
@@ -75,7 +76,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Execução Orçamentária e Financeira<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Licitações<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Legislação</a></li>
                             <li><a href="#">Avisos</a></li>
