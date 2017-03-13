@@ -94,4 +94,112 @@
       <Column Name="percentual" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.vw_licitacoes_legislacao" Member="vw_licitacoes_legislacaos">
+    <Type Name="vw_licitacoes_legislacao">
+      <Column Name="menu" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="anoProcesso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricaoProcesso" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="observacoesProcesso" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="situacaoProcesso" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dataProcesso" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="codigoProcesso" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="caminhoProcesso" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_licitacoes_avisos" Member="vw_licitacoes_avisos">
+    <Type Name="vw_licitacoes_aviso">
+      <Column Name="menu" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="anoProcesso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricaoProcesso" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="observacoesProcesso" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="situacaoProcesso" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dataProcesso" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="codigoProcesso" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="caminhoProcesso" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_licitacoes_tomada_de_precos" Member="vw_licitacoes_tomada_de_precos">
+    <Type Name="vw_licitacoes_tomada_de_preco">
+      <Column Name="menu" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="anoProcesso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricaoProcesso" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="observacoesProcesso" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="situacaoProcesso" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dataProcesso" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="codigoProcesso" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="caminhoProcesso" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_licitacoes_concorrencia_publica" Member="vw_licitacoes_concorrencia_publicas">
+    <Type Name="vw_licitacoes_concorrencia_publica">
+      <Column Name="menu" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="anoProcesso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricaoProcesso" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="observacoesProcesso" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="situacaoProcesso" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dataProcesso" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="codigoProcesso" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="caminhoProcesso" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_licitacoes_pregao_presencial" Member="vw_licitacoes_pregao_presencials">
+    <Type Name="vw_licitacoes_pregao_presencial">
+      <Column Name="menu" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="anoProcesso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricaoProcesso" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="observacoesProcesso" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="situacaoProcesso" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dataProcesso" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="codigoProcesso" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="caminho" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="caminhoProcesso" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_licitacoes_pregao_presencial_registro_precos" Member="vw_licitacoes_pregao_presencial_registro_precos">
+    <Type Name="vw_licitacoes_pregao_presencial_registro_preco">
+      <Column Name="menu" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="anoProcesso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricaoProcesso" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="observacoesProcesso" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="situacaoProcesso" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dataProcesso" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="codigoProcesso" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="caminho" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="caminhoProcesso" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_licitacoes_pregao_eletronico" Member="vw_licitacoes_pregao_eletronicos">
+    <Type Name="vw_licitacoes_pregao_eletronico">
+      <Column Name="menu" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="anoProcesso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricaoProcesso" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="observacoesProcesso" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="situacaoProcesso" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dataProcesso" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="codigoProcesso" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="caminho" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="caminhoProcesso" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_licitacoes_ata_registro_precos" Member="vw_licitacoes_ata_registro_precos">
+    <Type Name="vw_licitacoes_ata_registro_preco">
+      <Column Name="menu" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="anoProcesso" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="descricaoProcesso" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="observacoesProcesso" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="situacaoProcesso" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dataProcesso" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="codigoProcesso" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="caminho" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="caminhoProcesso" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

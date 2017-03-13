@@ -210,14 +210,22 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="pages\ata_registro_de_precos.aspx" />
+    <Content Include="pages\avisos.aspx" />
     <Content Include="pages\cargos_comissao.aspx" />
     <Content Include="pages\cargo_comissionado_vencimento.aspx" />
     <Content Include="pages\cargo_efetivo.aspx" />
     <Content Include="pages\cargo_efetivo_vencimento.aspx" />
+    <Content Include="pages\concorrencia_publica.aspx" />
     <Content Include="pages\contrato_convenio.aspx" />
     <Content Include="pages\folha_pagamento.aspx" />
+    <Content Include="pages\legislacao.aspx" />
+    <Content Include="pages\pregao_eletronico.aspx" />
+    <Content Include="pages\pregao_presencial.aspx" />
+    <Content Include="pages\pregao_presencial_registro_precos.aspx" />
     <Content Include="pages\quantitativo_defensores.aspx" />
     <Content Include="pages\subsidio.aspx" />
+    <Content Include="pages\tomada_de_precos.aspx" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap-dropdown.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -412,6 +420,20 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="pages\ata_registro_de_precos.aspx.cs">
+      <DependentUpon>ata_registro_de_precos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\ata_registro_de_precos.aspx.designer.cs">
+      <DependentUpon>ata_registro_de_precos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\avisos.aspx.cs">
+      <DependentUpon>avisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\avisos.aspx.designer.cs">
+      <DependentUpon>avisos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\cargos_comissao.aspx.cs">
       <DependentUpon>cargos_comissao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -440,6 +462,13 @@
     <Compile Include="pages\cargo_efetivo_vencimento.aspx.designer.cs">
       <DependentUpon>cargo_efetivo_vencimento.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pages\concorrencia_publica.aspx.cs">
+      <DependentUpon>concorrencia_publica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\concorrencia_publica.aspx.designer.cs">
+      <DependentUpon>concorrencia_publica.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\contrato_convenio.aspx.cs">
       <DependentUpon>contrato_convenio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -454,6 +483,34 @@
     <Compile Include="pages\folha_pagamento.aspx.designer.cs">
       <DependentUpon>folha_pagamento.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pages\legislacao.aspx.cs">
+      <DependentUpon>legislacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\legislacao.aspx.designer.cs">
+      <DependentUpon>legislacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\pregao_eletronico.aspx.cs">
+      <DependentUpon>pregao_eletronico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\pregao_eletronico.aspx.designer.cs">
+      <DependentUpon>pregao_eletronico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\pregao_presencial.aspx.cs">
+      <DependentUpon>pregao_presencial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\pregao_presencial.aspx.designer.cs">
+      <DependentUpon>pregao_presencial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\pregao_presencial_registro_precos.aspx.cs">
+      <DependentUpon>pregao_presencial_registro_precos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\pregao_presencial_registro_precos.aspx.designer.cs">
+      <DependentUpon>pregao_presencial_registro_precos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\quantitativo_defensores.aspx.cs">
       <DependentUpon>quantitativo_defensores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -467,6 +524,13 @@
     </Compile>
     <Compile Include="pages\subsidio.aspx.designer.cs">
       <DependentUpon>subsidio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\tomada_de_precos.aspx.cs">
+      <DependentUpon>tomada_de_precos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\tomada_de_precos.aspx.designer.cs">
+      <DependentUpon>tomada_de_precos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

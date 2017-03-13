@@ -38,6 +38,7 @@
     <br />
 
     <div style="position: relative;">
+        
         <ej:Grid ID="gvContratosConvenios" runat="server"
             AllowSorting="True"
             AllowResizeToFit="True"

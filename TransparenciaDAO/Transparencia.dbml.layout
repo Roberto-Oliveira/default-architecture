@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.5" name="Transparencia">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 19.5" name="Transparencia">
   <DataContextMoniker Name="/TransparenciaDataContext" />
   <nestedChildShapes>
     <classShape Id="7430f7fe-3267-4576-ad2c-f2d7588b2e4b" absoluteBounds="5.5, 0.625, 2, 3.1170068359375005">
@@ -48,6 +48,54 @@
       <DataClassMoniker Name="/TransparenciaDataContext/vw_cargo_comissionado_vencimento" />
       <nestedChildShapes>
         <elementListCompartment Id="7771b7a7-40af-49da-9acd-1dd9feba4b28" absoluteBounds="0.64, 7.71, 2.3449999999999998, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="feae65ea-f511-4299-8d08-9e43e0dba5db" absoluteBounds="3.75, 7.375, 2, 2.5401025390625">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_legislacao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccbb9df1-1a58-45bc-9609-8d8dab68cbbf" absoluteBounds="3.765, 7.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="822c7638-b847-4f27-bba8-58243809b220" absoluteBounds="6.125, 7.375, 2, 2.5401025390625">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_aviso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2713734a-653d-435f-9469-1dac96ed337c" absoluteBounds="6.14, 7.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2db46272-ce23-4884-9e82-47a2e3ec7865" absoluteBounds="0.625, 9.375, 2, 2.5401025390625">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_tomada_de_preco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6dd1628-b74f-4564-bf8b-f3ba609c938b" absoluteBounds="0.63999999999999968, 9.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="923f4807-af6c-4237-bb22-15f7ebc6c2ff" absoluteBounds="3.5, 10.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_concorrencia_publica" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e90d11f5-f453-4c93-adc4-cf96d13ae8b3" absoluteBounds="3.5149999999999997, 10.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d1b3a003-bc1b-450c-bcce-2af11b818717" absoluteBounds="0.625, 12.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_pregao_presencial" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea9b2a95-6077-42bc-ad6a-aa31fe7a1464" absoluteBounds="0.64, 12.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d32a63aa-d78d-4472-a2c3-8b6137b4b395" absoluteBounds="3.5, 13.375, 3.125, 2.7324039713541666">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_pregao_presencial_registro_preco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8777645-a2e0-4756-8c85-b3702acc984c" absoluteBounds="3.515, 13.835, 3.0949999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63d21d33-7dcd-40c7-a32d-fa744f745801" absoluteBounds="0.625, 15.25, 2.5, 2.7324039713541666">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_pregao_eletronico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3213559-12a3-4b94-8ec6-29889cd97349" absoluteBounds="0.64, 15.71, 2.4699999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1cb424c6-1d39-416a-860c-8053567adc49" absoluteBounds="3.625, 16.5, 2.375, 2.7324039713541666">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_ata_registro_preco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c948282-f0ed-4305-9621-9781f74b87bc" absoluteBounds="3.64, 16.96, 2.3449999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

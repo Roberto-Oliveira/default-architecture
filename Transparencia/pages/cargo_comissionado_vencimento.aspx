@@ -16,7 +16,7 @@
 
         .e-grid .e-rowcell {
             border-width: 1px 0 0 1px;
-            padding: 10px 0px 10px 3px;
+            padding: 10px 0 10px 3px;
             line-height: 14px;
             white-space: nowrap;
             width: auto;

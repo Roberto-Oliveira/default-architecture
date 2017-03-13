@@ -125,6 +125,70 @@ namespace TransparenciaDAO
 				return this.GetTable<vw_cargo_comissionado_vencimento>();
 			}
 		}
+		
+		public System.Data.Linq.Table<vw_licitacoes_legislacao> vw_licitacoes_legislacaos
+		{
+			get
+			{
+				return this.GetTable<vw_licitacoes_legislacao>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_licitacoes_aviso> vw_licitacoes_avisos
+		{
+			get
+			{
+				return this.GetTable<vw_licitacoes_aviso>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_licitacoes_tomada_de_preco> vw_licitacoes_tomada_de_precos
+		{
+			get
+			{
+				return this.GetTable<vw_licitacoes_tomada_de_preco>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_licitacoes_concorrencia_publica> vw_licitacoes_concorrencia_publicas
+		{
+			get
+			{
+				return this.GetTable<vw_licitacoes_concorrencia_publica>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_licitacoes_pregao_presencial> vw_licitacoes_pregao_presencials
+		{
+			get
+			{
+				return this.GetTable<vw_licitacoes_pregao_presencial>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_licitacoes_pregao_presencial_registro_preco> vw_licitacoes_pregao_presencial_registro_precos
+		{
+			get
+			{
+				return this.GetTable<vw_licitacoes_pregao_presencial_registro_preco>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_licitacoes_pregao_eletronico> vw_licitacoes_pregao_eletronicos
+		{
+			get
+			{
+				return this.GetTable<vw_licitacoes_pregao_eletronico>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_licitacoes_ata_registro_preco> vw_licitacoes_ata_registro_precos
+		{
+			get
+			{
+				return this.GetTable<vw_licitacoes_ata_registro_preco>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_contratos_convenios")]
@@ -1310,6 +1374,1446 @@ namespace TransparenciaDAO
 				if ((this._percentual != value))
 				{
 					this._percentual = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_licitacoes_legislacao")]
+	public partial class vw_licitacoes_legislacao
+	{
+		
+		private string _menu;
+		
+		private System.Nullable<int> _anoProcesso;
+		
+		private string _descricaoProcesso;
+		
+		private string _observacoesProcesso;
+		
+		private string _situacaoProcesso;
+		
+		private string _dataProcesso;
+		
+		private string _codigoProcesso;
+		
+		private string _caminhoProcesso;
+		
+		private string _descricaoArquivoDownload;
+		
+		public vw_licitacoes_legislacao()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_menu", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string menu
+		{
+			get
+			{
+				return this._menu;
+			}
+			set
+			{
+				if ((this._menu != value))
+				{
+					this._menu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoProcesso", DbType="Int")]
+		public System.Nullable<int> anoProcesso
+		{
+			get
+			{
+				return this._anoProcesso;
+			}
+			set
+			{
+				if ((this._anoProcesso != value))
+				{
+					this._anoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoProcesso", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string descricaoProcesso
+		{
+			get
+			{
+				return this._descricaoProcesso;
+			}
+			set
+			{
+				if ((this._descricaoProcesso != value))
+				{
+					this._descricaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_observacoesProcesso", DbType="VarChar(MAX)")]
+		public string observacoesProcesso
+		{
+			get
+			{
+				return this._observacoesProcesso;
+			}
+			set
+			{
+				if ((this._observacoesProcesso != value))
+				{
+					this._observacoesProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacaoProcesso", DbType="VarChar(50)")]
+		public string situacaoProcesso
+		{
+			get
+			{
+				return this._situacaoProcesso;
+			}
+			set
+			{
+				if ((this._situacaoProcesso != value))
+				{
+					this._situacaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataProcesso", DbType="Char(30)")]
+		public string dataProcesso
+		{
+			get
+			{
+				return this._dataProcesso;
+			}
+			set
+			{
+				if ((this._dataProcesso != value))
+				{
+					this._dataProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoProcesso", DbType="VarChar(3)")]
+		public string codigoProcesso
+		{
+			get
+			{
+				return this._codigoProcesso;
+			}
+			set
+			{
+				if ((this._codigoProcesso != value))
+				{
+					this._codigoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminhoProcesso", DbType="VarChar(250)")]
+		public string caminhoProcesso
+		{
+			get
+			{
+				return this._caminhoProcesso;
+			}
+			set
+			{
+				if ((this._caminhoProcesso != value))
+				{
+					this._caminhoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoArquivoDownload", DbType="VarChar(1000)")]
+		public string descricaoArquivoDownload
+		{
+			get
+			{
+				return this._descricaoArquivoDownload;
+			}
+			set
+			{
+				if ((this._descricaoArquivoDownload != value))
+				{
+					this._descricaoArquivoDownload = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_licitacoes_avisos")]
+	public partial class vw_licitacoes_aviso
+	{
+		
+		private string _menu;
+		
+		private System.Nullable<int> _anoProcesso;
+		
+		private string _descricaoProcesso;
+		
+		private string _observacoesProcesso;
+		
+		private string _situacaoProcesso;
+		
+		private string _dataProcesso;
+		
+		private string _codigoProcesso;
+		
+		private string _caminhoProcesso;
+		
+		private string _descricaoArquivoDownload;
+		
+		public vw_licitacoes_aviso()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_menu", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string menu
+		{
+			get
+			{
+				return this._menu;
+			}
+			set
+			{
+				if ((this._menu != value))
+				{
+					this._menu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoProcesso", DbType="Int")]
+		public System.Nullable<int> anoProcesso
+		{
+			get
+			{
+				return this._anoProcesso;
+			}
+			set
+			{
+				if ((this._anoProcesso != value))
+				{
+					this._anoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoProcesso", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string descricaoProcesso
+		{
+			get
+			{
+				return this._descricaoProcesso;
+			}
+			set
+			{
+				if ((this._descricaoProcesso != value))
+				{
+					this._descricaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_observacoesProcesso", DbType="VarChar(MAX)")]
+		public string observacoesProcesso
+		{
+			get
+			{
+				return this._observacoesProcesso;
+			}
+			set
+			{
+				if ((this._observacoesProcesso != value))
+				{
+					this._observacoesProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacaoProcesso", DbType="VarChar(50)")]
+		public string situacaoProcesso
+		{
+			get
+			{
+				return this._situacaoProcesso;
+			}
+			set
+			{
+				if ((this._situacaoProcesso != value))
+				{
+					this._situacaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataProcesso", DbType="Char(30)")]
+		public string dataProcesso
+		{
+			get
+			{
+				return this._dataProcesso;
+			}
+			set
+			{
+				if ((this._dataProcesso != value))
+				{
+					this._dataProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoProcesso", DbType="VarChar(3)")]
+		public string codigoProcesso
+		{
+			get
+			{
+				return this._codigoProcesso;
+			}
+			set
+			{
+				if ((this._codigoProcesso != value))
+				{
+					this._codigoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminhoProcesso", DbType="VarChar(250)")]
+		public string caminhoProcesso
+		{
+			get
+			{
+				return this._caminhoProcesso;
+			}
+			set
+			{
+				if ((this._caminhoProcesso != value))
+				{
+					this._caminhoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoArquivoDownload", DbType="VarChar(1000)")]
+		public string descricaoArquivoDownload
+		{
+			get
+			{
+				return this._descricaoArquivoDownload;
+			}
+			set
+			{
+				if ((this._descricaoArquivoDownload != value))
+				{
+					this._descricaoArquivoDownload = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_licitacoes_tomada_de_precos")]
+	public partial class vw_licitacoes_tomada_de_preco
+	{
+		
+		private string _menu;
+		
+		private System.Nullable<int> _anoProcesso;
+		
+		private string _descricaoProcesso;
+		
+		private string _observacoesProcesso;
+		
+		private string _situacaoProcesso;
+		
+		private string _dataProcesso;
+		
+		private string _codigoProcesso;
+		
+		private string _caminhoProcesso;
+		
+		private string _descricaoArquivoDownload;
+		
+		public vw_licitacoes_tomada_de_preco()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_menu", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string menu
+		{
+			get
+			{
+				return this._menu;
+			}
+			set
+			{
+				if ((this._menu != value))
+				{
+					this._menu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoProcesso", DbType="Int")]
+		public System.Nullable<int> anoProcesso
+		{
+			get
+			{
+				return this._anoProcesso;
+			}
+			set
+			{
+				if ((this._anoProcesso != value))
+				{
+					this._anoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoProcesso", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string descricaoProcesso
+		{
+			get
+			{
+				return this._descricaoProcesso;
+			}
+			set
+			{
+				if ((this._descricaoProcesso != value))
+				{
+					this._descricaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_observacoesProcesso", DbType="VarChar(MAX)")]
+		public string observacoesProcesso
+		{
+			get
+			{
+				return this._observacoesProcesso;
+			}
+			set
+			{
+				if ((this._observacoesProcesso != value))
+				{
+					this._observacoesProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacaoProcesso", DbType="VarChar(50)")]
+		public string situacaoProcesso
+		{
+			get
+			{
+				return this._situacaoProcesso;
+			}
+			set
+			{
+				if ((this._situacaoProcesso != value))
+				{
+					this._situacaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataProcesso", DbType="Char(30)")]
+		public string dataProcesso
+		{
+			get
+			{
+				return this._dataProcesso;
+			}
+			set
+			{
+				if ((this._dataProcesso != value))
+				{
+					this._dataProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoProcesso", DbType="VarChar(3)")]
+		public string codigoProcesso
+		{
+			get
+			{
+				return this._codigoProcesso;
+			}
+			set
+			{
+				if ((this._codigoProcesso != value))
+				{
+					this._codigoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminhoProcesso", DbType="VarChar(250)")]
+		public string caminhoProcesso
+		{
+			get
+			{
+				return this._caminhoProcesso;
+			}
+			set
+			{
+				if ((this._caminhoProcesso != value))
+				{
+					this._caminhoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoArquivoDownload", DbType="VarChar(1000)")]
+		public string descricaoArquivoDownload
+		{
+			get
+			{
+				return this._descricaoArquivoDownload;
+			}
+			set
+			{
+				if ((this._descricaoArquivoDownload != value))
+				{
+					this._descricaoArquivoDownload = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_licitacoes_concorrencia_publica")]
+	public partial class vw_licitacoes_concorrencia_publica
+	{
+		
+		private string _menu;
+		
+		private System.Nullable<int> _anoProcesso;
+		
+		private string _descricaoProcesso;
+		
+		private string _observacoesProcesso;
+		
+		private string _situacaoProcesso;
+		
+		private string _dataProcesso;
+		
+		private string _codigoProcesso;
+		
+		private string _caminhoProcesso;
+		
+		private string _descricaoArquivoDownload;
+		
+		public vw_licitacoes_concorrencia_publica()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_menu", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string menu
+		{
+			get
+			{
+				return this._menu;
+			}
+			set
+			{
+				if ((this._menu != value))
+				{
+					this._menu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoProcesso", DbType="Int")]
+		public System.Nullable<int> anoProcesso
+		{
+			get
+			{
+				return this._anoProcesso;
+			}
+			set
+			{
+				if ((this._anoProcesso != value))
+				{
+					this._anoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoProcesso", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string descricaoProcesso
+		{
+			get
+			{
+				return this._descricaoProcesso;
+			}
+			set
+			{
+				if ((this._descricaoProcesso != value))
+				{
+					this._descricaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_observacoesProcesso", DbType="VarChar(MAX)")]
+		public string observacoesProcesso
+		{
+			get
+			{
+				return this._observacoesProcesso;
+			}
+			set
+			{
+				if ((this._observacoesProcesso != value))
+				{
+					this._observacoesProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacaoProcesso", DbType="VarChar(50)")]
+		public string situacaoProcesso
+		{
+			get
+			{
+				return this._situacaoProcesso;
+			}
+			set
+			{
+				if ((this._situacaoProcesso != value))
+				{
+					this._situacaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataProcesso", DbType="Char(30)")]
+		public string dataProcesso
+		{
+			get
+			{
+				return this._dataProcesso;
+			}
+			set
+			{
+				if ((this._dataProcesso != value))
+				{
+					this._dataProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoProcesso", DbType="VarChar(3)")]
+		public string codigoProcesso
+		{
+			get
+			{
+				return this._codigoProcesso;
+			}
+			set
+			{
+				if ((this._codigoProcesso != value))
+				{
+					this._codigoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminhoProcesso", DbType="VarChar(250)")]
+		public string caminhoProcesso
+		{
+			get
+			{
+				return this._caminhoProcesso;
+			}
+			set
+			{
+				if ((this._caminhoProcesso != value))
+				{
+					this._caminhoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoArquivoDownload", DbType="VarChar(1000)")]
+		public string descricaoArquivoDownload
+		{
+			get
+			{
+				return this._descricaoArquivoDownload;
+			}
+			set
+			{
+				if ((this._descricaoArquivoDownload != value))
+				{
+					this._descricaoArquivoDownload = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_licitacoes_pregao_presencial")]
+	public partial class vw_licitacoes_pregao_presencial
+	{
+		
+		private string _menu;
+		
+		private System.Nullable<int> _anoProcesso;
+		
+		private string _descricaoProcesso;
+		
+		private string _observacoesProcesso;
+		
+		private string _situacaoProcesso;
+		
+		private string _dataProcesso;
+		
+		private string _codigoProcesso;
+		
+		private string _caminho;
+		
+		private string _caminhoProcesso;
+		
+		private string _descricaoArquivoDownload;
+		
+		public vw_licitacoes_pregao_presencial()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_menu", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string menu
+		{
+			get
+			{
+				return this._menu;
+			}
+			set
+			{
+				if ((this._menu != value))
+				{
+					this._menu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoProcesso", DbType="Int")]
+		public System.Nullable<int> anoProcesso
+		{
+			get
+			{
+				return this._anoProcesso;
+			}
+			set
+			{
+				if ((this._anoProcesso != value))
+				{
+					this._anoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoProcesso", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string descricaoProcesso
+		{
+			get
+			{
+				return this._descricaoProcesso;
+			}
+			set
+			{
+				if ((this._descricaoProcesso != value))
+				{
+					this._descricaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_observacoesProcesso", DbType="VarChar(MAX)")]
+		public string observacoesProcesso
+		{
+			get
+			{
+				return this._observacoesProcesso;
+			}
+			set
+			{
+				if ((this._observacoesProcesso != value))
+				{
+					this._observacoesProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacaoProcesso", DbType="VarChar(50)")]
+		public string situacaoProcesso
+		{
+			get
+			{
+				return this._situacaoProcesso;
+			}
+			set
+			{
+				if ((this._situacaoProcesso != value))
+				{
+					this._situacaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataProcesso", DbType="Char(30)")]
+		public string dataProcesso
+		{
+			get
+			{
+				return this._dataProcesso;
+			}
+			set
+			{
+				if ((this._dataProcesso != value))
+				{
+					this._dataProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoProcesso", DbType="VarChar(3)")]
+		public string codigoProcesso
+		{
+			get
+			{
+				return this._codigoProcesso;
+			}
+			set
+			{
+				if ((this._codigoProcesso != value))
+				{
+					this._codigoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminho", DbType="VarChar(500)")]
+		public string caminho
+		{
+			get
+			{
+				return this._caminho;
+			}
+			set
+			{
+				if ((this._caminho != value))
+				{
+					this._caminho = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminhoProcesso", DbType="VarChar(250)")]
+		public string caminhoProcesso
+		{
+			get
+			{
+				return this._caminhoProcesso;
+			}
+			set
+			{
+				if ((this._caminhoProcesso != value))
+				{
+					this._caminhoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoArquivoDownload", DbType="VarChar(1000)")]
+		public string descricaoArquivoDownload
+		{
+			get
+			{
+				return this._descricaoArquivoDownload;
+			}
+			set
+			{
+				if ((this._descricaoArquivoDownload != value))
+				{
+					this._descricaoArquivoDownload = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_licitacoes_pregao_presencial_registro_precos")]
+	public partial class vw_licitacoes_pregao_presencial_registro_preco
+	{
+		
+		private string _menu;
+		
+		private System.Nullable<int> _anoProcesso;
+		
+		private string _descricaoProcesso;
+		
+		private string _observacoesProcesso;
+		
+		private string _situacaoProcesso;
+		
+		private string _dataProcesso;
+		
+		private string _codigoProcesso;
+		
+		private string _caminho;
+		
+		private string _caminhoProcesso;
+		
+		private string _descricaoArquivoDownload;
+		
+		public vw_licitacoes_pregao_presencial_registro_preco()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_menu", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string menu
+		{
+			get
+			{
+				return this._menu;
+			}
+			set
+			{
+				if ((this._menu != value))
+				{
+					this._menu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoProcesso", DbType="Int")]
+		public System.Nullable<int> anoProcesso
+		{
+			get
+			{
+				return this._anoProcesso;
+			}
+			set
+			{
+				if ((this._anoProcesso != value))
+				{
+					this._anoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoProcesso", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string descricaoProcesso
+		{
+			get
+			{
+				return this._descricaoProcesso;
+			}
+			set
+			{
+				if ((this._descricaoProcesso != value))
+				{
+					this._descricaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_observacoesProcesso", DbType="VarChar(MAX)")]
+		public string observacoesProcesso
+		{
+			get
+			{
+				return this._observacoesProcesso;
+			}
+			set
+			{
+				if ((this._observacoesProcesso != value))
+				{
+					this._observacoesProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacaoProcesso", DbType="VarChar(50)")]
+		public string situacaoProcesso
+		{
+			get
+			{
+				return this._situacaoProcesso;
+			}
+			set
+			{
+				if ((this._situacaoProcesso != value))
+				{
+					this._situacaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataProcesso", DbType="Char(30)")]
+		public string dataProcesso
+		{
+			get
+			{
+				return this._dataProcesso;
+			}
+			set
+			{
+				if ((this._dataProcesso != value))
+				{
+					this._dataProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoProcesso", DbType="VarChar(3)")]
+		public string codigoProcesso
+		{
+			get
+			{
+				return this._codigoProcesso;
+			}
+			set
+			{
+				if ((this._codigoProcesso != value))
+				{
+					this._codigoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminho", DbType="VarChar(500)")]
+		public string caminho
+		{
+			get
+			{
+				return this._caminho;
+			}
+			set
+			{
+				if ((this._caminho != value))
+				{
+					this._caminho = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminhoProcesso", DbType="VarChar(250)")]
+		public string caminhoProcesso
+		{
+			get
+			{
+				return this._caminhoProcesso;
+			}
+			set
+			{
+				if ((this._caminhoProcesso != value))
+				{
+					this._caminhoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoArquivoDownload", DbType="VarChar(1000)")]
+		public string descricaoArquivoDownload
+		{
+			get
+			{
+				return this._descricaoArquivoDownload;
+			}
+			set
+			{
+				if ((this._descricaoArquivoDownload != value))
+				{
+					this._descricaoArquivoDownload = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_licitacoes_pregao_eletronico")]
+	public partial class vw_licitacoes_pregao_eletronico
+	{
+		
+		private string _menu;
+		
+		private System.Nullable<int> _anoProcesso;
+		
+		private string _descricaoProcesso;
+		
+		private string _observacoesProcesso;
+		
+		private string _situacaoProcesso;
+		
+		private string _dataProcesso;
+		
+		private string _codigoProcesso;
+		
+		private string _caminho;
+		
+		private string _caminhoProcesso;
+		
+		private string _descricaoArquivoDownload;
+		
+		public vw_licitacoes_pregao_eletronico()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_menu", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string menu
+		{
+			get
+			{
+				return this._menu;
+			}
+			set
+			{
+				if ((this._menu != value))
+				{
+					this._menu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoProcesso", DbType="Int")]
+		public System.Nullable<int> anoProcesso
+		{
+			get
+			{
+				return this._anoProcesso;
+			}
+			set
+			{
+				if ((this._anoProcesso != value))
+				{
+					this._anoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoProcesso", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string descricaoProcesso
+		{
+			get
+			{
+				return this._descricaoProcesso;
+			}
+			set
+			{
+				if ((this._descricaoProcesso != value))
+				{
+					this._descricaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_observacoesProcesso", DbType="VarChar(MAX)")]
+		public string observacoesProcesso
+		{
+			get
+			{
+				return this._observacoesProcesso;
+			}
+			set
+			{
+				if ((this._observacoesProcesso != value))
+				{
+					this._observacoesProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacaoProcesso", DbType="VarChar(50)")]
+		public string situacaoProcesso
+		{
+			get
+			{
+				return this._situacaoProcesso;
+			}
+			set
+			{
+				if ((this._situacaoProcesso != value))
+				{
+					this._situacaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataProcesso", DbType="Char(30)")]
+		public string dataProcesso
+		{
+			get
+			{
+				return this._dataProcesso;
+			}
+			set
+			{
+				if ((this._dataProcesso != value))
+				{
+					this._dataProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoProcesso", DbType="VarChar(3)")]
+		public string codigoProcesso
+		{
+			get
+			{
+				return this._codigoProcesso;
+			}
+			set
+			{
+				if ((this._codigoProcesso != value))
+				{
+					this._codigoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminho", DbType="VarChar(500)")]
+		public string caminho
+		{
+			get
+			{
+				return this._caminho;
+			}
+			set
+			{
+				if ((this._caminho != value))
+				{
+					this._caminho = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminhoProcesso", DbType="VarChar(250)")]
+		public string caminhoProcesso
+		{
+			get
+			{
+				return this._caminhoProcesso;
+			}
+			set
+			{
+				if ((this._caminhoProcesso != value))
+				{
+					this._caminhoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoArquivoDownload", DbType="VarChar(1000)")]
+		public string descricaoArquivoDownload
+		{
+			get
+			{
+				return this._descricaoArquivoDownload;
+			}
+			set
+			{
+				if ((this._descricaoArquivoDownload != value))
+				{
+					this._descricaoArquivoDownload = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_licitacoes_ata_registro_precos")]
+	public partial class vw_licitacoes_ata_registro_preco
+	{
+		
+		private string _menu;
+		
+		private string _anoProcesso;
+		
+		private string _descricaoProcesso;
+		
+		private string _observacoesProcesso;
+		
+		private string _situacaoProcesso;
+		
+		private string _dataProcesso;
+		
+		private string _codigoProcesso;
+		
+		private string _caminho;
+		
+		private string _caminhoProcesso;
+		
+		private string _descricaoArquivoDownload;
+		
+		public vw_licitacoes_ata_registro_preco()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_menu", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string menu
+		{
+			get
+			{
+				return this._menu;
+			}
+			set
+			{
+				if ((this._menu != value))
+				{
+					this._menu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoProcesso", DbType="VarChar(4)")]
+		public string anoProcesso
+		{
+			get
+			{
+				return this._anoProcesso;
+			}
+			set
+			{
+				if ((this._anoProcesso != value))
+				{
+					this._anoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoProcesso", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string descricaoProcesso
+		{
+			get
+			{
+				return this._descricaoProcesso;
+			}
+			set
+			{
+				if ((this._descricaoProcesso != value))
+				{
+					this._descricaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_observacoesProcesso", DbType="VarChar(MAX)")]
+		public string observacoesProcesso
+		{
+			get
+			{
+				return this._observacoesProcesso;
+			}
+			set
+			{
+				if ((this._observacoesProcesso != value))
+				{
+					this._observacoesProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacaoProcesso", DbType="VarChar(50)")]
+		public string situacaoProcesso
+		{
+			get
+			{
+				return this._situacaoProcesso;
+			}
+			set
+			{
+				if ((this._situacaoProcesso != value))
+				{
+					this._situacaoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataProcesso", DbType="Char(30)")]
+		public string dataProcesso
+		{
+			get
+			{
+				return this._dataProcesso;
+			}
+			set
+			{
+				if ((this._dataProcesso != value))
+				{
+					this._dataProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoProcesso", DbType="VarChar(3)")]
+		public string codigoProcesso
+		{
+			get
+			{
+				return this._codigoProcesso;
+			}
+			set
+			{
+				if ((this._codigoProcesso != value))
+				{
+					this._codigoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminho", DbType="VarChar(500)")]
+		public string caminho
+		{
+			get
+			{
+				return this._caminho;
+			}
+			set
+			{
+				if ((this._caminho != value))
+				{
+					this._caminho = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_caminhoProcesso", DbType="VarChar(250)")]
+		public string caminhoProcesso
+		{
+			get
+			{
+				return this._caminhoProcesso;
+			}
+			set
+			{
+				if ((this._caminhoProcesso != value))
+				{
+					this._caminhoProcesso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricaoArquivoDownload", DbType="VarChar(1000)")]
+		public string descricaoArquivoDownload
+		{
+			get
+			{
+				return this._descricaoArquivoDownload;
+			}
+			set
+			{
+				if ((this._descricaoArquivoDownload != value))
+				{
+					this._descricaoArquivoDownload = value;
 				}
 			}
 		}
