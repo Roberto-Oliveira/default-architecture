@@ -78,18 +78,18 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Licitações<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Legislação</a></li>
-                            <li><a href="#">Avisos</a></li>
+                            <li><a href="/pages/legislacao.aspx">Legislação</a></li>
+                            <li><a href="/pages/avisos.aspx">Avisos</a></li>
                             <li><a href="#">Convite</a></li>
-                            <li><a href="#">Tomada de Preços</a></li>
-                            <li><a href="#">Concorrência Pública</a></li>
-                            <li><a href="#">Pregão Presencial - Aquisição/Contratação</a></li>
-                            <li><a href="#">Pregão Presencial - Registro de Preços</a></li>
-                            <li><a href="#">Pregão Eletrônico</a></li>
-                            <li><a href="#">Ata de Registro de Preços</a></li>
+                            <li><a href="/pages/tomada_de_precos.aspx">Tomada de Preços</a></li>
+                            <li><a href="/pages/concorrencia_publica.aspx">Concorrência Pública</a></li>
+                            <li><a href="/pages/pregao_presencial.aspx">Pregão Presencial - Aquisição/Contratação</a></li>
+                            <li><a href="/pages/pregao_presencial_registro_precos.aspx">Pregão Presencial - Registro de Preços</a></li>
+                            <li><a href="/pages/pregao_eletronico.aspx">Pregão Eletrônico</a></li>
+                            <li><a href="/pages/ata_registro_de_precos.aspx">Ata de Registro de Preços</a></li>
                             <li><a href="#">Adesão a Ata de Registro de Preços</a></li>
                             <li><a href="#">Adesão ao Sistema de Registro de Preços</a></li>
-                            <li><a href="#">Cadastro de Fornecedores - DPGE</a></li>
+                            <li><a href="/pages/cadastro_fornecedores.aspx">Cadastro de Fornecedores - DPGE</a></li>
                         </ul>
                     </li>
 

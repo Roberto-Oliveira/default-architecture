@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AtaRegistroPrecosDao.cs" />
     <Compile Include="AvisosDao.cs" />
+    <Compile Include="CadastroFornecedoresDao.cs" />
     <Compile Include="CargoComissaoDao.cs" />
     <Compile Include="CargoComissionadoVencimentoDao.cs" />
     <Compile Include="CargoDefensorDao.cs" />

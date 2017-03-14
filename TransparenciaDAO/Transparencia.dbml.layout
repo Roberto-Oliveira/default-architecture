@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 19.5" name="Transparencia">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 21.375" name="Transparencia">
   <DataContextMoniker Name="/TransparenciaDataContext" />
   <nestedChildShapes>
     <classShape Id="7430f7fe-3267-4576-ad2c-f2d7588b2e4b" absoluteBounds="5.5, 0.625, 2, 3.1170068359375005">
@@ -96,6 +96,12 @@
       <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_ata_registro_preco" />
       <nestedChildShapes>
         <elementListCompartment Id="5c948282-f0ed-4305-9621-9781f74b87bc" absoluteBounds="3.64, 16.96, 2.3449999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41a988cc-38e7-48d3-a706-a06b127c19ba" absoluteBounds="0.625, 18.375, 2.375, 2.7324039713541666">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_cadastro_fornecedore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d70cf6b-4a4e-4446-a94d-c3508d4a360c" absoluteBounds="0.64, 18.835, 2.3449999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

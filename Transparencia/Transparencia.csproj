@@ -212,6 +212,7 @@
     <Content Include="Account\Web.config" />
     <Content Include="pages\ata_registro_de_precos.aspx" />
     <Content Include="pages\avisos.aspx" />
+    <Content Include="pages\cadastro_fornecedores.aspx" />
     <Content Include="pages\cargos_comissao.aspx" />
     <Content Include="pages\cargo_comissionado_vencimento.aspx" />
     <Content Include="pages\cargo_efetivo.aspx" />
@@ -433,6 +434,13 @@
     </Compile>
     <Compile Include="pages\avisos.aspx.designer.cs">
       <DependentUpon>avisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\cadastro_fornecedores.aspx.cs">
+      <DependentUpon>cadastro_fornecedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\cadastro_fornecedores.aspx.designer.cs">
+      <DependentUpon>cadastro_fornecedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\cargos_comissao.aspx.cs">
       <DependentUpon>cargos_comissao.aspx</DependentUpon>

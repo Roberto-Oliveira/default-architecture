@@ -202,4 +202,18 @@
       <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.vw_licitacoes_cadastro_fornecedores" Member="vw_licitacoes_cadastro_fornecedores">
+    <Type Name="vw_licitacoes_cadastro_fornecedore">
+      <Column Name="menu" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="anoProcesso" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="descricaoProcesso" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="observacoesProcesso" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="situacaoProcesso" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dataProcesso" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="codigoProcesso" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="caminho" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="caminhoProcesso" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>
