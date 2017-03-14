@@ -1,12 +1,12 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Transparencia.SiteMaster" %>
+ï»¿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Transparencia.Home" %>
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Portal da Transparência</title>
+    <title><%: Page.Title %> - Portal da TransparÃªncia</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -19,7 +19,6 @@
     <%:Styles.Render("~/Content/Site.css") %>
     <%:Styles.Render("~/Content/ej/web/ej.widgets.core.min.css") %>
     <%:Styles.Render("~/Content/ej/web/bootstrap-theme/ej.theme.min.css") %>
-    <%:Styles.Render("~/Content/portal.css") %>
 
 
     <%: Scripts.Render("~/Scripts/jquery-1.10.2.min.js")%>
@@ -27,6 +26,8 @@
     <%: Scripts.Render("~/Scripts/ej/ej.web.all.min.js")%>
     <%: Scripts.Render("~/Scripts/ej/ej.webform.min.js")%>
     <%: Scripts.Render("~/Scripts/bootstrap-dropdown.js")%>
+    <%:Styles.Render("~/Content/portal.css") %>
+    <%: Scripts.Render("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")%>
 
     <script>
         $('.dropdown-toggle').dropdown()
@@ -41,67 +42,57 @@
 </head>
 <body style="padding-top: 0px;">
     <form runat="server">
-
+        
         <asp:ScriptManager runat="server">
         </asp:ScriptManager>
 
-        <div class="container">
-            <div class="row" style="margin-bottom: -10px;">
-                <div class="col-md-12">
-                    <p>
-                        <img alt="" src="/images/banner-transparencia.png" style="width: 1170px;" />
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="navbar navbar-default navbar-static-top">
+       <div class="navbar navbar-default navbar-static-top">
             <div class="container">
 
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Transparência</a>
+                    <a class="navbar-brand" href="#">TransparÃªncia</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a href="/pages/contrato_convenio.aspx">Contratos e Convênios</a></li>
+                    <li><a href="/pages/contrato_convenio.aspx">Contratos e ConvÃªnios</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestão de Pessoal<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">GestÃ£o de Pessoal<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/pages/quantitativo_defensores.aspx">Quadro da Defensoria Pública</a></li>
+                            <li><a href="/pages/quantitativo_defensores.aspx">Quadro da Defensoria PÃºblica</a></li>
                             <li><a href="/pages/cargo_efetivo.aspx">Cargos Efetivos</a></li>
-                            <li><a href="/pages/cargos_comissao.aspx">Cargos em Comissão</a></li>
+                            <li><a href="/pages/cargos_comissao.aspx">Cargos em ComissÃ£o</a></li>
                             <li><a href="/pages/subsidio.aspx">Subsidio</a></li>
                             <li><a href="/pages/cargo_efetivo_vencimento.aspx">Vencimento Cargos Efetivos</a></li>
-                            <li><a href="/pages/cargo_comissionado_vencimento.aspx">Vencimento Cargos Comissão</a></li>
-                            <li><a href="/pages/folha_pagamento.aspx">Consulta Remuneração</a></li>
+                            <li><a href="/pages/cargo_comissionado_vencimento.aspx">Vencimento Cargos ComissÃ£o</a></li>
+                            <li><a href="/pages/folha_pagamento.aspx">Consulta RemuneraÃ§Ã£o</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Execução Orçamentária e Financeira<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ExecuÃ§Ã£o OrÃ§amentÃ¡ria e Financeira<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="http://www.transparencia.ms.gov.br/#/Orcamento">Legislação Orçamentária</a></li>
+                            <li><a href="http://www.transparencia.ms.gov.br/#/Orcamento">LegislaÃ§Ã£o OrÃ§amentÃ¡ria</a></li>
                             <li><a href="http://www.transparencia.ms.gov.br/#/ReceitaSimplificada" target="_blank">Receita - FUNADEP</a></li>
-                            <li><a href="#">Repasse - Duodécimo</a></li>
+                            <li><a href="#">Repasse - DuodÃ©cimo</a></li>
                             <li><a href="http://www.transparencia.ms.gov.br/#/Despesa" target="_blank">Despesa</a></li>
                             <li><a href="http://www.scge.ms.gov.br/?page_id=370" target="_blank">LRF</a></li>
-                            <li><a href="#">Balanços Contábeis</a></li>
+                            <li><a href="#">BalanÃ§os ContÃ¡beis</a></li>
                             <li><a href="#">Balancete</a></li>
-                            <li><a href="#">Publicações</a></li>
+                            <li><a href="#">PublicaÃ§Ãµes</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Licitações<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">LicitaÃ§Ãµes<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/pages/legislacao.aspx">Legislação</a></li>
+                            <li><a href="/pages/legislacao.aspx">LegislaÃ§Ã£o</a></li>
                             <li><a href="/pages/avisos.aspx">Avisos</a></li>
                             <li><a href="#">Convite</a></li>
-                            <li><a href="/pages/tomada_de_precos.aspx">Tomada de Preços</a></li>
-                            <li><a href="/pages/concorrencia_publica.aspx">Concorrência Pública</a></li>
-                            <li><a href="/pages/pregao_presencial.aspx">Pregão Presencial - Aquisição/Contratação</a></li>
-                            <li><a href="/pages/pregao_presencial_registro_precos.aspx">Pregão Presencial - Registro de Preços</a></li>
-                            <li><a href="/pages/pregao_eletronico.aspx">Pregão Eletrônico</a></li>
-                            <li><a href="/pages/ata_registro_de_precos.aspx">Ata de Registro de Preços</a></li>
-                            <li><a href="#">Adesão a Ata de Registro de Preços</a></li>
-                            <li><a href="#">Adesão ao Sistema de Registro de Preços</a></li>
+                            <li><a href="/pages/tomada_de_precos.aspx">Tomada de PreÃ§os</a></li>
+                            <li><a href="/pages/concorrencia_publica.aspx">ConcorrÃªncia PÃºblica</a></li>
+                            <li><a href="/pages/pregao_presencial.aspx">PregÃ£o Presencial - AquisiÃ§Ã£o/ContrataÃ§Ã£o</a></li>
+                            <li><a href="/pages/pregao_presencial_registro_precos.aspx">PregÃ£o Presencial - Registro de PreÃ§os</a></li>
+                            <li><a href="/pages/pregao_eletronico.aspx">PregÃ£o EletrÃ´nico</a></li>
+                            <li><a href="/pages/ata_registro_de_precos.aspx">Ata de Registro de PreÃ§os</a></li>
+                            <li><a href="#">AdesÃ£o a Ata de Registro de PreÃ§os</a></li>
+                            <li><a href="#">AdesÃ£o ao Sistema de Registro de PreÃ§os</a></li>
                             <li><a href="/pages/cadastro_fornecedores.aspx">Cadastro de Fornecedores - DPGE</a></li>
                         </ul>
                     </li>
@@ -123,7 +114,7 @@
             <hr />
 
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Portal da Transparência</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Portal da TransparÃªncia</p>
             </footer>
         </div>
     </form>

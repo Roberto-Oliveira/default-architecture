@@ -1,9 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="cadastro_fornecedores.aspx.cs" Inherits="Transparencia.pages.CadastroFornecedores" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
+     
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Cadastro de Fornecedores</h2>
-    <br />
-
+    
     <div style="position: relative;">
 
         <ej:Grid ID="gvCadastroFornecedores" runat="server"
@@ -21,7 +23,7 @@
                 </ej:Column>
                 <ej:Column Field="codigoProcesso" HeaderText="Código Processo" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="8%" Visible="False">
+                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" Visible="False">
                 </ej:Column>
                 <ej:Column Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
                 </ej:Column>
@@ -44,7 +46,7 @@
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="10"></PageSettings>
+            <PageSettings PageSize="7"></PageSettings>
 
         </ej:Grid>
 

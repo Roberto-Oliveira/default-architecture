@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="pregao_eletronico.aspx.cs" Inherits="Transparencia.pages.pregao_eletronico" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
+</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Pregão Eletrônico</h2>
-    <br />
-
+   
     <div style="position: relative;">
 
         <ej:Grid ID="gvPregaoEletronico" runat="server"
@@ -19,7 +22,7 @@
                 </ej:Column>
                 <ej:Column Field="codigoProcesso" HeaderText="Código Processo">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="8%">
+                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%">
                 </ej:Column>
                 <ej:Column Field="descricaoProcesso" HeaderText="Descrição">
                 </ej:Column>
@@ -43,7 +46,7 @@
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="10"></PageSettings>
+            <PageSettings PageSize="7"></PageSettings>
         </ej:Grid>
 
         <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="800" Title="Detalhes" ShowOnInit="false"

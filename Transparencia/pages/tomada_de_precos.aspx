@@ -1,42 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="tomada_de_precos.aspx.cs" Inherits="Transparencia.pages.TomadaDePrecos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
-    <style type="text/css">
-        .e-grid .e-headercelldiv {
-            font-weight: bold;
-            font-size: 12px;
-            display: block;
-            border: 0 none;
-            height: 29px;
-            line-height: 29px;
-            margin: -10px;
-            padding: 0 .7em;
-            text-align: left;
-            white-space: nowrap;
-        }
-
-        .e-grid .e-rowcell {
-            border-width: 1px 0 0 1px;
-            padding: 10px 0px 10px 3px;
-            line-height: 14px;
-            white-space: nowrap;
-            width: auto;
-            vertical-align: middle;
-        }
-
-        .td-grid {
-            width: 144px;
-        }
-
-        td.td-grid {
-            height: 29px;
-        }
-    </style>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Tomada de Preços</h2>
-    <br />
-
+   
     <div style="position: relative;">
 
         <ej:Grid ID="gvTomadaPrecos" runat="server"
@@ -50,7 +19,7 @@
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="8%" AllowFiltering="True">
+                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" AllowFiltering="True">
                 </ej:Column>
                 <ej:Column Field="descricaoProcesso" HeaderText="Descrição">
                 </ej:Column>
@@ -75,7 +44,7 @@
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="10"></PageSettings>
+            <PageSettings PageSize="7"></PageSettings>
         </ej:Grid>
 
         <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="800" Title="Detalhes" ShowOnInit="false"

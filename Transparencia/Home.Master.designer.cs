@@ -7,27 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Transparencia.pages {
+namespace Transparencia {
     
     
-    public partial class AtaRegistroDePrecos {
+    public partial class Home {
         
         /// <summary>
-        /// gvAtaRegistroPrecos control.
+        /// ControlContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Grid gvAtaRegistroPrecos;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ControlContent;
         
         /// <summary>
-        /// commanddialog control.
+        /// MainContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.Dialog commanddialog;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        
+        /// <summary>
+        /// ScriptContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptContent;
     }
 }

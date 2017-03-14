@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ata_registro_de_precos.aspx.cs" Inherits="Transparencia.pages.AtaRegistroDePrecos" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
+     
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Ata Registro de Preços</h2>
-    <br />
-
+   
     <div style="position: relative;">
 
         <ej:Grid ID="gvAtaRegistroPrecos" runat="server"
@@ -19,7 +22,7 @@
                 </ej:Column>
                 <ej:Column Field="codigoProcesso" HeaderText="Código Processo">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="8%">
+                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%">
                 </ej:Column>
                 <ej:Column Field="descricaoProcesso" HeaderText="Descrição">
                 </ej:Column>
@@ -42,7 +45,7 @@
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="10"></PageSettings>
+            <PageSettings PageSize="7"></PageSettings>
 
         </ej:Grid>
 
