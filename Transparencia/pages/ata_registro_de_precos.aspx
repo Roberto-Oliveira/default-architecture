@@ -9,34 +9,38 @@
    
     <div style="position: relative;">
 
-        <ej:Grid ID="gvAtaRegistroPrecos" runat="server"
+       <ej:Grid ID="gvAtaRegistroPrecos" runat="server"
+            AllowFiltering="True"
             AllowSorting="True"
             AllowPaging="True"
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            AllowResizeToFit="True">
+            AllowResizeToFit="True"
+            AllowGrouping="True">
+
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
 
             <Columns>
-                <ej:Column Field="menu" HeaderText="Menu" Visible="False">
+                <ej:Column Field="menu" HeaderText="Menu" Visible="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="codigoProcesso" HeaderText="Código Processo">
+                <ej:Column Field="codigoProcesso" HeaderText="Código Processo" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%">
+                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="descricaoProcesso" HeaderText="Descrição">
+                <ej:Column Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="descricaoArquivoDownload" HeaderText="Observações">
+                <ej:Column Field="descricaoArquivoDownload" HeaderText="Observações" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="situacaoProcesso" HeaderText="Situação">
+                <ej:Column Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="dataProcesso" HeaderText="Data">
+                <ej:Column Field="dataProcesso" HeaderText="Data" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
-                <ej:Column Field="caminhoProcesso" HeaderText="Caminho Arquivo Download" Visible="False">
+                <ej:Column Field="caminhoProcesso" HeaderText="Caminho Arquivo Download" Visible="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="descricaoArquivoDownload" HeaderText="Descrição Arquivo Download" Visible="False">
+                <ej:Column Field="descricaoArquivoDownload" HeaderText="Descrição Arquivo Download" Visible="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="8%" Field="" AllowFiltering="False">
+                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="8%" Field="" AllowFiltering="False" AllowGrouping="False">
                     <Command>
                         <ej:Commands Type="detail">
                             <ButtonOptions Text="Detalhes" Width="80%" Height="2%" Click="onClick"></ButtonOptions>

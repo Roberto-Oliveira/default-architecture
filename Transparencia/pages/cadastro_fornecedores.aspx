@@ -17,6 +17,8 @@
             AllowResizeToFit="True"
             AllowGrouping="True"
             >
+            
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False">
@@ -29,7 +31,7 @@
                 </ej:Column>
                 <ej:Column Field="descricaoArquivoDownload" HeaderText="Observações" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="False">
+                <ej:Column Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
                 </ej:Column>
                 <ej:Column Field="dataProcesso" HeaderText="Data" AllowGrouping="False">
                 </ej:Column>

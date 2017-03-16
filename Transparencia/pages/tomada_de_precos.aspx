@@ -1,33 +1,38 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="tomada_de_precos.aspx.cs" Inherits="Transparencia.pages.TomadaDePrecos" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
-    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Tomada de Preços</h2>
-   
+
     <div style="position: relative;">
 
         <ej:Grid ID="gvTomadaPrecos" runat="server"
+            AllowFiltering="True"
             AllowSorting="True"
             AllowPaging="True"
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            AllowResizeToFit="True">
+            AllowResizeToFit="True"
+            AllowGrouping="True">
+
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+
 
             <Columns>
-                <ej:Column Field="menu" HeaderText="Menu" Visible="False">
+                <ej:Column Field="menu" HeaderText="Menu" Visible="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" AllowFiltering="True">
+                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" AllowFiltering="True" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="descricaoProcesso" HeaderText="Descrição">
+                <ej:Column Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="descricaoArquivoDownload" HeaderText="Observações">
+                <ej:Column Field="descricaoArquivoDownload" HeaderText="Observações" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="situacaoProcesso" HeaderText="Situação">
+                <ej:Column Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="dataProcesso" HeaderText="Data">
+                <ej:Column Field="dataProcesso" HeaderText="Data" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
                 <ej:Column Field="codigoProcesso" HeaderText="Código Processo" Visible="False">
                 </ej:Column>

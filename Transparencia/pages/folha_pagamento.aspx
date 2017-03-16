@@ -1,11 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="folha_pagamento.aspx.cs" Inherits="Transparencia.pages.FolhaPagamento" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ControlContent" runat="server">
-    
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    
+
     <h2>Folha de Pagamento</h2>
 
     <div id="ControlRegion">
@@ -16,11 +15,17 @@
                     AllowResizeToFit="True"
                     AllowPaging="True"
                     OnServerExcelExporting="gvFolhaServidores_OnServerExcelExporting"
-                    ShowColumnChooser="True" 
-                    AllowFiltering="True">
+                    ShowColumnChooser="True"
+                    AllowFiltering="True"
+                    AllowSelection="False"
+                    EnableRowHover="False"
+                    ClientIDMode="Static"
+                    AllowGrouping="True">
 
+                    <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
 
-                    <PageSettings PageSize="7"></PageSettings>
+                    <PageSettings PageSize="6"></PageSettings>
+
                     <ToolbarSettings ShowToolbar="True" ToolbarItems="excelExport"></ToolbarSettings>
 
                 </ej:Grid>

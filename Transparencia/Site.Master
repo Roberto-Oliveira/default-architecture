@@ -49,7 +49,9 @@
             <div class="row" style="margin-bottom: -10px;">
                 <div class="col-md-12">
                     <p>
-                        <img alt="" src="/images/banner-transparencia.png" style="width: 1170px;" />
+                        <a href="/transparencia.aspx">
+                            <img alt="" src="/images/banner-transparencia.png" class="img-responsive" style="width: 1170px;" />
+                        </a>
                     </p>
                 </div>
             </div>
@@ -59,7 +61,7 @@
             <div class="container">
 
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Transparência</a>
+                    <a class="navbar-brand" href="/transparencia.aspx">Transparência</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="/pages/contrato_convenio.aspx">Contratos e Convênios</a></li>
@@ -94,7 +96,7 @@
                             <li><a href="/pages/legislacao.aspx">Legislação</a></li>
                             <li><a href="/pages/avisos.aspx">Avisos</a></li>
                             <li><a href="#">Convite</a></li>
-                            <li><a href="/pages/tomada_de_precos.aspx">Tomada de Preços</a></li>
+                            <li><a href="#">Tomada de Preços</a></li>
                             <li><a href="/pages/concorrencia_publica.aspx">Concorrência Pública</a></li>
                             <li><a href="/pages/pregao_presencial.aspx">Pregão Presencial - Aquisição/Contratação</a></li>
                             <li><a href="/pages/pregao_presencial_registro_precos.aspx">Pregão Presencial - Registro de Preços</a></li>

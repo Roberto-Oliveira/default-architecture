@@ -7,39 +7,33 @@
     <h2>Cargos Comissionados - Vencimentos</h2>
    
     <ej:Grid ID="gvCargosComissionadosVencimentos" runat="server"
-        AllowGrouping="True"
+        AllowFiltering="True"
+        AllowSorting="True"
         AllowPaging="True"
-        ShowSummary="True"
-        AllowSorting="True" 
+        AllowSelection="False"
+        EnableRowHover="False"
+        ClientIDMode="Static"
         AllowResizeToFit="True"
-        >
+        AllowGrouping="True">
+
+        <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
         
         <Columns>
-            <ej:Column Field="anoCompetencia" HeaderText="Ano Competência">
+            <ej:Column Field="anoCompetencia" HeaderText="Ano Competência" AllowGrouping="True" AllowFiltering="True">
             </ej:Column>
-            <ej:Column Field="descricaoClasse" HeaderText="Símbolo">
+            <ej:Column Field="descricaoClasse" HeaderText="Símbolo" AllowGrouping="True" AllowFiltering="True">
             </ej:Column>
-            <ej:Column Field="tipoServidor" HeaderText="Tipo Servidor" Visible="False">
+            <ej:Column Field="tipoServidor" HeaderText="Tipo Servidor" Visible="False" AllowGrouping="False" AllowFiltering="False">
             </ej:Column>
-            <ej:Column Field="valorReajuste" HeaderText="Vencimento Básico">
+            <ej:Column Field="valorReajuste" HeaderText="Vencimento Básico" AllowGrouping="False" AllowFiltering="False">
             </ej:Column>
-            <ej:Column Field="percentual" HeaderText="Percentual">
+            <ej:Column Field="percentual" HeaderText="Percentual" AllowGrouping="False" AllowFiltering="False">
             </ej:Column>
-            <ej:Column Field="gratificacao" HeaderText="Gratificação" Tooltip="Gratificação pelo exercício do Cargo em Comissão">
+            <ej:Column Field="gratificacao" HeaderText="Gratificação" Tooltip="Gratificação pelo exercício do Cargo em Comissão" AllowGrouping="False" AllowFiltering="False">
             </ej:Column>
         </Columns>
         
-        <PageSettings PageSize="10"></PageSettings>
-
-        <GroupSettings GroupedColumns="anoCompetencia"></GroupSettings>
-
-        <SummaryRows>
-            <ej:SummaryRow ShowTotalSummary="False">
-                <SummaryColumn>
-                    <ej:SummaryColumn SummaryType="Count"/>
-                </SummaryColumn>
-            </ej:SummaryRow>
-        </SummaryRows>
+        <PageSettings PageSize="7"></PageSettings>
 
     </ej:Grid>
     

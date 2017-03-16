@@ -6,7 +6,9 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron" style="background: transparent">
 
-        <img src="images/banner-inicial-transparencia.png" alt="Banner" style="width: 1169px; margin-left: -59px;" />
+        <a href="/transparencia.aspx">
+            <img src="images/banner-inicial-transparencia.png" alt="Banner" style="width: 1169px; margin-left: -59px;" class="img-responsive"/>
+        </a>
 
     </div>
     <div class="container">
@@ -36,6 +38,10 @@
                                 <h4 class="modal-title">Sobre o Portal</h4>
                             </div>
                             <div class="modal-body">
+                                <p>
+                                    <img src="/images/banner-transparencia.png" alt="" style="width: 557px;" class="img-responsive"/>
+                                </p>
+                                <br/>
                                 <p class="paragrafo-justificacao">O estímulo à transparência pública é um dos objetivos essenciais da moderna Administração Pública. A ampliação da divulgação das ações governamentais a milhões de brasileiros, além de contribuir para o fortalecimento da democracia, prestigia e desenvolve as noções de cidadania. As páginas de Transparência Pública dão continuidade às ações de governo voltadas para o incremento da transparência e do controle social, com objetivo de divulgar as despesas realizadas pelos órgãos e entidades da Administração Pública.</p>
                                 <p class="paragrafo-justificacao">Dessa forma, em atendimento ao Princípio Constitucional da Publicidade e visando dar cumprimento ao disposto na Lei Complementar Federal nº 131, de 27 de maio de 2009, que trata da divulgação, em tempo real, de informações pormenorizadas sobre a execução orçamentária e financeira, bem como às disposições estatuídas na Lei Federal nº 12.527, de 18 de novembro de 2011, também denominada de Lei de Acesso à Informação, a Defensoria Pública do Estado de Mato Grosso do Sul disponibiliza neste Portal as informações existentes nas suas bases de dados e procura atender por meio das suas ações e atividades as aspirações da sociedade.</p>
                             </div>
