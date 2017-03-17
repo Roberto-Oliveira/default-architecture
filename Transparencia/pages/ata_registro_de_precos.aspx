@@ -1,15 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ata_registro_de_precos.aspx.cs" Inherits="Transparencia.pages.AtaRegistroDePrecos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
-     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Ata Registro de Preços</h2>
-   
+
     <div style="position: relative;">
 
-       <ej:Grid ID="gvAtaRegistroPrecos" runat="server"
+        <ej:Grid ID="gvAtaRegistroPrecos" runat="server"
             AllowFiltering="True"
             AllowSorting="True"
             AllowPaging="True"
@@ -17,7 +16,8 @@
             EnableRowHover="False"
             ClientIDMode="Static"
             AllowResizeToFit="True"
-            AllowGrouping="True">
+            AllowGrouping="True"
+            Locale="pt-BR">
 
             <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
 
@@ -117,6 +117,22 @@
             if (navigator.userAgent.indexOf("MSIE 8.0") != -1)
                 $("#commanddialog").find("img").width(150);
         }
+    </script>
+
+    <script type="text/javascript">
+        ej.Grid.Locale["pt-BR"] = {
+            GroupDropArea: "Arraste o cabeçalho das colunas para a área azul para agrupá-las",
+            Columns: "Colunas"
+        };
+        if (ej.Pager) ej.Pager.Locale["pt-BR"] = {
+            pagerInfo: "{0} de {1} páginas ({2} itens)",
+            firstPageTooltip: "Ir para a primeira página",
+            lastPageTooltip: "Ir para a última página",
+            nextPageTooltip: "Ir para a próxima página",
+            previousPageTooltip: "Ir para a página anterior",
+            nextPagerTooltip: "Ir para a próxima página",
+            previousPagerTooltip: "Ir para página anterior"
+        };
     </script>
 
 </asp:Content>

@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head runat="server">
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Portal da Transparência</title>
@@ -11,6 +13,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
+
     <webopt:BundleReference runat="server" Path="~/Content/css" />
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -21,10 +24,10 @@
     <%:Styles.Render("~/Content/ej/web/bootstrap-theme/ej.theme.min.css") %>
     <%:Styles.Render("~/Content/portal.css") %>
 
-
     <%: Scripts.Render("~/Scripts/jquery-1.10.2.min.js")%>
     <%: Scripts.Render("~/Scripts/jsrender.min.js")%>
     <%: Scripts.Render("~/Scripts/ej/ej.web.all.min.js")%>
+    <%: Scripts.Render("~/Scripts/ej/i18n/ej.culture.pt-BR.min.js")%>
     <%: Scripts.Render("~/Scripts/ej/ej.webform.min.js")%>
     <%: Scripts.Render("~/Scripts/bootstrap-dropdown.js")%>
 
@@ -39,6 +42,7 @@
     </style>
 
 </head>
+
 <body style="padding-top: 0px;">
     <form runat="server">
 
