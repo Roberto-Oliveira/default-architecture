@@ -16,29 +16,6 @@
       <Column Name="objeto" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.vw_folha_pagamento_servidor" Member="vw_folha_pagamento_servidors">
-    <Type Name="vw_folha_pagamento_servidor">
-      <Column Name="[Mês Competência]" Member="Mês_Competência" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
-      <Column Name="[Ano Competência]" Member="Ano_Competência" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Matrícula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="[Nome Beneficiário]" Member="Nome_Beneficiário" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="Cargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="Classe" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="[Cargo Comissão]" Member="Cargo_Comissão" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="Vencimento" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="Subsidio" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="[Vantagens Pessoais]" Member="Vantagens_Pessoais" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="[Vantagens Cargo]" Member="Vantagens_Cargo" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="Férias" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="[Décimo Salário]" Member="Décimo_Salário" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="[Total Créditos]" Member="Total_Créditos" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="Previdência" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="Imposto" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="[Total Desconto]" Member="Total_Desconto" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="[Total Líquido]" Member="Total_Líquido" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="Indenizações" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.vw_cargo_comissao_servidor" Member="vw_cargo_comissao_servidors">
     <Type Name="vw_cargo_comissao_servidor">
       <Column Name="grupo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
@@ -214,6 +191,35 @@
       <Column Name="caminho" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
       <Column Name="caminhoProcesso" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
       <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_folha_pagamento_servidor" Member="vw_folha_pagamento_servidors">
+    <Type Name="vw_folha_pagamento_servidor">
+      <Column Name="mesCompetencia" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="classe" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cargoComissao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="vencimento" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="subsidio" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="vantagemsPessoais" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="vantagensCargo" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="ferias" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="decimoSalario" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="totalCredito" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="previdencia" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="imposto" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="totalDesconto" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="totalLiquido" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="indenizacoes" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_servidores" Member="vw_servidores">
+    <Type Name="vw_servidore">
+      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

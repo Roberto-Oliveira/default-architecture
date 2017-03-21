@@ -70,14 +70,6 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		public System.Data.Linq.Table<vw_folha_pagamento_servidor> vw_folha_pagamento_servidors
-		{
-			get
-			{
-				return this.GetTable<vw_folha_pagamento_servidor>();
-			}
-		}
-		
 		public System.Data.Linq.Table<vw_cargo_comissao_servidor> vw_cargo_comissao_servidors
 		{
 			get
@@ -195,6 +187,22 @@ namespace TransparenciaDAO
 			get
 			{
 				return this.GetTable<vw_licitacoes_cadastro_fornecedore>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_folha_pagamento_servidor> vw_folha_pagamento_servidors
+		{
+			get
+			{
+				return this.GetTable<vw_folha_pagamento_servidor>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_servidore> vw_servidores
+		{
+			get
+			{
+				return this.GetTable<vw_servidore>();
 			}
 		}
 	}
@@ -419,357 +427,6 @@ namespace TransparenciaDAO
 				if ((this._objeto != value))
 				{
 					this._objeto = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_folha_pagamento_servidor")]
-	public partial class vw_folha_pagamento_servidor
-	{
-		
-		private string _Mês_Competência;
-		
-		private System.Nullable<int> _Ano_Competência;
-		
-		private string _Matrícula;
-		
-		private string _Nome_Beneficiário;
-		
-		private string _Cargo;
-		
-		private string _Classe;
-		
-		private string _Cargo_Comissão;
-		
-		private System.Nullable<decimal> _Vencimento;
-		
-		private System.Nullable<decimal> _Subsidio;
-		
-		private System.Nullable<decimal> _Vantagens_Pessoais;
-		
-		private System.Nullable<decimal> _Vantagens_Cargo;
-		
-		private System.Nullable<decimal> _Férias;
-		
-		private System.Nullable<decimal> _Décimo_Salário;
-		
-		private System.Nullable<decimal> _Total_Créditos;
-		
-		private System.Nullable<decimal> _Previdência;
-		
-		private System.Nullable<decimal> _Imposto;
-		
-		private System.Nullable<decimal> _Total_Desconto;
-		
-		private System.Nullable<decimal> _Total_Líquido;
-		
-		private System.Nullable<decimal> _Indenizações;
-		
-		public vw_folha_pagamento_servidor()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Mês Competência]", Storage="_Mês_Competência", DbType="VarChar(15)")]
-		public string Mês_Competência
-		{
-			get
-			{
-				return this._Mês_Competência;
-			}
-			set
-			{
-				if ((this._Mês_Competência != value))
-				{
-					this._Mês_Competência = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Ano Competência]", Storage="_Ano_Competência", DbType="Int")]
-		public System.Nullable<int> Ano_Competência
-		{
-			get
-			{
-				return this._Ano_Competência;
-			}
-			set
-			{
-				if ((this._Ano_Competência != value))
-				{
-					this._Ano_Competência = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Matrícula", DbType="VarChar(255)")]
-		public string Matrícula
-		{
-			get
-			{
-				return this._Matrícula;
-			}
-			set
-			{
-				if ((this._Matrícula != value))
-				{
-					this._Matrícula = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Nome Beneficiário]", Storage="_Nome_Beneficiário", DbType="VarChar(255)")]
-		public string Nome_Beneficiário
-		{
-			get
-			{
-				return this._Nome_Beneficiário;
-			}
-			set
-			{
-				if ((this._Nome_Beneficiário != value))
-				{
-					this._Nome_Beneficiário = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cargo", DbType="VarChar(255)")]
-		public string Cargo
-		{
-			get
-			{
-				return this._Cargo;
-			}
-			set
-			{
-				if ((this._Cargo != value))
-				{
-					this._Cargo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Classe", DbType="VarChar(255)")]
-		public string Classe
-		{
-			get
-			{
-				return this._Classe;
-			}
-			set
-			{
-				if ((this._Classe != value))
-				{
-					this._Classe = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Cargo Comissão]", Storage="_Cargo_Comissão", DbType="VarChar(255)")]
-		public string Cargo_Comissão
-		{
-			get
-			{
-				return this._Cargo_Comissão;
-			}
-			set
-			{
-				if ((this._Cargo_Comissão != value))
-				{
-					this._Cargo_Comissão = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vencimento", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Vencimento
-		{
-			get
-			{
-				return this._Vencimento;
-			}
-			set
-			{
-				if ((this._Vencimento != value))
-				{
-					this._Vencimento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Subsidio", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Subsidio
-		{
-			get
-			{
-				return this._Subsidio;
-			}
-			set
-			{
-				if ((this._Subsidio != value))
-				{
-					this._Subsidio = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Vantagens Pessoais]", Storage="_Vantagens_Pessoais", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Vantagens_Pessoais
-		{
-			get
-			{
-				return this._Vantagens_Pessoais;
-			}
-			set
-			{
-				if ((this._Vantagens_Pessoais != value))
-				{
-					this._Vantagens_Pessoais = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Vantagens Cargo]", Storage="_Vantagens_Cargo", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Vantagens_Cargo
-		{
-			get
-			{
-				return this._Vantagens_Cargo;
-			}
-			set
-			{
-				if ((this._Vantagens_Cargo != value))
-				{
-					this._Vantagens_Cargo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Férias", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Férias
-		{
-			get
-			{
-				return this._Férias;
-			}
-			set
-			{
-				if ((this._Férias != value))
-				{
-					this._Férias = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Décimo Salário]", Storage="_Décimo_Salário", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Décimo_Salário
-		{
-			get
-			{
-				return this._Décimo_Salário;
-			}
-			set
-			{
-				if ((this._Décimo_Salário != value))
-				{
-					this._Décimo_Salário = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Total Créditos]", Storage="_Total_Créditos", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Total_Créditos
-		{
-			get
-			{
-				return this._Total_Créditos;
-			}
-			set
-			{
-				if ((this._Total_Créditos != value))
-				{
-					this._Total_Créditos = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Previdência", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Previdência
-		{
-			get
-			{
-				return this._Previdência;
-			}
-			set
-			{
-				if ((this._Previdência != value))
-				{
-					this._Previdência = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imposto", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Imposto
-		{
-			get
-			{
-				return this._Imposto;
-			}
-			set
-			{
-				if ((this._Imposto != value))
-				{
-					this._Imposto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Total Desconto]", Storage="_Total_Desconto", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Total_Desconto
-		{
-			get
-			{
-				return this._Total_Desconto;
-			}
-			set
-			{
-				if ((this._Total_Desconto != value))
-				{
-					this._Total_Desconto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Total Líquido]", Storage="_Total_Líquido", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Total_Líquido
-		{
-			get
-			{
-				return this._Total_Líquido;
-			}
-			set
-			{
-				if ((this._Total_Líquido != value))
-				{
-					this._Total_Líquido = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Indenizações", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> Indenizações
-		{
-			get
-			{
-				return this._Indenizações;
-			}
-			set
-			{
-				if ((this._Indenizações != value))
-				{
-					this._Indenizações = value;
 				}
 			}
 		}
@@ -3011,6 +2668,402 @@ namespace TransparenciaDAO
 				if ((this._descricaoArquivoDownload != value))
 				{
 					this._descricaoArquivoDownload = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_folha_pagamento_servidor")]
+	public partial class vw_folha_pagamento_servidor
+	{
+		
+		private string _mesCompetencia;
+		
+		private System.Nullable<int> _anoCompetencia;
+		
+		private string _matricula;
+		
+		private string _nomeBeneficiario;
+		
+		private string _cargo;
+		
+		private string _classe;
+		
+		private string _cargoComissao;
+		
+		private System.Nullable<decimal> _vencimento;
+		
+		private System.Nullable<decimal> _subsidio;
+		
+		private System.Nullable<decimal> _vantagemsPessoais;
+		
+		private System.Nullable<decimal> _vantagensCargo;
+		
+		private System.Nullable<decimal> _ferias;
+		
+		private System.Nullable<decimal> _decimoSalario;
+		
+		private System.Nullable<decimal> _totalCredito;
+		
+		private System.Nullable<decimal> _previdencia;
+		
+		private System.Nullable<decimal> _imposto;
+		
+		private System.Nullable<decimal> _totalDesconto;
+		
+		private System.Nullable<decimal> _totalLiquido;
+		
+		private System.Nullable<decimal> _indenizacoes;
+		
+		public vw_folha_pagamento_servidor()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mesCompetencia", DbType="VarChar(15)")]
+		public string mesCompetencia
+		{
+			get
+			{
+				return this._mesCompetencia;
+			}
+			set
+			{
+				if ((this._mesCompetencia != value))
+				{
+					this._mesCompetencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_anoCompetencia", DbType="Int")]
+		public System.Nullable<int> anoCompetencia
+		{
+			get
+			{
+				return this._anoCompetencia;
+			}
+			set
+			{
+				if ((this._anoCompetencia != value))
+				{
+					this._anoCompetencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matricula", DbType="VarChar(255)")]
+		public string matricula
+		{
+			get
+			{
+				return this._matricula;
+			}
+			set
+			{
+				if ((this._matricula != value))
+				{
+					this._matricula = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nomeBeneficiario", DbType="VarChar(255)")]
+		public string nomeBeneficiario
+		{
+			get
+			{
+				return this._nomeBeneficiario;
+			}
+			set
+			{
+				if ((this._nomeBeneficiario != value))
+				{
+					this._nomeBeneficiario = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cargo", DbType="VarChar(255)")]
+		public string cargo
+		{
+			get
+			{
+				return this._cargo;
+			}
+			set
+			{
+				if ((this._cargo != value))
+				{
+					this._cargo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_classe", DbType="VarChar(255)")]
+		public string classe
+		{
+			get
+			{
+				return this._classe;
+			}
+			set
+			{
+				if ((this._classe != value))
+				{
+					this._classe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cargoComissao", DbType="VarChar(255)")]
+		public string cargoComissao
+		{
+			get
+			{
+				return this._cargoComissao;
+			}
+			set
+			{
+				if ((this._cargoComissao != value))
+				{
+					this._cargoComissao = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vencimento", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> vencimento
+		{
+			get
+			{
+				return this._vencimento;
+			}
+			set
+			{
+				if ((this._vencimento != value))
+				{
+					this._vencimento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subsidio", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> subsidio
+		{
+			get
+			{
+				return this._subsidio;
+			}
+			set
+			{
+				if ((this._subsidio != value))
+				{
+					this._subsidio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vantagemsPessoais", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> vantagemsPessoais
+		{
+			get
+			{
+				return this._vantagemsPessoais;
+			}
+			set
+			{
+				if ((this._vantagemsPessoais != value))
+				{
+					this._vantagemsPessoais = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vantagensCargo", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> vantagensCargo
+		{
+			get
+			{
+				return this._vantagensCargo;
+			}
+			set
+			{
+				if ((this._vantagensCargo != value))
+				{
+					this._vantagensCargo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ferias", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> ferias
+		{
+			get
+			{
+				return this._ferias;
+			}
+			set
+			{
+				if ((this._ferias != value))
+				{
+					this._ferias = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_decimoSalario", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> decimoSalario
+		{
+			get
+			{
+				return this._decimoSalario;
+			}
+			set
+			{
+				if ((this._decimoSalario != value))
+				{
+					this._decimoSalario = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_totalCredito", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> totalCredito
+		{
+			get
+			{
+				return this._totalCredito;
+			}
+			set
+			{
+				if ((this._totalCredito != value))
+				{
+					this._totalCredito = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_previdencia", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> previdencia
+		{
+			get
+			{
+				return this._previdencia;
+			}
+			set
+			{
+				if ((this._previdencia != value))
+				{
+					this._previdencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imposto", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> imposto
+		{
+			get
+			{
+				return this._imposto;
+			}
+			set
+			{
+				if ((this._imposto != value))
+				{
+					this._imposto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_totalDesconto", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> totalDesconto
+		{
+			get
+			{
+				return this._totalDesconto;
+			}
+			set
+			{
+				if ((this._totalDesconto != value))
+				{
+					this._totalDesconto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_totalLiquido", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> totalLiquido
+		{
+			get
+			{
+				return this._totalLiquido;
+			}
+			set
+			{
+				if ((this._totalLiquido != value))
+				{
+					this._totalLiquido = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_indenizacoes", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> indenizacoes
+		{
+			get
+			{
+				return this._indenizacoes;
+			}
+			set
+			{
+				if ((this._indenizacoes != value))
+				{
+					this._indenizacoes = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_servidores")]
+	public partial class vw_servidore
+	{
+		
+		private string _matricula;
+		
+		private string _nomeBeneficiario;
+		
+		public vw_servidore()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matricula", DbType="VarChar(255)")]
+		public string matricula
+		{
+			get
+			{
+				return this._matricula;
+			}
+			set
+			{
+				if ((this._matricula != value))
+				{
+					this._matricula = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nomeBeneficiario", DbType="VarChar(255)")]
+		public string nomeBeneficiario
+		{
+			get
+			{
+				return this._nomeBeneficiario;
+			}
+			set
+			{
+				if ((this._nomeBeneficiario != value))
+				{
+					this._nomeBeneficiario = value;
 				}
 			}
 		}

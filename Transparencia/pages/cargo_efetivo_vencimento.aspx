@@ -6,51 +6,39 @@
 
     <h2>Cargos Efetivos - Vencimentos</h2>
 
-    <ej:Grid ID="gvCargoEfetivoVencimento" runat="server"
-        AllowFiltering="True"
-        AllowSorting="True"
-        AllowPaging="True"
-        AllowSelection="False"
-        EnableRowHover="False"
-        ClientIDMode="Static"
-        AllowResizeToFit="True"
-        AllowGrouping="True"
-        Locale="pt-BR">
+    <div class="table-responsive">
 
-        <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+        <ej:Grid ID="gvCargoEfetivoVencimento" runat="server"
+            AllowFiltering="True"
+            AllowSorting="True"
+            AllowPaging="True"
+            AllowSelection="False"
+            EnableRowHover="False"
+            ClientIDMode="Static"
+            AllowResizeToFit="True"
+            AllowGrouping="True"
+            Locale="pt-BR">
 
-        <Columns>
-            <ej:Column Field="anoCompetencia" HeaderText="Ano Competência" AllowGrouping="True">
-            </ej:Column>
-            <ej:Column Field="cargo" HeaderText="Cargo" AllowGrouping="True">
-            </ej:Column>
-            <ej:Column Field="classe" HeaderText="Classe" AllowGrouping="True">
-            </ej:Column>
-            <ej:Column Field="vencimentoBase" HeaderText="Vencimento Base" AllowGrouping="False" AllowFiltering="False">
-            </ej:Column>
-        </Columns>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
 
-        <PageSettings PageSize="7"></PageSettings>
+            <Columns>
+                <ej:Column Field="anoCompetencia" HeaderText="Ano Competência" AllowGrouping="True">
+                </ej:Column>
+                <ej:Column Field="cargo" HeaderText="Cargo" AllowGrouping="True">
+                </ej:Column>
+                <ej:Column Field="classe" HeaderText="Classe" AllowGrouping="True">
+                </ej:Column>
+                <ej:Column Field="vencimentoBase" HeaderText="Vencimento Base" AllowGrouping="False" AllowFiltering="False">
+                </ej:Column>
+            </Columns>
 
-    </ej:Grid>
+            <PageSettings PageSize="7"></PageSettings>
+
+        </ej:Grid>
+
+    </div>
+
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptContent" runat="server">
-
-    <script type="text/javascript">
-        ej.Grid.Locale["pt-BR"] = {
-            GroupDropArea: "Arraste o cabeçalho das colunas para a área azul para agrupá-las",
-            Columns: "Colunas"
-        };
-        if (ej.Pager) ej.Pager.Locale["pt-BR"] = {
-            pagerInfo: "{0} de {1} páginas ({2} itens)",
-            firstPageTooltip: "Ir para a primeira página",
-            lastPageTooltip: "Ir para a última página",
-            nextPageTooltip: "Ir para a próxima página",
-            previousPageTooltip: "Ir para a página anterior",
-            nextPagerTooltip: "Ir para a próxima página",
-            previousPagerTooltip: "Ir para página anterior"
-        };
-    </script>
-
 </asp:Content>

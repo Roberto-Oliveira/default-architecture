@@ -7,7 +7,7 @@
 
     <h2>Avisos</h2>
 
-    <div style="position: relative;">
+    <div class="table-responsive" style="position: relative;">
 
         <ej:Grid ID="gvAvisos" runat="server"
             AllowFiltering="True"
@@ -119,21 +119,5 @@
                 $("#commanddialog").find("img").width(150);
         }
     </script>
-
-    <script type="text/javascript">
-        ej.Grid.Locale["pt-BR"] = {
-            GroupDropArea: "Arraste o cabeçalho das colunas para a área azul para agrupá-las",
-            Columns: "Colunas"
-        };
-        if (ej.Pager) ej.Pager.Locale["pt-BR"] = {
-            pagerInfo: "{0} de {1} páginas ({2} itens)",
-            firstPageTooltip: "Ir para a primeira página",
-            lastPageTooltip: "Ir para a última página",
-            nextPageTooltip: "Ir para a próxima página",
-            previousPageTooltip: "Ir para a página anterior",
-            nextPagerTooltip: "Ir para a próxima página",
-            previousPagerTooltip: "Ir para página anterior"
-        };
-    </script>
-
+    
 </asp:Content>

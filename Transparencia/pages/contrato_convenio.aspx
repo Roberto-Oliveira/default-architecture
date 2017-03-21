@@ -6,7 +6,7 @@
 
     <h2>Contratos e Convênios</h2>
 
-    <div style="position: relative;">
+    <div class="table-responsive" style="position: relative;">
 
         <ej:Grid ID="gvContratosConvenios" runat="server"
             AllowFiltering="True"
@@ -18,18 +18,19 @@
             AllowResizeToFit="True"
             AllowGrouping="True"
             Locale="pt-BR"
+            AllowResizing="True"
             >
 
             <GroupSettings ShowDropArea="True" EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
 
-            <FilterSettings FilterType="Menu"></FilterSettings>
+            <FilterSettings FilterType="FilterBar"></FilterSettings>
 
             <Columns>
                 <ej:Column Field="codigoProcesso" HeaderText="Código Processo" Visible="False">
                 </ej:Column>
                 <ej:Column Field="nomeArquivoPDF" HeaderText="Nome Arquivo PDF" Visible="False">
                 </ej:Column>
-                <ej:Column Field="ano" Width="5%" HeaderText="Ano" AllowGrouping="True">
+                <ej:Column Field="ano" HeaderText="Ano" AllowGrouping="True">
                 </ej:Column>
                 <ej:Column Field="numeroProcesso" HeaderText="Número Processo" AllowGrouping="True">
                 </ej:Column>
@@ -49,10 +50,10 @@
                 </ej:Column>
                 <ej:Column Field="objeto" HeaderText="Objeto" Visible="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="150" Field="" AllowFiltering="False" AllowGrouping="False">
+                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Field="" AllowFiltering="False" AllowGrouping="False">
                     <Command>
                         <ej:Commands Type="detail">
-                            <ButtonOptions Text="Detalhes" Width="90%" Height="2%" Click="onClick"></ButtonOptions>
+                            <ButtonOptions Text="Detalhes" Width="auto" Height="2%" Click="onClick"></ButtonOptions>
                         </ej:Commands>
                     </Command>
                 </ej:Column>
@@ -138,22 +139,6 @@
             if (navigator.userAgent.indexOf("MSIE 8.0") != -1)
                 $("#commanddialog").find("img").width(150);
         }
-    </script>
-
-    <script type="text/javascript">
-        ej.Grid.Locale["pt-BR"] = {
-            GroupDropArea: "Arraste o cabeçalho das colunas para a área azul para agrupá-las",
-            Columns: "Colunas"
-        };
-        if (ej.Pager) ej.Pager.Locale["pt-BR"] = {
-            pagerInfo: "{0} de {1} páginas ({2} itens)",
-            firstPageTooltip: "Ir para a primeira página",
-            lastPageTooltip: "Ir para a última página",
-            nextPageTooltip: "Ir para a próxima página",
-            previousPageTooltip: "Ir para a página anterior",
-            nextPagerTooltip: "Ir para a próxima página",
-            previousPagerTooltip: "Ir para página anterior"
-        };
     </script>
 
 </asp:Content>

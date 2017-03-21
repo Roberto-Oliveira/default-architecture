@@ -4,10 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ControlContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="jumbotron" style="background: transparent">
+    <div class="container" style="background: transparent; margin-bottom: 60px; margin-top: 30px">
 
         <a href="/transparencia.aspx">
-            <img src="images/banner-inicial-transparencia.png" alt="Banner" style="width: 1169px; margin-left: -59px;" class="img-responsive"/>
+            <img src="images/banner-inicial-transparencia.png" alt="Banner" style="width: auto;" class="img-responsive"/>
         </a>
 
     </div>

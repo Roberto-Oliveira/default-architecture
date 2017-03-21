@@ -16,13 +16,12 @@
     white-space: nowrap;
 }
 
-.e-grid .e-rowcell {
-    border-width: 1px 0 0 1px;
-    padding: 10px 0 10px 3px;
-    line-height: 14px;
-    white-space: nowrap;
-    width: auto;
-    vertical-align: middle;
+.e-grid .e-gridcontent .e-rowcell {
+    padding-left: 4px;
+}
+
+.e-grid .e-gridheader .e-headercell, .e-grid .e-rowcell {
+    padding-left: 2px;
 }
 
 .td-grid {
@@ -36,4 +35,8 @@ td.td-grid {
 .paragrafo-justificacao {
     text-indent: 5em;
     text-align: justify;
+}
+
+input#gvFolhaServidores_searchbar {
+    width: 278px;
 }

@@ -66,7 +66,7 @@ namespace Generics.DAO
         }
 
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public List<T> GetNormalList()
+        public virtual List<T> GetNormalList()
         {
             return _context.GetTable<T>().ToList();
         }

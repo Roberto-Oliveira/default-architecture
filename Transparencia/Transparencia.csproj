@@ -243,13 +243,13 @@
     <Content Include="Scripts\ej\ej.webform.min.js" />
     <Content Include="Scripts\ej\ej.widget.angular.min.js" />
     <Content Include="Scripts\ej\ej.widget.ko.min.js" />
-    <Content Include="Scripts\ej\i18n\ej.culture.pt-BR.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jsrender.min.js" />
     <Content Include="Scripts\knockout-min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\portal.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
@@ -588,6 +588,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\ej\web\" />
+    <Folder Include="Scripts\ej\i18n\" />
     <Folder Include="Scripts\ej\l10n\" />
   </ItemGroup>
   <ItemGroup>

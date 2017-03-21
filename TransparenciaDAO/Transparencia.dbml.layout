@@ -8,12 +8,6 @@
         <elementListCompartment Id="33058de4-b32e-4b2b-8b42-6b1f198ecb24" absoluteBounds="5.5150000000000006, 1.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e246b158-7aba-48f1-aad0-d701eb88328f" absoluteBounds="2.875, 0.625, 2, 4.4631168619791666">
-      <DataClassMoniker Name="/TransparenciaDataContext/vw_folha_pagamento_servidor" />
-      <nestedChildShapes>
-        <elementListCompartment Id="3fd6194c-b32b-4d45-a2d1-0a88c7d20d04" absoluteBounds="2.89, 1.085, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="f8d591a7-6bfc-42ce-87f7-17d54a31cf62" absoluteBounds="0.5, 0.625, 2, 1.5785953776041666">
       <DataClassMoniker Name="/TransparenciaDataContext/vw_cargo_comissao_servidor" />
       <nestedChildShapes>
@@ -102,6 +96,18 @@
       <DataClassMoniker Name="/TransparenciaDataContext/vw_licitacoes_cadastro_fornecedore" />
       <nestedChildShapes>
         <elementListCompartment Id="9d70cf6b-4a4e-4446-a94d-c3508d4a360c" absoluteBounds="0.64, 18.835, 2.3449999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd4bb3b9-b0f9-4424-be00-906d5977c6a7" absoluteBounds="3, 0.625, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_folha_pagamento_servidor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60505232-bd15-49c7-9679-f546f365db1d" absoluteBounds="3.015, 1.085, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b0ccf74-6ba5-4604-b1b2-f299a53e659c" absoluteBounds="5.75, 10.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_servidore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa770e01-460e-4d15-b2b0-af0c691cc64f" absoluteBounds="5.765, 10.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
