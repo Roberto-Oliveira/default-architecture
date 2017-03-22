@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="concorrencia_publica.aspx.cs" Inherits="Transparencia.pages.concorrencia_publica" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
-   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Concorrência Pública</h2>
-   
+
     <div class="table-responsive" style="position: relative;">
 
         <ej:Grid ID="gvConcorrenciaPublica" runat="server"
@@ -14,10 +14,11 @@
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            AllowResizeToFit="True"
-            Locale="pt-BR">
+            AllowScrolling="True"
+            Locale="pt-BR"
+            >
 
-             <Columns>
+            <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False">
                 </ej:Column>
                 <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" AllowFiltering="True">

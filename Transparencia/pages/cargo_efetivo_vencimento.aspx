@@ -15,9 +15,10 @@
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            AllowResizeToFit="True"
+            AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR">
+            Locale="pt-BR"
+            >
 
             <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
 

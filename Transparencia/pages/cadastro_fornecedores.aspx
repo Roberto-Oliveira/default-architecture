@@ -14,18 +14,20 @@
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            AllowResizeToFit="True"
+            AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR">
+            Locale="pt-BR"
+            AllowResizeToFit="True"
+            >
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True"></GroupSettings>
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False">
                 </ej:Column>
-                <ej:Column Field="codigoProcesso" HeaderText="Código Processo" AllowGrouping="True">
+                <ej:Column Width="140" Field="codigoProcesso" HeaderText="Código Processo" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" Visible="False">
+                <ej:Column Width="100" Field="anoProcesso" HeaderText="Ano" Visible="False">
                 </ej:Column>
                 <ej:Column Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
                 </ej:Column>
@@ -39,16 +41,18 @@
                 </ej:Column>
                 <ej:Column Field="descricaoArquivoDownload" HeaderText="Descrição Arquivo Download" Visible="False">
                 </ej:Column>
-                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="8%" Field="" AllowFiltering="False" AllowGrouping="False">
+                <ej:Column Width="80" HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Field="" AllowFiltering="False" AllowGrouping="False">
                     <Command>
                         <ej:Commands Type="detail">
-                            <ButtonOptions Text="Detalhes" Width="80%" Height="2%" Click="onClick"></ButtonOptions>
+                            <ButtonOptions Text="Detalhes" Width="80" Height="2%" Click="onClick"></ButtonOptions>
                         </ej:Commands>
                     </Command>
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="7"></PageSettings>
+            <PageSettings PageSize="7" />
+
+            <ResizeSettings ResizeMode="Normal" />
 
         </ej:Grid>
 
@@ -117,5 +121,5 @@
                 $("#commanddialog").find("img").width(150);
         }
     </script>
-    
+
 </asp:Content>

@@ -46,7 +46,7 @@
                                 <p class="paragrafo-justificacao">Dessa forma, em atendimento ao Princípio Constitucional da Publicidade e visando dar cumprimento ao disposto na Lei Complementar Federal nº 131, de 27 de maio de 2009, que trata da divulgação, em tempo real, de informações pormenorizadas sobre a execução orçamentária e financeira, bem como às disposições estatuídas na Lei Federal nº 12.527, de 18 de novembro de 2011, também denominada de Lei de Acesso à Informação, a Defensoria Pública do Estado de Mato Grosso do Sul disponibiliza neste Portal as informações existentes nas suas bases de dados e procura atender por meio das suas ações e atividades as aspirações da sociedade.</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                             </div>
                         </div>
 

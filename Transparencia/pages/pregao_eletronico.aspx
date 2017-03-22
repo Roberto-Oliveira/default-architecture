@@ -6,19 +6,20 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Pregão Eletrônico</h2>
-   
+
     <div class="table-responsive" style="position: relative;">
 
-       <ej:Grid ID="gvPregaoEletronico" runat="server"
+        <ej:Grid ID="gvPregaoEletronico" runat="server"
             AllowFiltering="True"
             AllowSorting="True"
             AllowPaging="True"
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            AllowResizeToFit="True"
+            AllowScrolling="True"
             AllowGrouping="True"
-           Locale="pt-BR">
+            Locale="pt-BR"
+            >
 
             <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
 

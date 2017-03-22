@@ -15,7 +15,9 @@
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            Locale="pt-BR">
+            Locale="pt-BR"
+            AllowScrolling="True"
+            >
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False">

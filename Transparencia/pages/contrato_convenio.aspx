@@ -15,10 +15,10 @@
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            AllowResizeToFit="True"
+            AllowScrolling="True"
             AllowGrouping="True"
             Locale="pt-BR"
-            AllowResizing="True"
+            AllowResizeToFit="True"
             >
 
             <GroupSettings ShowDropArea="True" EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
@@ -30,36 +30,38 @@
                 </ej:Column>
                 <ej:Column Field="nomeArquivoPDF" HeaderText="Nome Arquivo PDF" Visible="False">
                 </ej:Column>
-                <ej:Column Field="ano" HeaderText="Ano" AllowGrouping="True">
+                <ej:Column Width="90" Field="ano" HeaderText="Ano" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="numeroProcesso" HeaderText="Número Processo" AllowGrouping="True">
+                <ej:Column Width="190" Field="numeroProcesso" HeaderText="Número Processo" AllowGrouping="True">
                 </ej:Column>
                 <ej:Column Field="contratada" HeaderText="Contratada" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="modalidade" HeaderText="Modalidade" AllowGrouping="True">
+                <ej:Column Width="150" Field="modalidade" HeaderText="Modalidade" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="finalizado" HeaderText="Finalizado" AllowGrouping="True">
+                <ej:Column Width="150" Field="finalizado" HeaderText="Finalizado" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="vigenciaInicial" HeaderText="Vigência Inicial" AllowFiltering="False" AllowGrouping="False">
+                <ej:Column Width="150" Field="vigenciaInicial" HeaderText="Vigência Inicial" AllowFiltering="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="vigenciaFinal" HeaderText="Vigência Final" AllowFiltering="False" AllowGrouping="False">
+                <ej:Column Width="150" Field="vigenciaFinal" HeaderText="Vigência Final" AllowFiltering="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="dataContrato" HeaderText="Data do Contrato" AllowFiltering="False" AllowGrouping="False">
+                <ej:Column Width="150" Field="dataContrato" HeaderText="Data do Contrato" AllowFiltering="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="vigenciaProrrogada" HeaderText="Vigência Prorrogada" AllowFiltering="False" AllowGrouping="False">
+                <ej:Column Width="180" Field="vigenciaProrrogada" HeaderText="Vigência Prorrogada" AllowFiltering="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="objeto" HeaderText="Objeto" Visible="False" AllowGrouping="False">
+                <ej:Column Width="150" Field="objeto" HeaderText="Objeto" Visible="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Field="" AllowFiltering="False" AllowGrouping="False">
+                <ej:Column Width="120" HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Field="" AllowFiltering="False" AllowGrouping="False">
                     <Command>
                         <ej:Commands Type="detail">
-                            <ButtonOptions Text="Detalhes" Width="auto" Height="2%" Click="onClick"></ButtonOptions>
+                            <ButtonOptions Text="Detalhes" Width="100" Height="2%" Click="onClick"></ButtonOptions>
                         </ej:Commands>
                     </Command>
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="6" ></PageSettings>
+            <PageSettings PageSize="6"/>
+            
+            <ResizeSettings ResizeMode="Normal"/>
 
         </ej:Grid>
 

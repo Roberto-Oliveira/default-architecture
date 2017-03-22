@@ -16,9 +16,10 @@
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            AllowResizeToFit="True"
+            AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR">
+            Locale="pt-BR"
+            >
 
             <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
 
@@ -37,7 +38,6 @@
                 </ej:Column>
                 <ej:Column Field="dataProcesso" HeaderText="Data" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
-
                 <ej:Column Field="caminhoProcesso" HeaderText="Caminho Arquivo Download" Visible="False" AllowGrouping="False">
                 </ej:Column>
                 <ej:Column Field="descricaoArquivoDownload" HeaderText="Descrição Arquivo Download" Visible="False" AllowGrouping="False">

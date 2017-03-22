@@ -16,9 +16,10 @@
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            AllowResizeToFit="True"
             AllowGrouping="True"
-            Locale="pt-BR">
+            Locale="pt-BR"
+            AllowScrolling="True"
+            >
 
             <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
 
@@ -119,5 +120,5 @@
                 $("#commanddialog").find("img").width(150);
         }
     </script>
-    
+
 </asp:Content>

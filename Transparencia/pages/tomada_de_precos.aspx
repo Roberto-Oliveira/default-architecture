@@ -15,12 +15,11 @@
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            AllowResizeToFit="True"
+            
             AllowGrouping="True"
             Locale="pt-BR">
 
             <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
-
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False" AllowGrouping="False">

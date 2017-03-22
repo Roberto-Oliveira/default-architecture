@@ -13,9 +13,8 @@
 
             <ej:Grid ID="gvFolhaServidores" runat="server"
                 AllowSorting="True"
-                AllowResizeToFit="True"
-                AllowResizing="True"
                 AllowPaging="True"
+                AllowScrolling="True"
                 OnServerExcelExporting="gvFolhaServidores_OnServerExcelExporting"
                 ShowColumnChooser="True"
                 AllowFiltering="True"
@@ -24,9 +23,10 @@
                 ClientIDMode="Static"
                 AllowGrouping="True"
                 Locale="pt-BR"
-                AllowSearching="True">
+                AllowSearching="True"
+                >
 
-                <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True" />
+                <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
 
                 <Columns>
                     <ej:Column Width="190" Field="mesCompetencia" HeaderText="Mês Competência" AllowGrouping="True" AllowFiltering="True">
@@ -76,6 +76,8 @@
                 <FilterSettings EnableCaseSensitivity="True" />
 
                 <SearchSettings Operator="Contains" />
+                
+                <ResizeSettings ResizeMode="Normal"></ResizeSettings>
 
             </ej:Grid>
         </div>
