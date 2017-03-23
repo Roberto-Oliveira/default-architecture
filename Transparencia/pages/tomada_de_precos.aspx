@@ -15,11 +15,12 @@
             AllowSelection="False"
             EnableRowHover="False"
             ClientIDMode="Static"
-            
             AllowGrouping="True"
             Locale="pt-BR">
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
+
+            <PageSettings PageSize="7" />
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False" AllowGrouping="False">
@@ -49,7 +50,6 @@
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="7"></PageSettings>
         </ej:Grid>
 
         <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="800" Title="Detalhes" ShowOnInit="false"

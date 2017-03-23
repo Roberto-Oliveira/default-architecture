@@ -17,10 +17,11 @@
             ClientIDMode="Static"
             AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR"
-            >
+            Locale="pt-BR">
+            
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <PageSettings PageSize="7" />
 
             <Columns>
                 <ej:Column Field="anoCompetencia" HeaderText="Ano Competência" AllowGrouping="True">
@@ -32,8 +33,6 @@
                 <ej:Column Field="vencimentoBase" HeaderText="Vencimento Base" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
             </Columns>
-
-            <PageSettings PageSize="7"></PageSettings>
 
         </ej:Grid>
 

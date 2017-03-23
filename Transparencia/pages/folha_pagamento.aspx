@@ -19,14 +19,16 @@
                 ShowColumnChooser="True"
                 AllowFiltering="True"
                 AllowSelection="True"
-                EnableRowHover="False"
-                ClientIDMode="Static"
+                EnableRowHover="True"
                 AllowGrouping="True"
                 Locale="pt-BR"
-                AllowSearching="True"
-                >
+                AllowSearching="True">
 
                 <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
+
+                <ToolbarSettings ShowToolbar="True" ToolbarItems="excelExport,search" />
+
+                <PageSettings PageSize="7" />
 
                 <Columns>
                     <ej:Column Width="190" Field="mesCompetencia" HeaderText="Mês Competência" AllowGrouping="True" AllowFiltering="True">
@@ -68,16 +70,6 @@
                     <ej:Column Width="130" Field="indenizacoes" HeaderText="Indenizações" AllowGrouping="False" AllowFiltering="False" Format="{0:c2}">
                     </ej:Column>
                 </Columns>
-
-                <PageSettings PageSize="6" Locale="pt-BR" />
-
-                <ToolbarSettings ShowToolbar="True" ToolbarItems="excelExport,search" />
-
-                <FilterSettings EnableCaseSensitivity="True" />
-
-                <SearchSettings Operator="Contains" />
-                
-                <ResizeSettings ResizeMode="Normal"></ResizeSettings>
 
             </ej:Grid>
         </div>

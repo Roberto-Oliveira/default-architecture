@@ -86,7 +86,7 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Execução Orçamentária e Financeira<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="http://www.transparencia.ms.gov.br/#/Orcamento">Legislação Orçamentária</a></li>
+                            <li><a href="http://www.transparencia.ms.gov.br/#/Orcamento" target="_blank">Legislação Orçamentária</a></li>
                             <li><a href="http://www.transparencia.ms.gov.br/#/ReceitaSimplificada" target="_blank">Receita - FUNADEP</a></li>
                             <li><a href="#">Repasse - Duodécimo</a></li>
                             <li><a href="http://www.transparencia.ms.gov.br/#/Despesa" target="_blank">Despesa</a></li>

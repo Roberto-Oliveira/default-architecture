@@ -1,12 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="pregao_presencial_registro_precos.aspx.cs" Inherits="Transparencia.pages.pregao_presencial_registro_precos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
-   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Pregão Presencial - Registro/Preço</h2>
-   
+
     <div class="table-responsive" style="position: relative;">
 
         <ej:Grid ID="gvPregaoPresencialRegistroPreco" runat="server"
@@ -18,10 +17,11 @@
             ClientIDMode="Static"
             AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR"
-            >
+            Locale="pt-BR">
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
+
+            <PageSettings PageSize="7" />
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False" AllowGrouping="False">
@@ -51,7 +51,6 @@
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="7"></PageSettings>
         </ej:Grid>
 
         <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="800" Title="Detalhes" ShowOnInit="false"

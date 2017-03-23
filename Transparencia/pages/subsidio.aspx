@@ -17,11 +17,11 @@
             ClientIDMode="Static"
             AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR"
-            >
+            Locale="pt-BR">
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
 
+            <PageSettings PageSize="7" />
 
             <Columns>
                 <ej:Column Field="id" HeaderText="Id" Visible="False">
@@ -37,8 +37,6 @@
                 <ej:Column Field="vagasPrevistas" HeaderText="Vagas Previstas" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
             </Columns>
-
-            <PageSettings PageSize="7"></PageSettings>
 
         </ej:Grid>
 

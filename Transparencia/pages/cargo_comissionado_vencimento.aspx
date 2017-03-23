@@ -17,27 +17,26 @@
             ClientIDMode="Static"
             AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR"
-            >
+            Locale="pt-BR">
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
+
+            <PageSettings PageSize="7" />
 
             <Columns>
-                <ej:Column Field="anoCompetencia" HeaderText="Ano Competência" AllowGrouping="True" AllowFiltering="True">
+                <ej:Column Width="100" Field="anoCompetencia" HeaderText="Ano Competência" AllowGrouping="True" AllowFiltering="True">
                 </ej:Column>
-                <ej:Column Field="descricaoClasse" HeaderText="Símbolo" AllowGrouping="True" AllowFiltering="True">
+                <ej:Column Width="100" Field="descricaoClasse" HeaderText="Símbolo" AllowGrouping="True" AllowFiltering="True">
                 </ej:Column>
                 <ej:Column Field="tipoServidor" HeaderText="Tipo Servidor" Visible="False" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
-                <ej:Column Field="valorReajuste" HeaderText="Vencimento Básico" AllowGrouping="False" AllowFiltering="False">
+                <ej:Column Width="150" Field="valorReajuste" HeaderText="Vencimento Básico" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
-                <ej:Column Field="percentual" HeaderText="Percentual" AllowGrouping="False" AllowFiltering="False">
+                <ej:Column Width="150"  Field="percentual" HeaderText="Percentual" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
-                <ej:Column Field="gratificacao" HeaderText="Gratificação" Tooltip="Gratificação pelo exercício do Cargo em Comissão" AllowGrouping="False" AllowFiltering="False">
+                <ej:Column Width="150"  Field="gratificacao" HeaderText="Gratificação" Tooltip="Gratificação pelo exercício do Cargo em Comissão" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
             </Columns>
-
-            <PageSettings PageSize="7"></PageSettings>
 
         </ej:Grid>
 

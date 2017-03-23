@@ -37,6 +37,6 @@ td.td-grid {
     text-align: justify;
 }
 
-input#gvFolhaServidores_searchbar {
-    width: 278px;
-}
+/*.e-gridcontent.e-droppable.e-js.e-scroller.e-widget .e-content {
+    height: 279px;
+}*/

@@ -1,12 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="legislacao.aspx.cs" Inherits="Transparencia.pages.Legislacao" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
-   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Legislação</h2>
-    
+
     <div class="table-responsive" style="position: relative;">
 
         <ej:Grid ID="gvLegislacoes" runat="server"
@@ -16,8 +15,11 @@
             EnableRowHover="False"
             ClientIDMode="Static"
             Locale="pt-BR"
-            AllowScrolling="True"
-            >
+            AllowScrolling="True">
+            
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
+
+            <PageSettings PageSize="7" />
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False">
@@ -38,7 +40,7 @@
                 </ej:Column>
                 <ej:Column Field="descricaoArquivoDownload" HeaderText="Descrição Arquivo Download" Visible="False">
                 </ej:Column>
-                 <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="8%" Field="" AllowFiltering="False">
+                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="8%" Field="" AllowFiltering="False">
                     <Command>
                         <ej:Commands Type="detail">
                             <ButtonOptions Text="Detalhes" Width="80%" Height="2%" Click="onClick"></ButtonOptions>
@@ -47,7 +49,6 @@
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="7"></PageSettings>
         </ej:Grid>
 
         <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="800" Title="Detalhes" ShowOnInit="false"
@@ -116,4 +117,4 @@
         }
     </script>
 
-  </asp:Content>
+</asp:Content>

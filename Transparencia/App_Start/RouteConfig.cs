@@ -1,15 +1,5 @@
-#region Copyright Syncfusion Inc. 2001 - 2017
-// Copyright Syncfusion Inc. 2001 - 2017. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-using System;
-using System.Collections.Generic;
-using System.Web;
-using System.Web.Routing;
 using Microsoft.AspNet.FriendlyUrls;
+using System.Web.Routing;
 
 namespace Transparencia
 {
@@ -17,8 +7,7 @@ namespace Transparencia
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            var settings = new FriendlyUrlSettings();
-            settings.AutoRedirectMode = RedirectMode.Permanent;
+            var settings = new FriendlyUrlSettings {AutoRedirectMode = RedirectMode.Permanent};
             routes.EnableFriendlyUrls(settings);
         }
     }

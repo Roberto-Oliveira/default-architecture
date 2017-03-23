@@ -6,7 +6,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Cargos de Defensor</h2>
-    <div class="table-responsive">
+
+    <div class="table-responsive" style="position: relative;">
 
         <ej:Grid ID="gvQuantitativoServidores" runat="server"
             AllowFiltering="True"
@@ -17,10 +18,11 @@
             ClientIDMode="Static"
             AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR"
-            >
+            Locale="pt-BR">
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
+
+            <PageSettings PageSize="7"/>
 
             <Columns>
                 <ej:Column Field="carreira" HeaderText="Carreira" AllowGrouping="False" AllowFiltering="False">
@@ -40,8 +42,6 @@
                 <ej:Column Field="matricula" HeaderText="Matrícula" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
             </Columns>
-
-            <PageSettings PageSize="7"></PageSettings>
 
         </ej:Grid>
 

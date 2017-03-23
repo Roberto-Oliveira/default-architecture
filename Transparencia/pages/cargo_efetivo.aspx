@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Cargos Efetivos</h2>
@@ -17,10 +18,11 @@
             ClientIDMode="Static"
             AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR"
-            >
+            Locale="pt-BR">
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
+
+            <PageSettings PageSize="7" />
 
             <Columns>
                 <ej:Column Field="carreira" HeaderText="Carreira" AllowGrouping="True" AllowFiltering="True">
@@ -31,13 +33,11 @@
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="7"></PageSettings>
-
         </ej:Grid>
 
     </div>
 
-
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptContent" runat="server">
 </asp:Content>

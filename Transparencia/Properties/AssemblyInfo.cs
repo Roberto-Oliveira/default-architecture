@@ -1,12 +1,4 @@
-#region Copyright Syncfusion Inc. 2001 - 2017
-// Copyright Syncfusion Inc. 2001 - 2017. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -19,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Transparencia")]
 [assembly: AssemblyCopyright("Copyright - 2017")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyCulture("pt-BR")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

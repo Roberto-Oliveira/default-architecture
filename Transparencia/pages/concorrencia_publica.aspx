@@ -15,21 +15,24 @@
             EnableRowHover="False"
             ClientIDMode="Static"
             AllowScrolling="True"
-            Locale="pt-BR"
-            >
+            Locale="pt-BR">
+
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
+
+            <PageSettings PageSize="7" />
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" AllowFiltering="True">
+                <ej:Column Width="100" Field="anoProcesso" HeaderText="Ano" AllowFiltering="True">
                 </ej:Column>
-                <ej:Column Field="descricaoProcesso" HeaderText="Descrição">
+                <ej:Column Width="300" Field="descricaoProcesso" HeaderText="Descrição">
                 </ej:Column>
-                <ej:Column Field="descricaoArquivoDownload" HeaderText="Observações">
+                <ej:Column Width="150" Field="descricaoArquivoDownload" HeaderText="Observações">
                 </ej:Column>
-                <ej:Column Field="situacaoProcesso" HeaderText="Situação">
+                <ej:Column Width="130" Field="situacaoProcesso" HeaderText="Situação">
                 </ej:Column>
-                <ej:Column Field="dataProcesso" HeaderText="Data">
+                <ej:Column Width="100" Field="dataProcesso" HeaderText="Data">
                 </ej:Column>
                 <ej:Column Field="codigoProcesso" HeaderText="Código Processo" Visible="False">
                 </ej:Column>
@@ -46,7 +49,6 @@
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="7"></PageSettings>
         </ej:Grid>
 
         <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="800" Title="Detalhes" ShowOnInit="false"

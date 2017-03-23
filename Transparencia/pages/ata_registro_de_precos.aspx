@@ -17,25 +17,26 @@
             ClientIDMode="Static"
             AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR"
-            >
+            Locale="pt-BR">
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
+
+            <PageSettings PageSize="7"/>
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="codigoProcesso" HeaderText="Código Processo" AllowGrouping="True">
+                <ej:Column Width="180" Field="codigoProcesso" HeaderText="Código Processo" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" AllowGrouping="True">
+                <ej:Column Width="100" Field="anoProcesso" HeaderText="Ano" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
+                <ej:Column Width="400" Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="descricaoArquivoDownload" HeaderText="Observações" AllowGrouping="False">
+                <ej:Column Width="500" Field="descricaoArquivoDownload" HeaderText="Observações" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
+                <ej:Column Width="140" Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="dataProcesso" HeaderText="Data" AllowGrouping="False" AllowFiltering="False">
+                <ej:Column Field="dataProcesso" HeaderText="Data" AllowGrouping="False" AllowFiltering="False" Visible="False">
                 </ej:Column>
                 <ej:Column Field="caminhoProcesso" HeaderText="Caminho Arquivo Download" Visible="False" AllowGrouping="False">
                 </ej:Column>
@@ -49,8 +50,6 @@
                     </Command>
                 </ej:Column>
             </Columns>
-
-            <PageSettings PageSize="7"></PageSettings>
 
         </ej:Grid>
 
@@ -119,6 +118,6 @@
                 $("#commanddialog").find("img").width(150);
         }
     </script>
-   
+
 
 </asp:Content>

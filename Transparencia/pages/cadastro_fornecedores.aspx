@@ -16,16 +16,16 @@
             ClientIDMode="Static"
             AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR"
-            AllowResizeToFit="True"
-            >
+            Locale="pt-BR">
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
+
+            <PageSettings PageSize="7" />
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False">
                 </ej:Column>
-                <ej:Column Width="140" Field="codigoProcesso" HeaderText="Código Processo" AllowGrouping="True">
+                <ej:Column Width="190" Field="codigoProcesso" HeaderText="Código Processo" AllowGrouping="True">
                 </ej:Column>
                 <ej:Column Width="100" Field="anoProcesso" HeaderText="Ano" Visible="False">
                 </ej:Column>
@@ -33,15 +33,15 @@
                 </ej:Column>
                 <ej:Column Field="descricaoArquivoDownload" HeaderText="Observações" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
+                <ej:Column Width="160" Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="dataProcesso" HeaderText="Data" AllowGrouping="False">
+                <ej:Column Field="dataProcesso" HeaderText="Data" AllowGrouping="False" Visible="False">
                 </ej:Column>
                 <ej:Column Field="caminhoProcesso" HeaderText="Caminho Arquivo Download" Visible="False">
                 </ej:Column>
                 <ej:Column Field="descricaoArquivoDownload" HeaderText="Descrição Arquivo Download" Visible="False">
                 </ej:Column>
-                <ej:Column Width="80" HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Field="" AllowFiltering="False" AllowGrouping="False">
+                <ej:Column Width="100" HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Field="" AllowFiltering="False" AllowGrouping="False">
                     <Command>
                         <ej:Commands Type="detail">
                             <ButtonOptions Text="Detalhes" Width="80" Height="2%" Click="onClick"></ButtonOptions>
@@ -49,10 +49,6 @@
                     </Command>
                 </ej:Column>
             </Columns>
-
-            <PageSettings PageSize="7" />
-
-            <ResizeSettings ResizeMode="Normal" />
 
         </ej:Grid>
 

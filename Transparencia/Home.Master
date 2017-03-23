@@ -20,33 +20,16 @@
     <%:Styles.Render("~/Content/ej/web/ej.widgets.core.min.css") %>
     <%:Styles.Render("~/Content/ej/web/bootstrap-theme/ej.theme.min.css") %>
 
-
     <%: Scripts.Render("~/Scripts/jquery-1.10.2.min.js")%>
-    <%: Scripts.Render("~/Scripts/jsrender.min.js")%>
-    <%: Scripts.Render("~/Scripts/ej/ej.web.all.min.js")%>
-    <%: Scripts.Render("~/Scripts/ej/ej.webform.min.js")%>
-    <%: Scripts.Render("~/Scripts/bootstrap-dropdown.js")%>
-    <%:Styles.Render("~/Content/portal.css") %>
-    <%: Scripts.Render("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")%>
-
-    <script>
-        $('.dropdown-toggle').dropdown()
-    </script>
-
-    <style type="text/css">
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-    </style>
-
+    <%: Scripts.Render("~/Scripts/bootstrap.min.js")%>
 </head>
 <body style="padding-top: 0px;">
     <form runat="server">
-        
+
         <asp:ScriptManager runat="server">
         </asp:ScriptManager>
 
-       <div class="navbar navbar-default navbar-static-top">
+        <div class="navbar navbar-default navbar-static-top">
             <div class="container">
 
                 <div class="navbar-header">
@@ -118,5 +101,23 @@
             </footer>
         </div>
     </form>
+
+    <%: Scripts.Render("~/Scripts/jsrender.min.js")%>
+    <%: Scripts.Render("~/Scripts/ej/ej.web.all.min.js")%>
+    <%: Scripts.Render("~/Scripts/ej/i18n/ej.culture.pt-BR.min.js")%>
+    <%: Scripts.Render("~/Scripts/ej/ej.webform.min.js")%>
+    <%: Scripts.Render("~/Scripts/bootstrap-dropdown.js")%>
+    <%: Scripts.Render("~/Scripts/portal.js")%>
+
+    <script>
+        $('.dropdown-toggle').dropdown()
+    </script>
+
+    <style type="text/css">
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+
 </body>
 </html>

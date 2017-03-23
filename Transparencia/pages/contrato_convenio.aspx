@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ControlContent" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Contratos e Convênios</h2>
@@ -17,13 +18,11 @@
             ClientIDMode="Static"
             AllowScrolling="True"
             AllowGrouping="True"
-            Locale="pt-BR"
-            AllowResizeToFit="True"
-            >
+            Locale="pt-BR">
 
-            <GroupSettings ShowDropArea="True" EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
 
-            <FilterSettings FilterType="FilterBar"></FilterSettings>
+            <PageSettings PageSize="7" />
 
             <Columns>
                 <ej:Column Field="codigoProcesso" HeaderText="Código Processo" Visible="False">
@@ -34,7 +33,7 @@
                 </ej:Column>
                 <ej:Column Width="190" Field="numeroProcesso" HeaderText="Número Processo" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="contratada" HeaderText="Contratada" AllowGrouping="True">
+                <ej:Column Width="1500" Field="contratada" HeaderText="Contratada" AllowGrouping="True">
                 </ej:Column>
                 <ej:Column Width="150" Field="modalidade" HeaderText="Modalidade" AllowGrouping="True">
                 </ej:Column>
@@ -58,11 +57,7 @@
                     </Command>
                 </ej:Column>
             </Columns>
-
-            <PageSettings PageSize="6"/>
             
-            <ResizeSettings ResizeMode="Normal"/>
-
         </ej:Grid>
 
         <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="800" Title="Detalhes do Contrato" ShowOnInit="false"

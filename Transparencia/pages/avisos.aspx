@@ -18,20 +18,20 @@
             ClientIDMode="Static"
             AllowGrouping="True"
             Locale="pt-BR"
-            AllowScrolling="True"
-            >
+            AllowScrolling="True">
 
-            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" ShowUngroupButton="True"></GroupSettings>
+            <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
 
+            <PageSettings PageSize="7" />
 
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" AllowFiltering="True" AllowGrouping="True">
+                <ej:Column Width="100" Field="anoProcesso" HeaderText="Ano" AllowFiltering="True" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
+                <ej:Column Width="250" Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="observacoesProcesso" HeaderText="Observações" AllowGrouping="False">
+                <ej:Column Width="1100" Field="observacoesProcesso" HeaderText="Observações" AllowGrouping="False">
                 </ej:Column>
                 <ej:Column Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
                 </ej:Column>
@@ -52,7 +52,6 @@
                 </ej:Column>
             </Columns>
 
-            <PageSettings PageSize="7"></PageSettings>
         </ej:Grid>
 
         <ej:Dialog ID="commanddialog" ClientIDMode="Static" runat="server" Width="800" Title="Detalhes" ShowOnInit="false"
