@@ -13,15 +13,6 @@ namespace Transparencia.pages {
     public partial class FolhaPagamento {
         
         /// <summary>
-        /// selectMonth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Syncfusion.JavaScript.Web.DropDownList selectMonth;
-        
-        /// <summary>
         /// gvFolhaServidores control.
         /// </summary>
         /// <remarks>

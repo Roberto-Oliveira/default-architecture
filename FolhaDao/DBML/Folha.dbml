@@ -1,0 +1,1825 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BD_DEFENSORIA_GESTAOPESSOAL" Class="FolhaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=s1445;Initial Catalog=BD_DEFENSORIA_GESTAOPESSOAL;Persist Security Info=True;User ID=sa" SettingsObjectName="Folha.Properties.Settings" SettingsPropertyName="BD_DEFENSORIA_GESTAOPESSOALConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PESSOA" Member="PESSOAs">
+    <Type Name="PESSOA">
+      <Column Name="IDEMPRESA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDPESSOA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="APELIDO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ATIVIDADE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ATUALIZACAO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BAIRRO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="BAIRRO2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="BIP" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CADASTRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CELULAR" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CEP" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CEP2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CIDADE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CIDADE2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="COMPLEMENTAR" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="COMPLEMENTO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="COMPLEMENTO2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CPF_CGC" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DOC_ORGAO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ENDERECO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ENDERECO2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FONEFAX" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="HOMEPAGE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IDCIDADE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDESTADO_CIVIL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IDNACIONALIDADE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IDNATURALIDADE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IDPAIS" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IDPAIS2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IDUF" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IDUF2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="MAE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="NASCIMENTO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOME" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="NUMERO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OBSERVACAO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PAI" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PESSOA" Member="PESSOA1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PRINCIPAL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="RG" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="SEXO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TITULO_NUM" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TITULO_SECAO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TITULO_ZONA" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_VINCULO_FUNCIONAL" Member="TB_VINCULO_FUNCIONALs">
+    <Type Name="TB_VINCULO_FUNCIONAL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_VINCULO_FUNCIONAL_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idVinculoFuncional" Type="TB_DADOS_FUNCIONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB__EVENTO_FOLHA_BASE" Member="TB__EVENTO_FOLHA_BASEs">
+    <Type Name="TB__EVENTO_FOLHA_BASE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idEventoFolhaBase" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idEventoFolhaComposicao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="tipoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_EVENTO_FOLHA_TB__EVENTO_FOLHA_BASE" Member="TB_EVENTO_FOLHA" ThisKey="idEventoFolhaBase" OtherKey="id" Type="TB_EVENTO_FOLHA" IsForeignKey="true" />
+      <Association Name="TB_EVENTO_FOLHA_TB__EVENTO_FOLHA_BASE1" Member="TB_EVENTO_FOLHA1" ThisKey="idEventoFolhaComposicao" OtherKey="id" Type="TB_EVENTO_FOLHA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_ADICIONAL_DEFENSOR" Member="TB_ADICIONAL_DEFENSORs">
+    <Type Name="TB_ADICIONAL_DEFENSOR">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="cpfBeneficiarioSubtituicao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataFim" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idBeneficiarioSubtituicao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="matriculaBeneficiarioSubtituicao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiarioSubtituicao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="observacao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="paginaDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="qtdeDias" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="tipAdicional" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idComposicaoInstituicao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeComposicaoInstituicao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoAdicionalDefensor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="matriculaBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="defensoriaVaga" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mesCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipoPeriodo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="excecaoDatasSelecionadas" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DatasUteis" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="diferencaEntrancia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="portaria" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoAtuacaoAuxilio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_AFASTAMENTO" Member="TB_AFASTAMENTOs">
+    <Type Name="TB_AFASTAMENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataAutorizacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataFim" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="historico" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroDias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paginaDiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idBeneficioFuncional" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idMotivoAfastamento" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTipoDocumentoAutorizacao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="incideCompetenciaFolha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="bloqueiaPagamento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="anoPortaria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroPortaria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TB_BENEFICIO_FUNCIONAL_TB_AFASTAMENTO" Member="TB_BENEFICIO_FUNCIONAL" ThisKey="idBeneficioFuncional" OtherKey="id" Type="TB_BENEFICIO_FUNCIONAL" IsForeignKey="true" />
+      <Association Name="TB_MOTIVO_AFASTAMENTO_TB_AFASTAMENTO" Member="TB_MOTIVO_AFASTAMENTO" ThisKey="idMotivoAfastamento" OtherKey="id" Type="TB_MOTIVO_AFASTAMENTO" IsForeignKey="true" />
+      <Association Name="TB_TIPO_DOCUMENTO_AUTORIZACAO_TB_AFASTAMENTO" Member="TB_TIPO_DOCUMENTO_AUTORIZACAO" ThisKey="idTipoDocumentoAutorizacao" OtherKey="id" Type="TB_TIPO_DOCUMENTO_AUTORIZACAO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_ANO_MES_DIA_UTIL" Member="TB_ANO_MES_DIA_UTILs">
+    <Type Name="TB_ANO_MES_DIA_UTIL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nrDiasUteis" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nrFeriado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nrDiasSemanais" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="codCidade" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeCidade" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idAnoMesDiasUteis" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_ANO_MES_DIA_UTIL_TB_ANO_MES_DIA_UTIL" Member="TB_ANO_MES_DIA_UTILs" ThisKey="id" OtherKey="idAnoMesDiasUteis" Type="TB_ANO_MES_DIA_UTIL" />
+      <Association Name="TB_ANO_MES_DIA_UTIL_TB_ANO_MES_DIA_UTIL" Member="TB_ANO_MES_DIA_UTIL1" ThisKey="idAnoMesDiasUteis" OtherKey="id" Type="TB_ANO_MES_DIA_UTIL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_ANO_UTIL" Member="TB_ANO_UTILs">
+    <Type Name="TB_ANO_UTIL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TB_ANO_UTIL_TB_FERIADO_CIDADE" Member="TB_FERIADO_CIDADEs" ThisKey="id" OtherKey="idAnoUteis" Type="TB_FERIADO_CIDADE" />
+      <Association Name="TB_ANO_UTIL_TB_MES_UTIL" Member="TB_MES_UTILs" ThisKey="id" OtherKey="idAnoUteis" Type="TB_MES_UTIL" />
+      <Association Name="TB_ANO_UTIL_TB_MES_UTIL1" Member="TB_MES_UTILs1" ThisKey="id" OtherKey="idAnoMesDiasUteis" Type="TB_MES_UTIL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_AVERBACAO" Member="TB_AVERBACAOs">
+    <Type Name="TB_AVERBACAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="certidao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cnpj" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataFinal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataInicial" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numProcesso" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroDias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="orgaoExpedidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="paginaDiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="regimePrevidenciario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ufOrgaoExpedidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idFinalidade" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idOrgaoEmpresa" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="empregador" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_FINALIDADE_TB_AVERBACAO" Member="TB_FINALIDADE" ThisKey="idFinalidade" OtherKey="id" Type="TB_FINALIDADE" IsForeignKey="true" />
+      <Association Name="TB_ORGAO_EMPRESA_TB_AVERBACAO" Member="TB_ORGAO_EMPRESA" ThisKey="idOrgaoEmpresa" OtherKey="id" Type="TB_ORGAO_EMPRESA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_BENEFICIO" Member="TB_BENEFICIOs">
+    <Type Name="TB_BENEFICIO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="habilitarOpcoesPagto" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_BENEFICIO_TB_BENEFICIO_FUNCIONAL" Member="TB_BENEFICIO_FUNCIONALs" ThisKey="id" OtherKey="idBeneficio" Type="TB_BENEFICIO_FUNCIONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_BENEFICIO_FUNCIONAL" Member="TB_BENEFICIO_FUNCIONALs">
+    <Type Name="TB_BENEFICIO_FUNCIONAL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataFim" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="historico" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numProcesso" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroDias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paginaDiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idBeneficio" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataPgto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tipoBeneficioFuncional" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="valor" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Association Name="TB_BENEFICIO_FUNCIONAL_TB_AFASTAMENTO" Member="TB_AFASTAMENTOs" ThisKey="id" OtherKey="idBeneficioFuncional" Type="TB_AFASTAMENTO" />
+      <Association Name="TB_BENEFICIO_TB_BENEFICIO_FUNCIONAL" Member="TB_BENEFICIO" ThisKey="idBeneficio" OtherKey="id" Type="TB_BENEFICIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CALCULO_RESUMO_GERAL" Member="TB_CALCULO_RESUMO_GERALs">
+    <Type Name="TB_CALCULO_RESUMO_GERAL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="classificacaoContabil" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codIdentificador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricaoFonte" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="fonte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idEventoFolha" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idSubGrupo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="mesCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nomeEventoFolha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeExibicaoEmRelatorio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeSubGrupo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ordem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipoEvento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="valorCalculo" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="ordemSubGrupo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="qtdeServidor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="categoriaFonte" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CARGA_HORARIA" Member="TB_CARGA_HORARIAs">
+    <Type Name="TB_CARGA_HORARIA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_CARGA_HORARIA_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idCargaHoraria" Type="TB_DADOS_FUNCIONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CARGO_COMISSAO" Member="TB_CARGO_COMISSAOs">
+    <Type Name="TB_CARGO_COMISSAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codigo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dedicacaoExclusiva" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="paginaDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="percentual" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="sigla" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="simbolo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="valorContribuicao" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="idOpcaoRemuneracao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_OPCAO_REMUNERACAO_TB_CARGO_COMISSAO" Member="TB_OPCAO_REMUNERACAO" ThisKey="idOpcaoRemuneracao" OtherKey="id" Type="TB_OPCAO_REMUNERACAO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CARREIRA" Member="TB_CARREIRAs">
+    <Type Name="TB_CARREIRA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_CARREIRA_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idCarreira" Type="TB_DADOS_FUNCIONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CATEGORIA_MIDIA" Member="TB_CATEGORIA_MIDIAs">
+    <Type Name="TB_CATEGORIA_MIDIA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="categoriaPai" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="titulo" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="TB_CATEGORIA_MIDIA_TB_MIDIA" Member="TB_MIDIAs" ThisKey="id" OtherKey="categoriaMidia_id" Type="TB_MIDIA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CENSO_DEPENDENTE" Member="TB_CENSO_DEPENDENTEs">
+    <Type Name="TB_CENSO_DEPENDENTE">
+      <Column Name="idDependente" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cs_estado_civil" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cs_logradouro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cs_motivo_fim_pensao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cs_motivo_ini_pensao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cs_sexo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dt_expedicao_rg" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dt_fim_dep" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dt_fim_pensao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dt_inicio_dep" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dt_inicio_pensao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dt_nascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_escolaridade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_motivo_fim_dep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_motivo_inicio_dep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_muni_ibge" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="id_muni_ibge_reside" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="id_orgao_emissor_ident" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pessoa_fisica" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="id_tipo_dependencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_uf_expedicao_rg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="in_deficiente" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nm_bairro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nm_logradouro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nm_mae" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nm_pai" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nm_pessoa_fisica" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nu_celular" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nu_cep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nu_cpf" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nu_ddd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nu_ddd_cel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nu_logradouro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nu_matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nu_pasep_pis_nit" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nu_rg" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nu_telefone" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="quantidade_dependentes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="te_compl_logr" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="te_email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="te_just_mot_fim_pensao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="te_just_mot_ini_pensao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_servidor" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_CENSO_SERVIDOR_PUBLICO_TB_CENSO_DEPENDENTE" Member="TB_CENSO_SERVIDOR_PUBLICO" ThisKey="id_servidor" OtherKey="idServidor" Type="TB_CENSO_SERVIDOR_PUBLICO" IsForeignKey="true" />
+      <Association Name="TB_IBGE_CIDADE_TB_CENSO_DEPENDENTE" Member="TB_IBGE_CIDADE" ThisKey="id_muni_ibge" OtherKey="id" Type="TB_IBGE_CIDADE" IsForeignKey="true" />
+      <Association Name="TB_IBGE_CIDADE_TB_CENSO_DEPENDENTE1" Member="TB_IBGE_CIDADE1" ThisKey="id_muni_ibge_reside" OtherKey="id" Type="TB_IBGE_CIDADE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CENSO_SERVIDOR_PUBLICO" Member="TB_CENSO_SERVIDOR_PUBLICOs">
+    <Type Name="TB_CENSO_SERVIDOR_PUBLICO">
+      <Column Name="idServidor" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cs_estado_civil" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cs_logradouro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cs_sexo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dt_emissao_ctps" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dt_expedicao_rg" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dt_falecimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dt_nascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_escolaridade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_muni_ibge" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="id_muni_ibge_reside" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="id_orgao_emissor_ident" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pessoa_fisica" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="id_uf_expedicao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_uf_expedicao_rg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="in_deficiente" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="in_instituidor_pensao" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nm_bairro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nm_logradouro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nm_mae" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nm_pai" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nm_pessoa_fisica" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nu_celular" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nu_cep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nu_cpf" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nu_ctps" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nu_ctps_serie" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nu_ddd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nu_ddd_cel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nu_logradouro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nu_matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nu_pasep_pis_nit" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nu_rg" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nu_secao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nu_telefone" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nu_titulo_eleitor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nu_zona_titulo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="quantidade_dependentes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="te_compl_logr" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="te_email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="migrado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TB_CENSO_SERVIDOR_PUBLICO_TB_CENSO_DEPENDENTE" Member="TB_CENSO_DEPENDENTEs" ThisKey="idServidor" OtherKey="id_servidor" Type="TB_CENSO_DEPENDENTE" />
+      <Association Name="TB_IBGE_CIDADE_TB_CENSO_SERVIDOR_PUBLICO" Member="TB_IBGE_CIDADE" ThisKey="id_muni_ibge_reside" OtherKey="id" Type="TB_IBGE_CIDADE" IsForeignKey="true" />
+      <Association Name="TB_IBGE_CIDADE_TB_CENSO_SERVIDOR_PUBLICO1" Member="TB_IBGE_CIDADE1" ThisKey="id_muni_ibge" OtherKey="id" Type="TB_IBGE_CIDADE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CENSO_WS_DATAS" Member="TB_CENSO_WS_DATAs">
+    <Type Name="TB_CENSO_WS_DATA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CIDADE_DIA_UTIL" Member="TB_CIDADE_DIA_UTILs">
+    <Type Name="TB_CIDADE_DIA_UTIL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codCidade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nomeCidade" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nrDiasUteis" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nrFeriado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idMesUteis" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_CIDADE_DIA_UTIL_TB_FERIADO_CIDADE" Member="TB_FERIADO_CIDADEs" ThisKey="id" OtherKey="idCidadeDiasUteis" Type="TB_FERIADO_CIDADE" />
+      <Association Name="TB_MES_UTIL_TB_CIDADE_DIA_UTIL" Member="TB_MES_UTIL" ThisKey="idMesUteis" OtherKey="id" Type="TB_MES_UTIL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CODIGO_DOENCA" Member="TB_CODIGO_DOENCAs">
+    <Type Name="TB_CODIGO_DOENCA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CID" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_CODIGO_DOENCA_TB_LICENCA" Member="TB_LICENCAs" ThisKey="id" OtherKey="idCodigoDoenca" Type="TB_LICENCA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_COMPETENCIA_HOLERITE" Member="TB_COMPETENCIA_HOLERITEs">
+    <Type Name="TB_COMPETENCIA_HOLERITE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dataFechamento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="fechamento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="folhaGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaCedidoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaComissionadoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaDefensorGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaEfetivoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="folhaMesFechada" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaMesGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaCedidoDecimoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaCedidoFeriasGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaCedidoNormalGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaCedidoRescisaoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaComissionadoDecimoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaComissionadoFeriasGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaComissionadoNormalGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaComissionadoRescisaoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaDefensorAposentadoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaDefensorDecimoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaDefensorFeriasGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaDefensorIndenizatoriaGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaDefensorNormal" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaDefensorNormalGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaDefensorRescisaoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaEfetivoDecimoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaEfetivoFeriasGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaEfetivoNormalGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaEfetivoRescisaoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaPensionistaGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaPensionistaJudicialFeriasGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaPensionistaJudicialGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaPensionistaJudicialIndenizatoriaGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaPensionistaJudicialNormalGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaPensionistaNormalGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaDefensorAposentadoNormalGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataPagamentoDecimo" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="folhaPensionistaJudicialDecimoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="complementar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="folhaEfetivoAposentadoGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaEfetivoAposentadoNormalGerado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_COMPETENCIA_TABELA_IMPOSTO" Member="TB_COMPETENCIA_TABELA_IMPOSTOs">
+    <Type Name="TB_COMPETENCIA_TABELA_IMPOSTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataCompetencia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idTabelaImposto" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_COMPETENCIA_TABELA_IMPOSTO_TB_DEDUCAO_EXCLUSIVA_COMPETENCIA" Member="TB_DEDUCAO_EXCLUSIVA_COMPETENCIAs" ThisKey="id" OtherKey="idcompetenciaTabelaImposto" Type="TB_DEDUCAO_EXCLUSIVA_COMPETENCIA" />
+      <Association Name="TB_COMPETENCIA_TABELA_IMPOSTO_TB_ITEM_COMPETENCIA_IMPOSTO" Member="TB_ITEM_COMPETENCIA_IMPOSTOs" ThisKey="id" OtherKey="idcompetenciaTabelaImposto" Type="TB_ITEM_COMPETENCIA_IMPOSTO" />
+      <Association Name="TB_TABELA_IMPOSTO_TB_COMPETENCIA_TABELA_IMPOSTO" Member="TB_TABELA_IMPOSTO" ThisKey="idTabelaImposto" OtherKey="id" Type="TB_TABELA_IMPOSTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_COMPLEMENTO_FERIAS" Member="TB_COMPLEMENTO_FERIAs">
+    <Type Name="TB_COMPLEMENTO_FERIA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="observacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="qtdeDias" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codFerias" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CONFIGURACAO_ARQUIVOS" Member="TB_CONFIGURACAO_ARQUIVOs">
+    <Type Name="TB_CONFIGURACAO_ARQUIVO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="caminhoUpload" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="configDefault" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="diretorioFotosPerfil" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="urlMidias" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CONFIGURACAO_EXPORTACAO" Member="TB_CONFIGURACAO_EXPORTACAOs">
+    <Type Name="TB_CONFIGURACAO_EXPORTACAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codigoCassems" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_CONFIGURACAO_PORTAL" Member="TB_CONFIGURACAO_PORTALs">
+    <Type Name="TB_CONFIGURACAO_PORTAL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="configDefault" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dataLiberacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="mesLiberacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anoLiberacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs">
+    <Type Name="TB_DADOS_FUNCIONAL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codCargo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codClasse" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codFuncionarioIntegracao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataAdmissao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataDemissaoExoneracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataExercicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPosse" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataReconducao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataReintegracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idFuncionarioMigracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idLotacao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="matriculaIntegracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeClasse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeLotacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="paginaDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idCargaHoraria" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idCarreira" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idDeficiencia" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idOrigemDocumentoReconducao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idOrigemDocumentoReintegracao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTipoAdmissao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTipoDemissao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTipoReconducao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTipoReintegracao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idVinculoEmpregaticio" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idVinculoFuncional" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataReversao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idTipoReversao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataPromocao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idOrigemDocumentoReversao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="tipoCedencia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CNPJOrgaoOrigem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeOrgaoOrigem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cpfBeneficiarioResponsavel" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idBeneficiarioResponsavel" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="matriculaBeneficiarioResponsavel" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiarioResponsavel" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pensaoCategoriaDecimo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pensaoCategoriaFerias" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pensaoCategoriaNormal" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pensaoCategoriaVerbasIndenizatoria" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="valorInformadoDecimo" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorInformadoFerias" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorInformadoIndenizatoria" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorInformadoNormal" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="dataFimPensaoDecimo" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataFimPensaoFerias" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataFimPensaoNormal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataFimPensaoVrbInd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataInicioPensaoDecimo" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataInicioPensaoFerias" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataInicioPensaoNormal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataInicioPensaoVrbInd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="anoPortariaAdmissao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anoPortariaDemissaoExoneracao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anoPortariaPromocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroPortariaAdmissao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroPortariaDemissaoExoneracao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroPortariaPromocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="instituidorPensao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataPublicacaoExoneracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="numeroDiarioOficialExoneracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="paginaDiarioOficialExoneracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_CARREIRA_TB_DADOS_FUNCIONAL" Member="TB_CARREIRA" ThisKey="idCarreira" OtherKey="id" Type="TB_CARREIRA" IsForeignKey="true" />
+      <Association Name="TB_VINCULO_FUNCIONAL_TB_DADOS_FUNCIONAL" Member="TB_VINCULO_FUNCIONAL" ThisKey="idVinculoFuncional" OtherKey="id" Type="TB_VINCULO_FUNCIONAL" IsForeignKey="true" />
+      <Association Name="TB_CARGA_HORARIA_TB_DADOS_FUNCIONAL" Member="TB_CARGA_HORARIA" ThisKey="idCargaHoraria" OtherKey="id" Type="TB_CARGA_HORARIA" IsForeignKey="true" />
+      <Association Name="TB_DEFICIENCIA_TB_DADOS_FUNCIONAL" Member="TB_DEFICIENCIA" ThisKey="idDeficiencia" OtherKey="id" Type="TB_DEFICIENCIA" IsForeignKey="true" />
+      <Association Name="TB_ORIGEM_DOCUMENTO_TB_DADOS_FUNCIONAL" Member="TB_ORIGEM_DOCUMENTO" ThisKey="idOrigemDocumentoReconducao" OtherKey="id" Type="TB_ORIGEM_DOCUMENTO" IsForeignKey="true" />
+      <Association Name="TB_ORIGEM_DOCUMENTO_TB_DADOS_FUNCIONAL1" Member="TB_ORIGEM_DOCUMENTO1" ThisKey="idOrigemDocumentoReversao" OtherKey="id" Type="TB_ORIGEM_DOCUMENTO" IsForeignKey="true" />
+      <Association Name="TB_ORIGEM_DOCUMENTO_TB_DADOS_FUNCIONAL2" Member="TB_ORIGEM_DOCUMENTO2" ThisKey="idOrigemDocumentoReintegracao" OtherKey="id" Type="TB_ORIGEM_DOCUMENTO" IsForeignKey="true" />
+      <Association Name="TB_TIPO_ADMISSAO_TB_DADOS_FUNCIONAL" Member="TB_TIPO_ADMISSAO" ThisKey="idTipoAdmissao" OtherKey="id" Type="TB_TIPO_ADMISSAO" IsForeignKey="true" />
+      <Association Name="TB_TIPO_DEMISSAO_TB_DADOS_FUNCIONAL" Member="TB_TIPO_DEMISSAO" ThisKey="idTipoDemissao" OtherKey="id" Type="TB_TIPO_DEMISSAO" IsForeignKey="true" />
+      <Association Name="TB_TIPO_RECONDUCAO_TB_DADOS_FUNCIONAL" Member="TB_TIPO_RECONDUCAO" ThisKey="idTipoReconducao" OtherKey="id" Type="TB_TIPO_RECONDUCAO" IsForeignKey="true" />
+      <Association Name="TB_TIPO_REINTEGRACAO_TB_DADOS_FUNCIONAL" Member="TB_TIPO_REINTEGRACAO" ThisKey="idTipoReintegracao" OtherKey="id" Type="TB_TIPO_REINTEGRACAO" IsForeignKey="true" />
+      <Association Name="TB_TIPO_REVERSAO_TB_DADOS_FUNCIONAL" Member="TB_TIPO_REVERSAO" ThisKey="idTipoReversao" OtherKey="id" Type="TB_TIPO_REVERSAO" IsForeignKey="true" />
+      <Association Name="TB_VINCULO_EMPREGATICIO_TB_DADOS_FUNCIONAL" Member="TB_VINCULO_EMPREGATICIO" ThisKey="idVinculoEmpregaticio" OtherKey="id" Type="TB_VINCULO_EMPREGATICIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_DEDUCAO_EXCLUSIVA_COMPETENCIA" Member="TB_DEDUCAO_EXCLUSIVA_COMPETENCIAs">
+    <Type Name="TB_DEDUCAO_EXCLUSIVA_COMPETENCIA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="valor" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="idcompetenciaTabelaImposto" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="tipoDeducao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TB_COMPETENCIA_TABELA_IMPOSTO_TB_DEDUCAO_EXCLUSIVA_COMPETENCIA" Member="TB_COMPETENCIA_TABELA_IMPOSTO" ThisKey="idcompetenciaTabelaImposto" OtherKey="id" Type="TB_COMPETENCIA_TABELA_IMPOSTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_DEFICIENCIA" Member="TB_DEFICIENCIAs">
+    <Type Name="TB_DEFICIENCIA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_DEFICIENCIA_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idDeficiencia" Type="TB_DADOS_FUNCIONAL" />
+      <Association Name="TB_DEFICIENCIA_TB_DEPENDENTE" Member="TB_DEPENDENTEs" ThisKey="id" OtherKey="idDeficiente" Type="TB_DEPENDENTE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_DEPENDENTE" Member="TB_DEPENDENTEs">
+    <Type Name="TB_DEPENDENTE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cartorioCC" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cartorioCN" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="certidaoCasamento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="certidaoNascimento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="cpf" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataNascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idCidadeCC" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idCidadeCN" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCidadeCC" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCidadeCN" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeEstadoCC" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeEstadoCN" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeMae" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomePai" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="orgaoEmissor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="previdencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rg" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="sexo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ufEmissor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idTipoDependente" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idDeficiente" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_DEFICIENCIA_TB_DEPENDENTE" Member="TB_DEFICIENCIA" ThisKey="idDeficiente" OtherKey="id" Type="TB_DEFICIENCIA" IsForeignKey="true" />
+      <Association Name="TB_TIPO_DEPENDENTE_TB_DEPENDENTE" Member="TB_TIPO_DEPENDENTE" ThisKey="idTipoDependente" OtherKey="id" Type="TB_TIPO_DEPENDENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_DIRF" Member="TB_DIRFs">
+    <Type Name="TB_DIRF">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_DIRF_TB_EVENTO_FOLHA" Member="TB_EVENTO_FOLHAs" ThisKey="id" OtherKey="idDirf" Type="TB_EVENTO_FOLHA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_EMPENHO_REGIONAL" Member="TB_EMPENHO_REGIONALs">
+    <Type Name="TB_EMPENHO_REGIONAL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idRegional" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeRegional" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idEmpenho" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_EMPENHO_VERBA_TB_EMPENHO_REGIONAL" Member="TB_EMPENHO_VERBA" ThisKey="idEmpenho" OtherKey="id" Type="TB_EMPENHO_VERBA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_EMPENHO_VERBA" Member="TB_EMPENHO_VERBAs">
+    <Type Name="TB_EMPENHO_VERBA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mesCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="valorEmpenho" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="idEventoFolha" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="valorUtilizado" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorSaldo" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Association Name="TB_EMPENHO_VERBA_TB_EMPENHO_REGIONAL" Member="TB_EMPENHO_REGIONALs" ThisKey="id" OtherKey="idEmpenho" Type="TB_EMPENHO_REGIONAL" />
+      <Association Name="TB_EVENTO_FOLHA_TB_EMPENHO_VERBA" Member="TB_EVENTO_FOLHA" ThisKey="idEventoFolha" OtherKey="id" Type="TB_EVENTO_FOLHA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_EVENTO_FOLHA" Member="TB_EVENTO_FOLHAs">
+    <Type Name="TB_EVENTO_FOLHA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="assumirValorInformado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="exibirContraCheque" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="exibirTotalLotacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proporcional" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipoCalculo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipoEventoFolha" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idDirf" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idRais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="global" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="modoEntrada" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idFormula" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codigoIdentificadorMigracao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TB_EVENTO_FOLHA_TB__EVENTO_FOLHA_BASE" Member="TB__EVENTO_FOLHA_BASEs" ThisKey="id" OtherKey="idEventoFolhaBase" Type="TB__EVENTO_FOLHA_BASE" />
+      <Association Name="TB_EVENTO_FOLHA_TB__EVENTO_FOLHA_BASE1" Member="TB__EVENTO_FOLHA_BASEs1" ThisKey="id" OtherKey="idEventoFolhaComposicao" Type="TB__EVENTO_FOLHA_BASE" />
+      <Association Name="TB_EVENTO_FOLHA_TB_EMPENHO_VERBA" Member="TB_EMPENHO_VERBAs" ThisKey="id" OtherKey="idEventoFolha" Type="TB_EMPENHO_VERBA" />
+      <Association Name="TB_EVENTO_FOLHA_TB_EVENTO_FOLHA_SUB_GRUPO_EVENTO" Member="TB_EVENTO_FOLHA_SUB_GRUPO_EVENTOs" ThisKey="id" OtherKey="idEventoFolha" Type="TB_EVENTO_FOLHA_SUB_GRUPO_EVENTO" />
+      <Association Name="TB_EVENTO_FOLHA_TB_EVENTO_FOLHA_TABELA_IMPOSTO" Member="TB_EVENTO_FOLHA_TABELA_IMPOSTOs" ThisKey="id" OtherKey="idEventoFolha" Type="TB_EVENTO_FOLHA_TABELA_IMPOSTO" />
+      <Association Name="TB_EVENTO_FOLHA_TB_EVENTO_FOLHA_TIPO_SERVIDOR" Member="TB_EVENTO_FOLHA_TIPO_SERVIDORs" ThisKey="id" OtherKey="idEventoFolha" Type="TB_EVENTO_FOLHA_TIPO_SERVIDOR" />
+      <Association Name="TB_EVENTO_FOLHA_TB_FICHA_FINANCEIRA_EVENTO_FOLHA" Member="TB_FICHA_FINANCEIRA_EVENTO_FOLHAs" ThisKey="id" OtherKey="idEventoFolha" Type="TB_FICHA_FINANCEIRA_EVENTO_FOLHA" />
+      <Association Name="TB_EVENTO_FOLHA_TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIO" Member="TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIOs" ThisKey="id" OtherKey="idEventoFolha" Type="TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIO" />
+      <Association Name="TB_EVENTO_FOLHA_TB_INFO_FINANCEIRA" Member="TB_INFO_FINANCEIRAs" ThisKey="id" OtherKey="idEventoFolha" Type="TB_INFO_FINANCEIRA" />
+      <Association Name="TB_EVENTO_FOLHA_TB_VANTAGEM_FIXA_SERVIDOR" Member="TB_VANTAGEM_FIXA_SERVIDORs" ThisKey="id" OtherKey="idEventoFolha" Type="TB_VANTAGEM_FIXA_SERVIDOR" />
+      <Association Name="TB_DIRF_TB_EVENTO_FOLHA" Member="TB_DIRF" ThisKey="idDirf" OtherKey="id" Type="TB_DIRF" IsForeignKey="true" />
+      <Association Name="TB_FORMULA_TB_EVENTO_FOLHA" Member="TB_FORMULA" ThisKey="idFormula" OtherKey="id" Type="TB_FORMULA" IsForeignKey="true" />
+      <Association Name="TB_RAI_TB_EVENTO_FOLHA" Member="TB_RAI" ThisKey="idRais" OtherKey="id" Type="TB_RAI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_EVENTO_FOLHA_SUB_GRUPO_EVENTO" Member="TB_EVENTO_FOLHA_SUB_GRUPO_EVENTOs">
+    <Type Name="TB_EVENTO_FOLHA_SUB_GRUPO_EVENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idEventoFolha" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idSubGrupoEvento" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="ordem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TB_EVENTO_FOLHA_TB_EVENTO_FOLHA_SUB_GRUPO_EVENTO" Member="TB_EVENTO_FOLHA" ThisKey="idEventoFolha" OtherKey="id" Type="TB_EVENTO_FOLHA" IsForeignKey="true" />
+      <Association Name="TB_SUB_GRUPO_EVENTO_TB_EVENTO_FOLHA_SUB_GRUPO_EVENTO" Member="TB_SUB_GRUPO_EVENTO" ThisKey="idSubGrupoEvento" OtherKey="id" Type="TB_SUB_GRUPO_EVENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_EVENTO_FOLHA_TABELA_IMPOSTO" Member="TB_EVENTO_FOLHA_TABELA_IMPOSTOs">
+    <Type Name="TB_EVENTO_FOLHA_TABELA_IMPOSTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idEventoFolha" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTabelaImposto" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_EVENTO_FOLHA_TB_EVENTO_FOLHA_TABELA_IMPOSTO" Member="TB_EVENTO_FOLHA" ThisKey="idEventoFolha" OtherKey="id" Type="TB_EVENTO_FOLHA" IsForeignKey="true" />
+      <Association Name="TB_TABELA_IMPOSTO_TB_EVENTO_FOLHA_TABELA_IMPOSTO" Member="TB_TABELA_IMPOSTO" ThisKey="idTabelaImposto" OtherKey="id" Type="TB_TABELA_IMPOSTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_EVENTO_FOLHA_TIPO_SERVIDOR" Member="TB_EVENTO_FOLHA_TIPO_SERVIDORs">
+    <Type Name="TB_EVENTO_FOLHA_TIPO_SERVIDOR">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoServidor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idEventoFolha" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="eventoPadrao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="categoriaFoha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_EVENTO_FOLHA_TB_EVENTO_FOLHA_TIPO_SERVIDOR" Member="TB_EVENTO_FOLHA" ThisKey="idEventoFolha" OtherKey="id" Type="TB_EVENTO_FOLHA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_EVENTOS_EXPORTACAO_GAIP" Member="TB_EVENTOS_EXPORTACAO_GAIPs">
+    <Type Name="TB_EVENTOS_EXPORTACAO_GAIP">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codIdentificadorFolha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cpf" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataFimAfastamento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="grupo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idFolhaBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="mesAnoCompetencia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="motivoAfastamento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeEvento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroMeses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="plano" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="subGrupo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="telefoneCelular" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoBeneficio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipoEvento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="valorBaseCalculo" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorContribuicaoPatronal" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorContribuicaoServidor" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorIRRF" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorRemuneracaoBruta" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FERIADO_CIDADE" Member="TB_FERIADO_CIDADEs">
+    <Type Name="TB_FERIADO_CIDADE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dataFeriado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tipoFeriado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idCidadeDiasUteis" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idMesUteis" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idAnoUteis" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_CIDADE_DIA_UTIL_TB_FERIADO_CIDADE" Member="TB_CIDADE_DIA_UTIL" ThisKey="idCidadeDiasUteis" OtherKey="id" Type="TB_CIDADE_DIA_UTIL" IsForeignKey="true" />
+      <Association Name="TB_ANO_UTIL_TB_FERIADO_CIDADE" Member="TB_ANO_UTIL" ThisKey="idAnoUteis" OtherKey="id" Type="TB_ANO_UTIL" IsForeignKey="true" />
+      <Association Name="TB_MES_UTIL_TB_FERIADO_CIDADE" Member="TB_MES_UTIL" ThisKey="idMesUteis" OtherKey="id" Type="TB_MES_UTIL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FERIAS" Member="TB_FERIAs">
+    <Type Name="TB_FERIA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="abonoFerias" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataDiario" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPgto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="diasHaver" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="diferencaFerias" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fimConcessao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fimGozo" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inicioConcessao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inicioGozo" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="numeroDiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="observacoes" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="paginaDiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="periodoFerias" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="qtdeDias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="retorno" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="situacaoFerias" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idRegistroPai" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="mesAnoCompetencia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FICHA_FINANCEIRA_BENEFICIARIO" Member="TB_FICHA_FINANCEIRA_BENEFICIARIOs">
+    <Type Name="TB_FICHA_FINANCEIRA_BENEFICIARIO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaFolha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_FICHA_FINANCEIRA_BENEFICIARIO_TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIO" Member="TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIOs" ThisKey="id" OtherKey="idFichaFinanceiraBeneficiario" Type="TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FICHA_FINANCEIRA_EVENTO_FOLHA" Member="TB_FICHA_FINANCEIRA_EVENTO_FOLHAs">
+    <Type Name="TB_FICHA_FINANCEIRA_EVENTO_FOLHA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idEventoFolha" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idFichaFinanceiraPadraoFolhaGeral" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="abril" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="agosto" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="decimoTerceiro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dezembro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="fevereiro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="janeiro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="julho" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="junho" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="maio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="marco" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="novembro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="outubro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="setembro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="valorInformado" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Association Name="TB_EVENTO_FOLHA_TB_FICHA_FINANCEIRA_EVENTO_FOLHA" Member="TB_EVENTO_FOLHA" ThisKey="idEventoFolha" OtherKey="id" Type="TB_EVENTO_FOLHA" IsForeignKey="true" />
+      <Association Name="TB_FICHA_FINANCEIRA_PADRAO_FOLHA_TB_FICHA_FINANCEIRA_EVENTO_FOLHA" Member="TB_FICHA_FINANCEIRA_PADRAO_FOLHA" ThisKey="idFichaFinanceiraPadraoFolhaGeral" OtherKey="id" Type="TB_FICHA_FINANCEIRA_PADRAO_FOLHA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIO" Member="TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIOs">
+    <Type Name="TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DataFim" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="abril" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="agosto" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="decimoTerceiro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dezembro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="fevereiro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="janeiro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="julho" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="junho" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="maio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="marco" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="novembro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="outubro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="setembro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="valorInformado" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="idEventoFolha" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idFichaFinanceiraBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="eventoAutomatico" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="eventosAutomatico" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_EVENTO_FOLHA_TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIO" Member="TB_EVENTO_FOLHA" ThisKey="idEventoFolha" OtherKey="id" Type="TB_EVENTO_FOLHA" IsForeignKey="true" />
+      <Association Name="TB_FICHA_FINANCEIRA_BENEFICIARIO_TB_FICHA_FINANCEIRA_EVENTO_FOLHA_BENEFICIARIO" Member="TB_FICHA_FINANCEIRA_BENEFICIARIO" ThisKey="idFichaFinanceiraBeneficiario" OtherKey="id" Type="TB_FICHA_FINANCEIRA_BENEFICIARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FICHA_FINANCEIRA_PADRAO_FOLHA" Member="TB_FICHA_FINANCEIRA_PADRAO_FOLHAs">
+    <Type Name="TB_FICHA_FINANCEIRA_PADRAO_FOLHA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaFolha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TB_FICHA_FINANCEIRA_PADRAO_FOLHA_TB_FICHA_FINANCEIRA_EVENTO_FOLHA" Member="TB_FICHA_FINANCEIRA_EVENTO_FOLHAs" ThisKey="id" OtherKey="idFichaFinanceiraPadraoFolhaGeral" Type="TB_FICHA_FINANCEIRA_EVENTO_FOLHA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FILIACAO" Member="TB_FILIACAOs">
+    <Type Name="TB_FILIACAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codCidade" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="cpf" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataNascimentoFiliacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCidade" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeFiliacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idTipoFiliacao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_TIPO_FILIACAO_TB_FILIACAO" Member="TB_TIPO_FILIACAO" ThisKey="idTipoFiliacao" OtherKey="id" Type="TB_TIPO_FILIACAO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FINALIDADE" Member="TB_FINALIDADEs">
+    <Type Name="TB_FINALIDADE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_FINALIDADE_TB_AVERBACAO" Member="TB_AVERBACAOs" ThisKey="id" OtherKey="idFinalidade" Type="TB_AVERBACAO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FOLHA_PAGAMENTO_BENEFICIARIO" Member="TB_FOLHA_PAGAMENTO_BENEFICIARIOs">
+    <Type Name="TB_FOLHA_PAGAMENTO_BENEFICIARIO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="agencia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="categoriaFolha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codCargo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="contacorrente" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cpf" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataAdmissao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="lotacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="mesCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nomeBanco" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDependente" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="totalDesconto" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="totalProventos" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorLiquido" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="idlotacao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeLotacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBanco" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="folhaFechada" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="versao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idClasse" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeClasse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pisPasep" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_FOLHA_PAGAMENTO_BENEFICIARIO_TB_FOLHA_PAGAMENTO_EVENTO_FOLHA" Member="TB_FOLHA_PAGAMENTO_EVENTO_FOLHAs" ThisKey="id" OtherKey="idFolhaPagamentoBeneficiario" Type="TB_FOLHA_PAGAMENTO_EVENTO_FOLHA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FOLHA_PAGAMENTO_EVENTO_FOLHA" Member="TB_FOLHA_PAGAMENTO_EVENTO_FOLHAs">
+    <Type Name="TB_FOLHA_PAGAMENTO_EVENTO_FOLHA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idEventoFolha" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="tipoEvento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="valorCalculo" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorReferencia" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="idFolhaPagamentoBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeEventoFolha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codIdentificador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TB_FOLHA_PAGAMENTO_BENEFICIARIO_TB_FOLHA_PAGAMENTO_EVENTO_FOLHA" Member="TB_FOLHA_PAGAMENTO_BENEFICIARIO" ThisKey="idFolhaPagamentoBeneficiario" OtherKey="id" Type="TB_FOLHA_PAGAMENTO_BENEFICIARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FONTE" Member="TB_FONTEs">
+    <Type Name="TB_FONTE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="identificador" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_FONTE_TB_INFO_FINANCEIRA" Member="TB_INFO_FINANCEIRAs" ThisKey="id" OtherKey="idFonte" Type="TB_INFO_FINANCEIRA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FORMULA" Member="TB_FORMULAs">
+    <Type Name="TB_FORMULA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_FORMULA_TB_EVENTO_FOLHA" Member="TB_EVENTO_FOLHAs" ThisKey="id" OtherKey="idFormula" Type="TB_EVENTO_FOLHA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_FUNCAO_GRATIFICADA" Member="TB_FUNCAO_GRATIFICADAs">
+    <Type Name="TB_FUNCAO_GRATIFICADA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CNPJOrgaoOrigem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codigoFuncao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataDispensa" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataNomeacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dedicacaoExclusiva" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="incideContribuicao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeOrgaoOrigem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="opcaoFuncaoGratificada" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="percentualGratificacao" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="portariaDispensa" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="portariaNomeacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="siglaFuncaoGratificada" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="valorContribuicao" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="numeroDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="paginaDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_GRUPO_EVENTO" Member="TB_GRUPO_EVENTOs">
+    <Type Name="TB_GRUPO_EVENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="identificador" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="agruparSubGrupo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_GRUPO_EVENTO_TB_GRUPO_EVENTO_SUB_GRUPO_EVENTO" Member="TB_GRUPO_EVENTO_SUB_GRUPO_EVENTOs" ThisKey="id" OtherKey="idGrupoEvento" Type="TB_GRUPO_EVENTO_SUB_GRUPO_EVENTO" />
+      <Association Name="TB_GRUPO_EVENTO_TB_OPCOES_CONSULTA_REMUNERACAO" Member="TB_OPCOES_CONSULTA_REMUNERACAOs" ThisKey="id" OtherKey="idGrupoEventoFolha_resumo" Type="TB_OPCOES_CONSULTA_REMUNERACAO" />
+      <Association Name="TB_GRUPO_EVENTO_TB_OPCOES_RELATORIOS_RESUMO_GERAL" Member="TB_OPCOES_RELATORIOS_RESUMO_GERALs" ThisKey="id" OtherKey="idGrupoEventoFolha_resumo" Type="TB_OPCOES_RELATORIOS_RESUMO_GERAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_GRUPO_EVENTO_SUB_GRUPO_EVENTO" Member="TB_GRUPO_EVENTO_SUB_GRUPO_EVENTOs">
+    <Type Name="TB_GRUPO_EVENTO_SUB_GRUPO_EVENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idGrupoEvento" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idSubGrupoEvento" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_GRUPO_EVENTO_TB_GRUPO_EVENTO_SUB_GRUPO_EVENTO" Member="TB_GRUPO_EVENTO" ThisKey="idGrupoEvento" OtherKey="id" Type="TB_GRUPO_EVENTO" IsForeignKey="true" />
+      <Association Name="TB_SUB_GRUPO_EVENTO_TB_GRUPO_EVENTO_SUB_GRUPO_EVENTO" Member="TB_SUB_GRUPO_EVENTO" ThisKey="idSubGrupoEvento" OtherKey="id" Type="TB_SUB_GRUPO_EVENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_HISTORICO_LOTACAO" Member="TB_HISTORICO_LOTACAOs">
+    <Type Name="TB_HISTORICO_LOTACAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idLotacao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeLotacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="paginaDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idComposicaoInstituicao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeComposicaoInstituicao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="composicaoInstituicaoDeOrigem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeCargoDadosFuncionais" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="lotacaoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idDeferencaEntrancia" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataFinal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataInicial" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_IBGE_CIDADE" Member="TB_IBGE_CIDADEs">
+    <Type Name="TB_IBGE_CIDADE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cep" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="uf_id" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_IBGE_CIDADE_TB_CENSO_DEPENDENTE" Member="TB_CENSO_DEPENDENTEs" ThisKey="id" OtherKey="id_muni_ibge" Type="TB_CENSO_DEPENDENTE" />
+      <Association Name="TB_IBGE_CIDADE_TB_CENSO_DEPENDENTE1" Member="TB_CENSO_DEPENDENTEs1" ThisKey="id" OtherKey="id_muni_ibge_reside" Type="TB_CENSO_DEPENDENTE" />
+      <Association Name="TB_IBGE_CIDADE_TB_CENSO_SERVIDOR_PUBLICO" Member="TB_CENSO_SERVIDOR_PUBLICOs" ThisKey="id" OtherKey="id_muni_ibge_reside" Type="TB_CENSO_SERVIDOR_PUBLICO" />
+      <Association Name="TB_IBGE_CIDADE_TB_CENSO_SERVIDOR_PUBLICO1" Member="TB_CENSO_SERVIDOR_PUBLICOs1" ThisKey="id" OtherKey="id_muni_ibge" Type="TB_CENSO_SERVIDOR_PUBLICO" />
+      <Association Name="TB_IBGE_UF_TB_IBGE_CIDADE" Member="TB_IBGE_UF" ThisKey="uf_id" OtherKey="id" Type="TB_IBGE_UF" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_IBGE_UF" Member="TB_IBGE_UFs">
+    <Type Name="TB_IBGE_UF">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="sigla" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_IBGE_UF_TB_IBGE_CIDADE" Member="TB_IBGE_CIDADEs" ThisKey="id" OtherKey="uf_id" Type="TB_IBGE_CIDADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_INFO_FINANCEIRA" Member="TB_INFO_FINANCEIRAs">
+    <Type Name="TB_INFO_FINANCEIRA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="classificacaoContabil" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idEventoFolha" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idFonte" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_FONTE_TB_INFO_FINANCEIRA" Member="TB_FONTE" ThisKey="idFonte" OtherKey="id" Type="TB_FONTE" IsForeignKey="true" />
+      <Association Name="TB_EVENTO_FOLHA_TB_INFO_FINANCEIRA" Member="TB_EVENTO_FOLHA" ThisKey="idEventoFolha" OtherKey="id" Type="TB_EVENTO_FOLHA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_ITEM_COMPETENCIA_IMPOSTO" Member="TB_ITEM_COMPETENCIA_IMPOSTOs">
+    <Type Name="TB_ITEM_COMPETENCIA_IMPOSTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="acrescentar" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="deduzir" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="percentualTetoMaximo" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorTetoMaximo" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="idcompetenciaTabelaImposto" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="percentualDeducao" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorDeducao" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="itemValorUnico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="valorPrincipal" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="percentualPrincipal" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Association Name="TB_COMPETENCIA_TABELA_IMPOSTO_TB_ITEM_COMPETENCIA_IMPOSTO" Member="TB_COMPETENCIA_TABELA_IMPOSTO" ThisKey="idcompetenciaTabelaImposto" OtherKey="id" Type="TB_COMPETENCIA_TABELA_IMPOSTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_LICENCA" Member="TB_LICENCAs">
+    <Type Name="TB_LICENCA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataFim" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="historico" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroDias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paginaDiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idCodigoDoenca" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idMotivoLicenca" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="prorrogacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idLicencaProrrogado" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="incideCompetenciaFolha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_LICENCA_TB_LICENCA" Member="TB_LICENCAs" ThisKey="id" OtherKey="idLicencaProrrogado" Type="TB_LICENCA" />
+      <Association Name="TB_LICENCA_TB_LICENCA" Member="TB_LICENCA1" ThisKey="idLicencaProrrogado" OtherKey="id" Type="TB_LICENCA" IsForeignKey="true" />
+      <Association Name="TB_CODIGO_DOENCA_TB_LICENCA" Member="TB_CODIGO_DOENCA" ThisKey="idCodigoDoenca" OtherKey="id" Type="TB_CODIGO_DOENCA" IsForeignKey="true" />
+      <Association Name="TB_MOTIVO_LICENCA_TB_LICENCA" Member="TB_MOTIVO_LICENCA" ThisKey="idMotivoLicenca" OtherKey="id" Type="TB_MOTIVO_LICENCA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_MES_UTIL" Member="TB_MES_UTILs">
+    <Type Name="TB_MES_UTIL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nrDiasSemanais" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idAnoMesDiasUteis" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idAnoUteis" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="nomeMes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_MES_UTIL_TB_CIDADE_DIA_UTIL" Member="TB_CIDADE_DIA_UTILs" ThisKey="id" OtherKey="idMesUteis" Type="TB_CIDADE_DIA_UTIL" />
+      <Association Name="TB_MES_UTIL_TB_FERIADO_CIDADE" Member="TB_FERIADO_CIDADEs" ThisKey="id" OtherKey="idMesUteis" Type="TB_FERIADO_CIDADE" />
+      <Association Name="TB_ANO_UTIL_TB_MES_UTIL" Member="TB_ANO_UTIL" ThisKey="idAnoUteis" OtherKey="id" Type="TB_ANO_UTIL" IsForeignKey="true" />
+      <Association Name="TB_ANO_UTIL_TB_MES_UTIL1" Member="TB_ANO_UTIL1" ThisKey="idAnoMesDiasUteis" OtherKey="id" Type="TB_ANO_UTIL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_MIDIAS" Member="TB_MIDIAs">
+    <Type Name="TB_MIDIA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="anoReferencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="extensao" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="idBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="mesReferencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nomeDoArquivo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="nomeMesReferencia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="publicadoNoPortal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tamanho" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="titulo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaMidia_id" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="tipoDocumentos_id" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="path" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="url" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="tipoContracheque" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_CATEGORIA_MIDIA_TB_MIDIA" Member="TB_CATEGORIA_MIDIA" ThisKey="categoriaMidia_id" OtherKey="id" Type="TB_CATEGORIA_MIDIA" IsForeignKey="true" />
+      <Association Name="TB_TIPO_DOCUMENTO_TB_MIDIA" Member="TB_TIPO_DOCUMENTO" ThisKey="tipoDocumentos_id" OtherKey="id" Type="TB_TIPO_DOCUMENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_MODELO_COMPROVANTE" Member="TB_MODELO_COMPROVANTEs">
+    <Type Name="TB_MODELO_COMPROVANTE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="anexo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="anoCalendario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anoExercicio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nomeEmpresa" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="totalPaginas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="totalServidores" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TB_MODELO_COMPROVANTE_TB_MODELO_SERVIDOR_COMPROVANTE" Member="TB_MODELO_SERVIDOR_COMPROVANTEs" ThisKey="id" OtherKey="idModelo" Type="TB_MODELO_SERVIDOR_COMPROVANTE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_MODELO_SERVIDOR_COMPROVANTE" Member="TB_MODELO_SERVIDOR_COMPROVANTEs">
+    <Type Name="TB_MODELO_SERVIDOR_COMPROVANTE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="anexadoNoPortal" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codMidia" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="cpf" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="existeNoSistema" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="paginaFinal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paginaInicial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idModelo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_MODELO_COMPROVANTE_TB_MODELO_SERVIDOR_COMPROVANTE" Member="TB_MODELO_COMPROVANTE" ThisKey="idModelo" OtherKey="id" Type="TB_MODELO_COMPROVANTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_MONITOR_PROCEDURE" Member="TB_MONITOR_PROCEDUREs">
+    <Type Name="TB_MONITOR_PROCEDURE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="progress" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="categoriaFolha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_MOTIVO_AFASTAMENTO" Member="TB_MOTIVO_AFASTAMENTOs">
+    <Type Name="TB_MOTIVO_AFASTAMENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_MOTIVO_AFASTAMENTO_TB_AFASTAMENTO" Member="TB_AFASTAMENTOs" ThisKey="id" OtherKey="idMotivoAfastamento" Type="TB_AFASTAMENTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_MOTIVO_LICENCA" Member="TB_MOTIVO_LICENCAs">
+    <Type Name="TB_MOTIVO_LICENCA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_MOTIVO_LICENCA_TB_LICENCA" Member="TB_LICENCAs" ThisKey="id" OtherKey="idMotivoLicenca" Type="TB_LICENCA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_OPCAO_REMUNERACAO" Member="TB_OPCAO_REMUNERACAOs">
+    <Type Name="TB_OPCAO_REMUNERACAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="TB_OPCAO_REMUNERACAO_TB_CARGO_COMISSAO" Member="TB_CARGO_COMISSAOs" ThisKey="id" OtherKey="idOpcaoRemuneracao" Type="TB_CARGO_COMISSAO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_OPCOES_CONSULTA_REMUNERACAO" Member="TB_OPCOES_CONSULTA_REMUNERACAOs">
+    <Type Name="TB_OPCOES_CONSULTA_REMUNERACAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="configDefault" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idsSubCategorias" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idGrupoEventoFolha_resumo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_GRUPO_EVENTO_TB_OPCOES_CONSULTA_REMUNERACAO" Member="TB_GRUPO_EVENTO" ThisKey="idGrupoEventoFolha_resumo" OtherKey="id" Type="TB_GRUPO_EVENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_OPCOES_RELATORIOS_RESUMO_GERAL" Member="TB_OPCOES_RELATORIOS_RESUMO_GERALs">
+    <Type Name="TB_OPCOES_RELATORIOS_RESUMO_GERAL">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="configDefault" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idsDesconto" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idsFunadep" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idsPatronal" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idsProvento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idGrupoEventoFolha_resumo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_GRUPO_EVENTO_TB_OPCOES_RELATORIOS_RESUMO_GERAL" Member="TB_GRUPO_EVENTO" ThisKey="idGrupoEventoFolha_resumo" OtherKey="id" Type="TB_GRUPO_EVENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_ORGAO_EMPRESA" Member="TB_ORGAO_EMPRESAs">
+    <Type Name="TB_ORGAO_EMPRESA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoOrgaoEmpresa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TB_ORGAO_EMPRESA_TB_AVERBACAO" Member="TB_AVERBACAOs" ThisKey="id" OtherKey="idOrgaoEmpresa" Type="TB_AVERBACAO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_ORIGEM_DOCUMENTO" Member="TB_ORIGEM_DOCUMENTOs">
+    <Type Name="TB_ORIGEM_DOCUMENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_ORIGEM_DOCUMENTO_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idOrigemDocumentoReconducao" Type="TB_DADOS_FUNCIONAL" />
+      <Association Name="TB_ORIGEM_DOCUMENTO_TB_DADOS_FUNCIONAL1" Member="TB_DADOS_FUNCIONALs1" ThisKey="id" OtherKey="idOrigemDocumentoReversao" Type="TB_DADOS_FUNCIONAL" />
+      <Association Name="TB_ORIGEM_DOCUMENTO_TB_DADOS_FUNCIONAL2" Member="TB_DADOS_FUNCIONALs2" ThisKey="id" OtherKey="idOrigemDocumentoReintegracao" Type="TB_DADOS_FUNCIONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_PERIODO_COMPETENCIA_BASE" Member="TB_PERIODO_COMPETENCIA_BASEs">
+    <Type Name="TB_PERIODO_COMPETENCIA_BASE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dataCompetencia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idClasse" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idSimbolo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="percentualReajuste" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="valorReajuste" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="categoria" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idCargo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataValidade" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_PROMOCAO" Member="TB_PROMOCAOs">
+    <Type Name="TB_PROMOCAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codCargo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codClasse" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataInicioPromocao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataTermino" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargoDadosFuncionais" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeClasse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="paginaDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="anoPortariaPromocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroPortariaPromocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_RAIS" Member="TB_RAIs">
+    <Type Name="TB_RAI">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_RAI_TB_EVENTO_FOLHA" Member="TB_EVENTO_FOLHAs" ThisKey="id" OtherKey="idRais" Type="TB_EVENTO_FOLHA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_REMESSA" Member="TB_REMESSAs">
+    <Type Name="TB_REMESSA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="anoPortariaAdmissao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anoPortariaPromocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anoPortariaVacancia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="arquivoNomeacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoNomeacaoEnviado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoNomeacaoHash" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoPosse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoPosseEnviado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoPosseHash" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoPromocao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoPromocaoEnviado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoPromocaoHash" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoVacancia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoVacanciaEnviado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="arquivoVacanciaHash" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cargoComissaoAdmissao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cargoComissaoVacancia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="carteiraFuncional" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="carteiraTrabalho" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cboSicap" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cidadeIBGE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codNacionalidadeIBGE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cpf" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dataAdmissao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataCadastro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataDemissaoExoneracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataEmissaoRG" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataExercicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataNascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPosse" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPromocao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacaoAdmissao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacaoPromocao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacaoVacancia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estadoCivil" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idDocNomeacao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idDocPosse" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idEscolaridade" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idLotacao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTipoAdmissao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTipoDocVacancia" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTipoVacancia" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeClasse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeDocNomeacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeDocPosse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeEscolaridade" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeLotacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeMae" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeNaturalidadeIBGE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomePai" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeTipoAdmissao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeTipoDocVacancia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeTipoVacancia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroPortariaAdmissao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroPortariaPromocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroPortariaVacancia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numeroProtocoloAdmissao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroProtocoloPromocao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroProtocoloVacancia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ordemCargoSICAP" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ordemTabelaVencimento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="orgaoEmissorRG" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pathNomeacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pathPosse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pathPromocao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pathVacancia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="pisPasep" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="reservista" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="rg" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="secaoEleitor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="serieCTPS" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="sexo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="simboloClasse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoMovimento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipoProvimento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tituloEleitor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="urlNomeacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="urlPosse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="urlPromocao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="urlVacancia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="veiculoPublicacaoNomeacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="veiculoPublicacaoPosse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="veiculoPublicacaoPromocao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="veiculoPublicacaoVacancia" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="zonaEleitor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idRemessaControle" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="secaoTitulo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="zonaTitulo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_REMESSA_CONTROLE_TB_REMESSA" Member="TB_REMESSA_CONTROLE" ThisKey="idRemessaControle" OtherKey="id" Type="TB_REMESSA_CONTROLE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_REMESSA_CONTROLE" Member="TB_REMESSA_CONTROLEs">
+    <Type Name="TB_REMESSA_CONTROLE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="grupo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="mesCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TB_REMESSA_CONTROLE_TB_REMESSA" Member="TB_REMESSAs" ThisKey="id" OtherKey="idRemessaControle" Type="TB_REMESSA" />
+      <Association Name="TB_REMESSA_CONTROLE_TB_REMESSA_CONTROLE_GRUPO" Member="TB_REMESSA_CONTROLE_GRUPOs" ThisKey="id" OtherKey="idRemessaControle" Type="TB_REMESSA_CONTROLE_GRUPO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_REMESSA_CONTROLE_GRUPO" Member="TB_REMESSA_CONTROLE_GRUPOs">
+    <Type Name="TB_REMESSA_CONTROLE_GRUPO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="grupo" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idRemessaControle" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_REMESSA_CONTROLE_TB_REMESSA_CONTROLE_GRUPO" Member="TB_REMESSA_CONTROLE" ThisKey="idRemessaControle" OtherKey="id" Type="TB_REMESSA_CONTROLE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SICAP_CIDADE_IBGE" Member="TB_SICAP_CIDADE_IBGEs">
+    <Type Name="TB_SICAP_CIDADE_IBGE">
+      <Column Name="codigo_cidade" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="cidade" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="uf_sigla" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="uf_codigo_ibge" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SICAP_EVENTO_REMUNERACAO" Member="TB_SICAP_EVENTO_REMUNERACAOs">
+    <Type Name="TB_SICAP_EVENTO_REMUNERACAO">
+      <Column Name="idevento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idremuneracao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SICAP_LOTACAO" Member="TB_SICAP_LOTACAOs">
+    <Type Name="TB_SICAP_LOTACAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idLotacao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idCidade" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SICAP_TIPO_ADMISSAO" Member="TB_SICAP_TIPO_ADMISSAOs">
+    <Type Name="TB_SICAP_TIPO_ADMISSAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_SICAP_TIPO_ADMISSAO_TB_SICAP_TIPO_ADMISSAO_CATEGORIA_SERVIDOR" Member="TB_SICAP_TIPO_ADMISSAO_CATEGORIA_SERVIDORs" ThisKey="id" OtherKey="idTipoAdmissao" Type="TB_SICAP_TIPO_ADMISSAO_CATEGORIA_SERVIDOR" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SICAP_TIPO_ADMISSAO_CATEGORIA_SERVIDOR" Member="TB_SICAP_TIPO_ADMISSAO_CATEGORIA_SERVIDORs">
+    <Type Name="TB_SICAP_TIPO_ADMISSAO_CATEGORIA_SERVIDOR">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="enumTipoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idTipoAdmissao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_SICAP_TIPO_ADMISSAO_TB_SICAP_TIPO_ADMISSAO_CATEGORIA_SERVIDOR" Member="TB_SICAP_TIPO_ADMISSAO" ThisKey="idTipoAdmissao" OtherKey="id" Type="TB_SICAP_TIPO_ADMISSAO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SICAP_TIPO_ADMISSAO_DOCUMENTO" Member="TB_SICAP_TIPO_ADMISSAO_DOCUMENTOs">
+    <Type Name="TB_SICAP_TIPO_ADMISSAO_DOCUMENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idTipoAdmissao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTipoDocumento" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_SICAP_TIPO_DOCUMENTO_TB_SICAP_TIPO_ADMISSAO_DOCUMENTO" Member="TB_SICAP_TIPO_DOCUMENTO" ThisKey="idTipoDocumento" OtherKey="id" Type="TB_SICAP_TIPO_DOCUMENTO" IsForeignKey="true" />
+      <Association Name="TB_SICAP_TIPO_VACANCIA_TB_SICAP_TIPO_ADMISSAO_DOCUMENTO" Member="TB_SICAP_TIPO_VACANCIA" ThisKey="idTipoAdmissao" OtherKey="id" Type="TB_SICAP_TIPO_VACANCIA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SICAP_TIPO_DOCUMENTO" Member="TB_SICAP_TIPO_DOCUMENTOs">
+    <Type Name="TB_SICAP_TIPO_DOCUMENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_SICAP_TIPO_DOCUMENTO_TB_SICAP_TIPO_ADMISSAO_DOCUMENTO" Member="TB_SICAP_TIPO_ADMISSAO_DOCUMENTOs" ThisKey="id" OtherKey="idTipoDocumento" Type="TB_SICAP_TIPO_ADMISSAO_DOCUMENTO" />
+      <Association Name="TB_SICAP_TIPO_DOCUMENTO_TB_SICAP_TIPO_VACANCIA_DOCUMENTO" Member="TB_SICAP_TIPO_VACANCIA_DOCUMENTOs" ThisKey="id" OtherKey="idTipoDocumento" Type="TB_SICAP_TIPO_VACANCIA_DOCUMENTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SICAP_TIPO_VACANCIA" Member="TB_SICAP_TIPO_VACANCIAs">
+    <Type Name="TB_SICAP_TIPO_VACANCIA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_SICAP_TIPO_VACANCIA_TB_SICAP_TIPO_ADMISSAO_DOCUMENTO" Member="TB_SICAP_TIPO_ADMISSAO_DOCUMENTOs" ThisKey="id" OtherKey="idTipoAdmissao" Type="TB_SICAP_TIPO_ADMISSAO_DOCUMENTO" />
+      <Association Name="TB_SICAP_TIPO_VACANCIA_TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDOR" Member="TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDORs" ThisKey="id" OtherKey="idTipoVacancia" Type="TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDOR" />
+      <Association Name="TB_SICAP_TIPO_VACANCIA_TB_SICAP_TIPO_VACANCIA_DOCUMENTO" Member="TB_SICAP_TIPO_VACANCIA_DOCUMENTOs" ThisKey="id" OtherKey="idTipoVacancia" Type="TB_SICAP_TIPO_VACANCIA_DOCUMENTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDOR" Member="TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDORs">
+    <Type Name="TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDOR">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="enumTipoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idTipoVacancia" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idTipoDemissao" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_SICAP_TIPO_VACANCIA_TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDOR" Member="TB_SICAP_TIPO_VACANCIA" ThisKey="idTipoVacancia" OtherKey="id" Type="TB_SICAP_TIPO_VACANCIA" IsForeignKey="true" />
+      <Association Name="TB_TIPO_DEMISSAO_TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDOR" Member="TB_TIPO_DEMISSAO" ThisKey="idTipoDemissao" OtherKey="id" Type="TB_TIPO_DEMISSAO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SICAP_TIPO_VACANCIA_DOCUMENTO" Member="TB_SICAP_TIPO_VACANCIA_DOCUMENTOs">
+    <Type Name="TB_SICAP_TIPO_VACANCIA_DOCUMENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idTipoDocumento" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="idTipoVacancia" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_SICAP_TIPO_VACANCIA_TB_SICAP_TIPO_VACANCIA_DOCUMENTO" Member="TB_SICAP_TIPO_VACANCIA" ThisKey="idTipoVacancia" OtherKey="id" Type="TB_SICAP_TIPO_VACANCIA" IsForeignKey="true" />
+      <Association Name="TB_SICAP_TIPO_DOCUMENTO_TB_SICAP_TIPO_VACANCIA_DOCUMENTO" Member="TB_SICAP_TIPO_DOCUMENTO" ThisKey="idTipoDocumento" OtherKey="id" Type="TB_SICAP_TIPO_DOCUMENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SIPREV_ORGAO_EXPEDIDOR_RG" Member="TB_SIPREV_ORGAO_EXPEDIDOR_RGs">
+    <Type Name="TB_SIPREV_ORGAO_EXPEDIDOR_RG">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="sigla" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SUB_GRUPO_EVENTO" Member="TB_SUB_GRUPO_EVENTOs">
+    <Type Name="TB_SUB_GRUPO_EVENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="identificador" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeExibicaoEmRelatorio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ordem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoGlobal" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_SUB_GRUPO_EVENTO_TB_EVENTO_FOLHA_SUB_GRUPO_EVENTO" Member="TB_EVENTO_FOLHA_SUB_GRUPO_EVENTOs" ThisKey="id" OtherKey="idSubGrupoEvento" Type="TB_EVENTO_FOLHA_SUB_GRUPO_EVENTO" />
+      <Association Name="TB_SUB_GRUPO_EVENTO_TB_GRUPO_EVENTO_SUB_GRUPO_EVENTO" Member="TB_GRUPO_EVENTO_SUB_GRUPO_EVENTOs" ThisKey="id" OtherKey="idSubGrupoEvento" Type="TB_GRUPO_EVENTO_SUB_GRUPO_EVENTO" />
+      <Association Name="TB_SUB_GRUPO_EVENTO_TB_SUB_GRUPO_EVENTO_CATEGORIA_FOLHA" Member="TB_SUB_GRUPO_EVENTO_CATEGORIA_FOLHAs" ThisKey="id" OtherKey="idSubGrupoEvento" Type="TB_SUB_GRUPO_EVENTO_CATEGORIA_FOLHA" />
+      <Association Name="TB_SUB_GRUPO_EVENTO_TB_SUB_GRUPO_EVENTO_CATEGORIA_SERVIDOR" Member="TB_SUB_GRUPO_EVENTO_CATEGORIA_SERVIDORs" ThisKey="id" OtherKey="idSubGrupoEvento" Type="TB_SUB_GRUPO_EVENTO_CATEGORIA_SERVIDOR" />
+      <Association Name="TB_SUB_GRUPO_EVENTO_TB_SUB_GRUPO_TIPO_EVENTO_PROGRAMA" Member="TB_SUB_GRUPO_TIPO_EVENTO_PROGRAMAs" ThisKey="id" OtherKey="idSubGrupoEvento" Type="TB_SUB_GRUPO_TIPO_EVENTO_PROGRAMA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SUB_GRUPO_EVENTO_CATEGORIA_FOLHA" Member="TB_SUB_GRUPO_EVENTO_CATEGORIA_FOLHAs">
+    <Type Name="TB_SUB_GRUPO_EVENTO_CATEGORIA_FOLHA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="enumCategoriaFolha" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idSubGrupoEvento" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_SUB_GRUPO_EVENTO_TB_SUB_GRUPO_EVENTO_CATEGORIA_FOLHA" Member="TB_SUB_GRUPO_EVENTO" ThisKey="idSubGrupoEvento" OtherKey="id" Type="TB_SUB_GRUPO_EVENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SUB_GRUPO_EVENTO_CATEGORIA_SERVIDOR" Member="TB_SUB_GRUPO_EVENTO_CATEGORIA_SERVIDORs">
+    <Type Name="TB_SUB_GRUPO_EVENTO_CATEGORIA_SERVIDOR">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="enumTipoServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="idSubGrupoEvento" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_SUB_GRUPO_EVENTO_TB_SUB_GRUPO_EVENTO_CATEGORIA_SERVIDOR" Member="TB_SUB_GRUPO_EVENTO" ThisKey="idSubGrupoEvento" OtherKey="id" Type="TB_SUB_GRUPO_EVENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SUB_GRUPO_TIPO_EVENTO_PROGRAMA" Member="TB_SUB_GRUPO_TIPO_EVENTO_PROGRAMAs">
+    <Type Name="TB_SUB_GRUPO_TIPO_EVENTO_PROGRAMA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="enumTipoEvento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSubGrupoEvento" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_SUB_GRUPO_EVENTO_TB_SUB_GRUPO_TIPO_EVENTO_PROGRAMA" Member="TB_SUB_GRUPO_EVENTO" ThisKey="idSubGrupoEvento" OtherKey="id" Type="TB_SUB_GRUPO_EVENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TABELA_IMPOSTO" Member="TB_TABELA_IMPOSTOs">
+    <Type Name="TB_TABELA_IMPOSTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="global" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PercentualFixo" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="fixo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="valorFixo" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Association Name="TB_TABELA_IMPOSTO_TB_COMPETENCIA_TABELA_IMPOSTO" Member="TB_COMPETENCIA_TABELA_IMPOSTOs" ThisKey="id" OtherKey="idTabelaImposto" Type="TB_COMPETENCIA_TABELA_IMPOSTO" />
+      <Association Name="TB_TABELA_IMPOSTO_TB_EVENTO_FOLHA_TABELA_IMPOSTO" Member="TB_EVENTO_FOLHA_TABELA_IMPOSTOs" ThisKey="id" OtherKey="idTabelaImposto" Type="TB_EVENTO_FOLHA_TABELA_IMPOSTO" />
+      <Association Name="TB_TABELA_IMPOSTO_TB_TIPO_SERVIDOR_TABELA_IMPOSTO" Member="TB_TIPO_SERVIDOR_TABELA_IMPOSTOs" ThisKey="id" OtherKey="idTabelaImposto" Type="TB_TIPO_SERVIDOR_TABELA_IMPOSTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_ADMISSAO" Member="TB_TIPO_ADMISSAOs">
+    <Type Name="TB_TIPO_ADMISSAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_TIPO_ADMISSAO_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idTipoAdmissao" Type="TB_DADOS_FUNCIONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_DEMISSAO" Member="TB_TIPO_DEMISSAOs">
+    <Type Name="TB_TIPO_DEMISSAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_TIPO_DEMISSAO_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idTipoDemissao" Type="TB_DADOS_FUNCIONAL" />
+      <Association Name="TB_TIPO_DEMISSAO_TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDOR" Member="TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDORs" ThisKey="id" OtherKey="idTipoDemissao" Type="TB_SICAP_TIPO_VACANCIA_CATEGORIA_SERVIDOR" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_DEPENDENTE" Member="TB_TIPO_DEPENDENTEs">
+    <Type Name="TB_TIPO_DEPENDENTE">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_TIPO_DEPENDENTE_TB_DEPENDENTE" Member="TB_DEPENDENTEs" ThisKey="id" OtherKey="idTipoDependente" Type="TB_DEPENDENTE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_DEPENDENTE_SIPREV" Member="TB_TIPO_DEPENDENTE_SIPREVs">
+    <Type Name="TB_TIPO_DEPENDENTE_SIPREV">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_DOCUMENTO_AUTORIZACAO" Member="TB_TIPO_DOCUMENTO_AUTORIZACAOs">
+    <Type Name="TB_TIPO_DOCUMENTO_AUTORIZACAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_TIPO_DOCUMENTO_AUTORIZACAO_TB_AFASTAMENTO" Member="TB_AFASTAMENTOs" ThisKey="id" OtherKey="idTipoDocumentoAutorizacao" Type="TB_AFASTAMENTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_DOCUMENTOS" Member="TB_TIPO_DOCUMENTOs">
+    <Type Name="TB_TIPO_DOCUMENTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_TIPO_DOCUMENTO_TB_MIDIA" Member="TB_MIDIAs" ThisKey="id" OtherKey="tipoDocumentos_id" Type="TB_MIDIA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_FILIACAO" Member="TB_TIPO_FILIACAOs">
+    <Type Name="TB_TIPO_FILIACAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_TIPO_FILIACAO_TB_FILIACAO" Member="TB_FILIACAOs" ThisKey="id" OtherKey="idTipoFiliacao" Type="TB_FILIACAO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_FOLHA" Member="TB_TIPO_FOLHAs">
+    <Type Name="TB_TIPO_FOLHA">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_RECONDUCAO" Member="TB_TIPO_RECONDUCAOs">
+    <Type Name="TB_TIPO_RECONDUCAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_TIPO_RECONDUCAO_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idTipoReconducao" Type="TB_DADOS_FUNCIONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_REINTEGRACAO" Member="TB_TIPO_REINTEGRACAOs">
+    <Type Name="TB_TIPO_REINTEGRACAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_TIPO_REINTEGRACAO_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idTipoReintegracao" Type="TB_DADOS_FUNCIONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_REVERSAO" Member="TB_TIPO_REVERSAOs">
+    <Type Name="TB_TIPO_REVERSAO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_TIPO_REVERSAO_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idTipoReversao" Type="TB_DADOS_FUNCIONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_TIPO_SERVIDOR_TABELA_IMPOSTO" Member="TB_TIPO_SERVIDOR_TABELA_IMPOSTOs">
+    <Type Name="TB_TIPO_SERVIDOR_TABELA_IMPOSTO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataInclusao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataAlteracao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioInclusao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="UsuarioAlteracao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoServidor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTabelaImposto" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Association Name="TB_TABELA_IMPOSTO_TB_TIPO_SERVIDOR_TABELA_IMPOSTO" Member="TB_TABELA_IMPOSTO" ThisKey="idTabelaImposto" OtherKey="id" Type="TB_TABELA_IMPOSTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_VANTAGEM_FIXA_SERVIDOR" Member="TB_VANTAGEM_FIXA_SERVIDORs">
+    <Type Name="TB_VANTAGEM_FIXA_SERVIDOR">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codBeneficiario" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="codDadosFuncionais" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="dataDispensa" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataNomeacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dataPublicacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeCargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="numeroDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="paginaDiariaOficial" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="percentualvantagem" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="portariaDispensa" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="portariaNomeacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipoServidor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idEventoFolha" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="tipoVantagemFixa" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_EVENTO_FOLHA_TB_VANTAGEM_FIXA_SERVIDOR" Member="TB_EVENTO_FOLHA" ThisKey="idEventoFolha" OtherKey="id" Type="TB_EVENTO_FOLHA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_VINCULO_EMPREGATICIO" Member="TB_VINCULO_EMPREGATICIOs">
+    <Type Name="TB_VINCULO_EMPREGATICIO">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="TB_VINCULO_EMPREGATICIO_TB_DADOS_FUNCIONAL" Member="TB_DADOS_FUNCIONALs" ThisKey="id" OtherKey="idVinculoEmpregaticio" Type="TB_DADOS_FUNCIONAL" />
+    </Type>
+  </Table>
+</Database>
