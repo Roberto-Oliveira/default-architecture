@@ -25,15 +25,15 @@
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" Width="5%" AllowFiltering="True" AllowGrouping="True">
+                <ej:Column Width="100" Field="anoProcesso" HeaderText="Ano" AllowFiltering="True" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
+                <ej:Column Width="250" Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="descricaoArquivoDownload" HeaderText="Observações" AllowGrouping="False">
+                <ej:Column Width="350" Field="descricaoArquivoDownload" HeaderText="Observações" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
+                <ej:Column Width="110" Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
                 </ej:Column>
-                <ej:Column Field="dataProcesso" HeaderText="Data" AllowGrouping="False" AllowFiltering="False">
+                <ej:Column Width="90" Field="dataProcesso" HeaderText="Data" AllowGrouping="False" AllowFiltering="False">
                 </ej:Column>
                 <ej:Column Field="codigoProcesso" HeaderText="Código Processo" Visible="False">
                 </ej:Column>
@@ -41,10 +41,10 @@
                 </ej:Column>
                 <ej:Column Field="descricaoArquivoDownload" HeaderText="Descrição Arquivo Download" Visible="False">
                 </ej:Column>
-                <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="8%" Field="" AllowFiltering="False">
+                 <ej:Column Width="80" HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Field="" AllowFiltering="False" AllowGrouping="False">
                     <Command>
                         <ej:Commands Type="detail">
-                            <ButtonOptions Text="Detalhes" Width="80%" Height="2%" Click="onClick"></ButtonOptions>
+                            <ButtonOptions Text="Detalhes" Width="60" Height="auto" Click="onClick"></ButtonOptions>
                         </ej:Commands>
                     </Command>
                 </ej:Column>

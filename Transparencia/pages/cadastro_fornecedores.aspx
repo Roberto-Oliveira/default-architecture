@@ -29,11 +29,11 @@
                 </ej:Column>
                 <ej:Column Width="100" Field="anoProcesso" HeaderText="Ano" Visible="False">
                 </ej:Column>
-                <ej:Column Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
+                <ej:Column Width="300" Field="descricaoProcesso" HeaderText="Descrição" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Field="descricaoArquivoDownload" HeaderText="Observações" AllowGrouping="False">
+                <ej:Column Width="350" Field="descricaoArquivoDownload" HeaderText="Observações" AllowGrouping="False">
                 </ej:Column>
-                <ej:Column Width="160" Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
+                <ej:Column Width="120" Field="situacaoProcesso" HeaderText="Situação" AllowGrouping="True">
                 </ej:Column>
                 <ej:Column Field="dataProcesso" HeaderText="Data" AllowGrouping="False" Visible="False">
                 </ej:Column>

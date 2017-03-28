@@ -6,7 +6,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container" style="background: transparent; margin-bottom: 60px; margin-top: 30px">
 
-        <a href="/transparencia.aspx">
+        <a href="/">
             <img src="images/banner-inicial-transparencia.png" alt="Banner" style="width: auto;" class="img-responsive"/>
         </a>
 

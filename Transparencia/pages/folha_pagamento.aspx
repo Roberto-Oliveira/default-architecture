@@ -7,6 +7,38 @@
 
     <h2>Folha de Pagamento</h2>
 
+    <div style="display: inline">
+        <table style="float: left;">
+            <tr>
+                <td>
+                    <div>
+                        <ej:DropDownList ID="selectMonth" ClientSideOnChange="changeMonth" Width="150px" TargetID="MonthList" Height="30px" runat="server"></ej:DropDownList>
+                        <div id="MonthList">
+                            <ul>
+                                <li>Todos</li>
+                                <li>Janeiro</li>
+                                <li>Fevereiro</li>
+                                <li>Março</li>
+                                <li>Abril</li>
+                                <li>Maio</li>
+                                <li>Junho</li>
+                                <li>Julho</li>
+                                <li>Agosto</li>
+                                <li>Setembro</li>
+                                <li>Outubro</li>
+                                <li>Novembro</li>
+                                <li>Dezembro</li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="add-image" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
     <div id="ControlRegion">
 
         <div class="table-responsive">
@@ -73,6 +105,7 @@
 
             </ej:Grid>
         </div>
+
     </div>
 </asp:Content>
 
@@ -129,6 +162,18 @@
                 }
             }
         });
+
+        $(function () {
+            $(document).ready(function () {
+                $('#selectMonth').data("ejDropDownList").selectItemByText("Janeiro");
+            });
+            $("#btnBack").hide();
+        });
+        function changeMonth(args) {
+            var popupObj = $("#target").data("ejWaitingPopup");
+            popupObj.show();
+            UpdateGridChart(args.text); //updating content of grid and chart on change of month
+        }
 
     </script>
 

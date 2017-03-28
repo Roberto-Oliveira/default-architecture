@@ -222,4 +222,30 @@
       <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
+  <Function Name="dbo.pr_folha_pagamento_servidores" Method="pr_folha_pagamento_servidores">
+    <Parameter Name="mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ano" Type="System.Int32" DbType="Int" />
+    <ElementType Name="pr_folha_pagamento_servidoresResult">
+      <Column Name="mesCompetencia" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="categoriaServidor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cargo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="classe" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cargoComissao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="subsidio" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="vencimento" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="vantagemsPessoais" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="vantagensCargo" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="ferias" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="decimoSalario" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="totalCredito" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="previdencia" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="imposto" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="totalDesconto" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="rendimentoLiquido" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="indenizacoes" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

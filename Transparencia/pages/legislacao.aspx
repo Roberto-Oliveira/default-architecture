@@ -24,15 +24,15 @@
             <Columns>
                 <ej:Column Field="menu" HeaderText="Menu" Visible="False">
                 </ej:Column>
-                <ej:Column Field="anoProcesso" HeaderText="Ano" AllowFiltering="True">
+                <ej:Column Width="90" Field="anoProcesso" HeaderText="Ano" AllowFiltering="True">
                 </ej:Column>
-                <ej:Column Field="descricaoProcesso" HeaderText="Descrição">
+                <ej:Column Width="190" Field="descricaoProcesso" HeaderText="Descrição">
                 </ej:Column>
-                <ej:Column Field="observacoesProcesso" HeaderText="Observações">
+                <ej:Column Width="350" Field="observacoesProcesso" HeaderText="Observações">
                 </ej:Column>
-                <ej:Column Field="situacaoProcesso" HeaderText="Situação">
+                <ej:Column Width="110" Field="situacaoProcesso" HeaderText="Situação">
                 </ej:Column>
-                <ej:Column Field="dataProcesso" HeaderText="Data">
+                <ej:Column Width="90" Field="dataProcesso" HeaderText="Data">
                 </ej:Column>
                 <ej:Column Field="codigoProcesso" HeaderText="Código Processo" Visible="False">
                 </ej:Column>
@@ -43,7 +43,7 @@
                 <ej:Column HeaderText="Detalhes" IsUnbound="True" TextAlign="Left" Width="8%" Field="" AllowFiltering="False">
                     <Command>
                         <ej:Commands Type="detail">
-                            <ButtonOptions Text="Detalhes" Width="80%" Height="2%" Click="onClick"></ButtonOptions>
+                            <ButtonOptions Text="Detalhes" Width="60" Height="auto" Click="onClick"></ButtonOptions>
                         </ej:Commands>
                     </Command>
                 </ej:Column>

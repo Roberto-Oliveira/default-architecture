@@ -28,7 +28,6 @@
     <%: Scripts.Render("~/Scripts/bootstrap.min.js")%>
     <%: Scripts.Render("~/Scripts/jsrender.min.js")%>
     <%: Scripts.Render("~/Scripts/ej/ej.web.all.min.js")%>
-    <%: Scripts.Render("~/Scripts/ej/i18n/ej.culture.pt-BR.min.js")%>
     <%: Scripts.Render("~/Scripts/ej/ej.webform.min.js")%>
     <%: Scripts.Render("~/Scripts/bootstrap-dropdown.js")%>
     <%: Scripts.Render("~/Scripts/portal.js")%>
@@ -102,7 +101,7 @@
                             <li><a href="/pages/legislacao.aspx">Legislação</a></li>
                             <li><a href="/pages/avisos.aspx">Avisos</a></li>
                             <li><a href="#">Convite</a></li>
-                            <li><a href="#">Tomada de Preços</a></li>
+                            <li><a href="/pages/tomada_de_precos.aspx">Tomada de Preços</a></li>
                             <li><a href="/pages/concorrencia_publica.aspx">Concorrência Pública</a></li>
                             <li><a href="/pages/pregao_presencial.aspx">Pregão Presencial - Aquisição/Contratação</a></li>
                             <li><a href="/pages/pregao_presencial_registro_precos.aspx">Pregão Presencial - Registro de Preços</a></li>
@@ -120,12 +119,24 @@
         <div class="container body-content">
 
             <asp:ContentPlaceHolder ID="ControlContent" runat="server">
+                <asp:UpdatePanel runat="server" ID="upControlContent">
+                    <ContentTemplate>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </asp:ContentPlaceHolder>
 
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <asp:UpdatePanel runat="server" ID="upMainContent">
+                    <ContentTemplate>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </asp:ContentPlaceHolder>
 
             <asp:ContentPlaceHolder ID="ScriptContent" runat="server">
+                <asp:UpdatePanel runat="server" ID="upScriptContent">
+                    <ContentTemplate>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </asp:ContentPlaceHolder>
 
             <hr />
