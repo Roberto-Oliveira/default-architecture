@@ -19,6 +19,7 @@
     <%:Styles.Render("~/Content/Site.css") %>
     <%:Styles.Render("~/Content/ej/web/ej.widgets.core.min.css") %>
     <%:Styles.Render("~/Content/ej/web/bootstrap-theme/ej.theme.min.css") %>
+    <%:Styles.Render("~/Content/portal.css") %>
 
     <%: Scripts.Render("~/Scripts/jquery-1.10.2.min.js")%>
     <%: Scripts.Render("~/Scripts/bootstrap.min.js")%>
@@ -29,60 +30,69 @@
         <asp:ScriptManager runat="server">
         </asp:ScriptManager>
 
-        <div class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default">
+
             <div class="container">
 
                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <a class="navbar-brand" href="/">Transparência</a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="/pages/contrato_convenio.aspx">Contratos e Convênios</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestão de Pessoal<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/pages/quantitativo_defensores.aspx">Quadro da Defensoria Pública</a></li>
-                            <li><a href="/pages/cargo_efetivo.aspx">Cargos Efetivos</a></li>
-                            <li><a href="/pages/cargos_comissao.aspx">Cargos em Comissão</a></li>
-                            <li><a href="/pages/subsidio.aspx">Subsidio</a></li>
-                            <li><a href="/pages/cargo_efetivo_vencimento.aspx">Vencimento Cargos Efetivos</a></li>
-                            <li><a href="/pages/cargo_comissionado_vencimento.aspx">Vencimento Cargos Comissão</a></li>
-                            <li><a href="/pages/folha_pagamento.aspx">Consulta Remuneração</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Execução Orçamentária e Financeira<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="http://www.transparencia.ms.gov.br/#/Orcamento">Legislação Orçamentária</a></li>
-                            <li><a href="http://www.transparencia.ms.gov.br/#/ReceitaSimplificada" target="_blank">Receita - FUNADEP</a></li>
-                            <li><a href="#">Repasse - Duodécimo</a></li>
-                            <li><a href="http://www.transparencia.ms.gov.br/#/Despesa" target="_blank">Despesa</a></li>
-                            <li><a href="http://www.scge.ms.gov.br/?page_id=370" target="_blank">LRF</a></li>
-                            <li><a href="#">Balanços Contábeis</a></li>
-                            <li><a href="#">Balancete</a></li>
-                            <li><a href="#">Publicações</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Licitações<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/pages/legislacao.aspx">Legislação</a></li>
-                            <li><a href="/pages/avisos.aspx">Avisos</a></li>
-                            <li><a href="#">Convite</a></li>
-                            <li><a href="/pages/tomada_de_precos.aspx">Tomada de Preços</a></li>
-                            <li><a href="/pages/concorrencia_publica.aspx">Concorrência Pública</a></li>
-                            <li><a href="/pages/pregao_presencial.aspx">Pregão Presencial - Aquisição/Contratação</a></li>
-                            <li><a href="/pages/pregao_presencial_registro_precos.aspx">Pregão Presencial - Registro de Preços</a></li>
-                            <li><a href="/pages/pregao_eletronico.aspx">Pregão Eletrônico</a></li>
-                            <li><a href="/pages/ata_registro_de_precos.aspx">Ata de Registro de Preços</a></li>
-                            <li><a href="#">Adesão a Ata de Registro de Preços</a></li>
-                            <li><a href="#">Adesão ao Sistema de Registro de Preços</a></li>
-                            <li><a href="/pages/cadastro_fornecedores.aspx">Cadastro de Fornecedores - DPGE</a></li>
-                        </ul>
-                    </li>
 
-                </ul>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/pages/contrato_convenio.aspx">Contratos e Convênios</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestão de Pessoal<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/pages/quantitativo_defensores.aspx">Quadro da Defensoria Pública</a></li>
+                                <li><a href="/pages/cargo_efetivo.aspx">Cargos Efetivos</a></li>
+                                <li><a href="/pages/cargos_comissao.aspx">Cargos em Comissão</a></li>
+                                <li><a href="/pages/subsidio.aspx">Subsidio</a></li>
+                                <li><a href="/pages/cargo_efetivo_vencimento.aspx">Vencimento Cargos Efetivos</a></li>
+                                <li><a href="/pages/cargo_comissionado_vencimento.aspx">Vencimento Cargos Comissão</a></li>
+                                <li><a href="/pages/folha_pagamento.aspx">Consulta Remuneração</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Execução Orçamentária e Financeira<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://www.transparencia.ms.gov.br/#/Orcamento" target="_blank">Legislação Orçamentária</a></li>
+                                <li><a href="http://www.transparencia.ms.gov.br/#/ReceitaSimplificada" target="_blank">Receita - FUNADEP</a></li>
+                                <li><a href="#">Repasse - Duodécimo</a></li>
+                                <li><a href="http://www.transparencia.ms.gov.br/#/Despesa" target="_blank">Despesa</a></li>
+                                <li><a href="http://www.scge.ms.gov.br/?page_id=370" target="_blank">LRF</a></li>
+                                <li><a href="#">Balanços Contábeis</a></li>
+                                <li><a href="#">Balancete</a></li>
+                                <li><a href="#">Publicações</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Licitações<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/pages/legislacao.aspx">Legislação</a></li>
+                                <li><a href="/pages/avisos.aspx">Avisos</a></li>
+                                <li><a href="#">Convite</a></li>
+                                <li><a href="/pages/tomada_de_precos.aspx">Tomada de Preços</a></li>
+                                <li><a href="/pages/concorrencia_publica.aspx">Concorrência Pública</a></li>
+                                <li><a href="/pages/pregao_presencial.aspx">Pregão Presencial - Aquisição/Contratação</a></li>
+                                <li><a href="/pages/pregao_presencial_registro_precos.aspx">Pregão Presencial - Registro de Preços</a></li>
+                                <li><a href="/pages/pregao_eletronico.aspx">Pregão Eletrônico</a></li>
+                                <li><a href="/pages/ata_registro_de_precos.aspx">Ata de Registro de Preços</a></li>
+                                <li><a href="#">Adesão a Ata de Registro de Preços</a></li>
+                                <li><a href="#">Adesão ao Sistema de Registro de Preços</a></li>
+                                <li><a href="/pages/cadastro_fornecedores.aspx">Cadastro de Fornecedores - DPGE</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </nav>
         <div class="container body-content">
 
             <asp:ContentPlaceHolder ID="ControlContent" runat="server">

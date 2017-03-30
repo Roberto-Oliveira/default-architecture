@@ -1,5 +1,5 @@
 ﻿ej.Grid.Locale["pt-BR"] = {
-    GroupDropArea: "Arraste o cabeçalho das colunas que possuam este símbolo:" + '<span class="e-icon e-gridgroupbutton" style="color: #fbffff; margin-left: -6px; margin-right: 22px;"></span>' + "para a área azul para agrupá-las.",
+    GroupDropArea: "Clique ou arraste este símbolo:" + '<span class="e-icon e-gridgroupbutton" style="color: #fbffff; margin-left: -6px; margin-right: 22px;"></span>' + "para a área azul para agrupá-las.",
     Columns: "Colunas",
     SelectAll: "<b>Selecionar tudo</b>",
     Cancel: "Cancelar",
