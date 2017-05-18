@@ -23,7 +23,7 @@
                 AllowGrouping="True"
                 Locale="pt-BR"
                 AllowSearching="True">
-                
+
                 <GroupSettings EnableDropAreaAutoSizing="False" ShowToggleButton="True" />
 
                 <ToolbarSettings ShowToolbar="True" ToolbarItems="excelExport,search" />
@@ -49,7 +49,7 @@
                     </ej:Column>
                     <ej:Column Width="130" Field="subsidio" HeaderText="Subsidio" AllowGrouping="False" AllowFiltering="False" Format="{0:c2}">
                     </ej:Column>
-                    <ej:Column Width="150" Field="vantagemsPessoais" HeaderText="Vantagens Pessoais" AllowGrouping="False" AllowFiltering="False" Format="{0:c2}">
+                    <ej:Column Width="150" Field="vantagensPessoais" HeaderText="Vantagens Pessoais" AllowGrouping="False" AllowFiltering="False" Format="{0:c2}">
                     </ej:Column>
                     <ej:Column Width="150" Field="vantagensCargo" HeaderText="Vantagens Cargo" AllowGrouping="False" AllowFiltering="False" Format="{0:c2}">
                     </ej:Column>
@@ -70,7 +70,6 @@
                     <ej:Column Width="130" Field="indenizacoes" HeaderText="Indenizações" AllowGrouping="False" AllowFiltering="False" Format="{0:c2}">
                     </ej:Column>
                 </Columns>
-
             </ej:Grid>
         </div>
 

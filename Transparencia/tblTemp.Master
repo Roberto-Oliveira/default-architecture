@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="tblTemp.master.cs" Inherits="Transparencia.tblTemp" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta name="author" content="Roberto Oliveira" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portal da Transparência</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+
+    <link rel="shortcut icon" href='<%= Page.ResolveClientUrl("~/favicon.ico")%>' />
+
+    <%:Styles.Render("~/Content/bootstrap.min.css") %>
+    <%:Styles.Render("~/Content/Site.css") %>
+    <%:Styles.Render("~/Content/ej/web/ej.widgets.core.min.css") %>
+    <%:Styles.Render("~/Content/ej/web/gradient-azure/ej.theme.min.css") %>
+    <%:Styles.Render("~/Content/ejthemes/responsive-css/ej.responsive.css") %>
+    <%:Styles.Render("~/Content/ejthemes/responsive-css/ejgrid.responsive.css") %>
+    <%:Styles.Render("~/Content/Dashboard/ExpenseAnalysis/css/expense-css.css") %>
+    <%:Styles.Render("~/Content/portal.css") %>
+    <%:Styles.Render("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css") %>
+
+    <!--[if lt IE 9]>
+    <script src='<%= Page.ResolveClientUrl("~/Scripts/jquery-1.11.3.min.js")%>' type="text/javascript"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src='<%= Page.ResolveClientUrl("~/Scripts/jquery-2.1.4.min.js")%>' type="text/javascript"></script>
+    <!--<![endif]-->
+    <%: Scripts.Render("~/Scripts/jsviews.min.js")%>
+    <%: Scripts.Render("~/Scripts/jquery.validate.min.js")%>
+    <%: Scripts.Render("~/Scripts/bootstrap.min.js")%>
+    <%: Scripts.Render("~/Scripts/jsrender.min.js")%>
+    <%: Scripts.Render("~/Scripts/ej/ej.web.all.min.js")%>
+    <%: Scripts.Render("~/Scripts/ej/ej.webform.min.js")%>
+    <%: Scripts.Render("~/Scripts/bootstrap-dropdown.js")%>
+    <%: Scripts.Render("~/Scripts/jsondatachart.js")%>
+    <%: Scripts.Render("~/Scripts/portal.js")%>
+
+    <script>
+        $('.dropdown-toggle').dropdown()
+    </script>
+
+    <style type="text/css">
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body style="padding-top: 0;">
+    <form runat="server">
+
+        <asp:ScriptManager runat="server">
+        </asp:ScriptManager>
+
+        <div class="container">
+            <div class="row" style="margin-bottom: -10px;">
+                <div class="col-md-12">
+                    <p>
+                        <a href="#">
+                            <img alt="" src="/images/banner-transparencia.png" class="img-responsive" style="width: 1170px;" />
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-default">
+
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Transparência</a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">                        
+                        <li><a href="#">Tabela de Temporalidade</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container body-content">
+
+            <asp:ContentPlaceHolder ID="ControlContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder ID="ScriptContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <hr />
+
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Portal da Transparência</p>
+            </footer>
+
+        </div>
+    </form>
+</body>
+</html>

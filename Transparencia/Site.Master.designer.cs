@@ -22,15 +22,6 @@ namespace Transparencia {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ControlContent;
         
         /// <summary>
-        /// upControlContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upControlContent;
-        
-        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>
@@ -40,15 +31,6 @@ namespace Transparencia {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
         
         /// <summary>
-        /// upMainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upMainContent;
-        
-        /// <summary>
         /// ScriptContent control.
         /// </summary>
         /// <remarks>
@@ -56,14 +38,5 @@ namespace Transparencia {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptContent;
-        
-        /// <summary>
-        /// upScriptContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upScriptContent;
     }
 }

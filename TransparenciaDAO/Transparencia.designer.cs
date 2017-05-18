@@ -30,6 +30,9 @@ namespace TransparenciaDAO
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void Inserttbl_Temporalidade(tbl_Temporalidade instance);
+    partial void Updatetbl_Temporalidade(tbl_Temporalidade instance);
+    partial void Deletetbl_Temporalidade(tbl_Temporalidade instance);
     #endregion
 		
 		public TransparenciaDataContext() : 
@@ -190,19 +193,27 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		public System.Data.Linq.Table<vw_folha_pagamento_servidor> vw_folha_pagamento_servidors
-		{
-			get
-			{
-				return this.GetTable<vw_folha_pagamento_servidor>();
-			}
-		}
-		
 		public System.Data.Linq.Table<vw_servidore> vw_servidores
 		{
 			get
 			{
 				return this.GetTable<vw_servidore>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vw_folha_consulta_remuneracao_servidor> vw_folha_consulta_remuneracao_servidors
+		{
+			get
+			{
+				return this.GetTable<vw_folha_consulta_remuneracao_servidor>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbl_Temporalidade> tbl_Temporalidades
+		{
+			get
+			{
+				return this.GetTable<tbl_Temporalidade>();
 			}
 		}
 		
@@ -2680,8 +2691,53 @@ namespace TransparenciaDAO
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_folha_pagamento_servidor")]
-	public partial class vw_folha_pagamento_servidor
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_servidores")]
+	public partial class vw_servidore
+	{
+		
+		private string _matricula;
+		
+		private string _nomeBeneficiario;
+		
+		public vw_servidore()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matricula", DbType="VarChar(255)")]
+		public string matricula
+		{
+			get
+			{
+				return this._matricula;
+			}
+			set
+			{
+				if ((this._matricula != value))
+				{
+					this._matricula = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nomeBeneficiario", DbType="VarChar(255)")]
+		public string nomeBeneficiario
+		{
+			get
+			{
+				return this._nomeBeneficiario;
+			}
+			set
+			{
+				if ((this._nomeBeneficiario != value))
+				{
+					this._nomeBeneficiario = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_folha_consulta_remuneracao_servidor")]
+	public partial class vw_folha_consulta_remuneracao_servidor
 	{
 		
 		private string _mesCompetencia;
@@ -2702,7 +2758,7 @@ namespace TransparenciaDAO
 		
 		private System.Nullable<decimal> _subsidio;
 		
-		private System.Nullable<decimal> _vantagemsPessoais;
+		private System.Nullable<decimal> _vantagensPessoais;
 		
 		private System.Nullable<decimal> _vantagensCargo;
 		
@@ -2722,7 +2778,7 @@ namespace TransparenciaDAO
 		
 		private System.Nullable<decimal> _indenizacoes;
 		
-		public vw_folha_pagamento_servidor()
+		public vw_folha_consulta_remuneracao_servidor()
 		{
 		}
 		
@@ -2870,18 +2926,18 @@ namespace TransparenciaDAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vantagemsPessoais", DbType="Decimal(38,2)")]
-		public System.Nullable<decimal> vantagemsPessoais
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vantagensPessoais", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> vantagensPessoais
 		{
 			get
 			{
-				return this._vantagemsPessoais;
+				return this._vantagensPessoais;
 			}
 			set
 			{
-				if ((this._vantagemsPessoais != value))
+				if ((this._vantagensPessoais != value))
 				{
-					this._vantagemsPessoais = value;
+					this._vantagensPessoais = value;
 				}
 			}
 		}
@@ -3031,47 +3087,136 @@ namespace TransparenciaDAO
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_servidores")]
-	public partial class vw_servidore
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Temporalidade")]
+	public partial class tbl_Temporalidade : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
-		private string _matricula;
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _nomeBeneficiario;
+		private int _cod;
 		
-		public vw_servidore()
+		private string _numeroProcesso;
+		
+		private string _contratada;
+		
+		private string _codTabTemp;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OncodChanging(int value);
+    partial void OncodChanged();
+    partial void OnnumeroProcessoChanging(string value);
+    partial void OnnumeroProcessoChanged();
+    partial void OncontratadaChanging(string value);
+    partial void OncontratadaChanged();
+    partial void OncodTabTempChanging(string value);
+    partial void OncodTabTempChanged();
+    #endregion
+		
+		public tbl_Temporalidade()
 		{
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matricula", DbType="VarChar(255)")]
-		public string matricula
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cod", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int cod
 		{
 			get
 			{
-				return this._matricula;
+				return this._cod;
 			}
 			set
 			{
-				if ((this._matricula != value))
+				if ((this._cod != value))
 				{
-					this._matricula = value;
+					this.OncodChanging(value);
+					this.SendPropertyChanging();
+					this._cod = value;
+					this.SendPropertyChanged("cod");
+					this.OncodChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nomeBeneficiario", DbType="VarChar(255)")]
-		public string nomeBeneficiario
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_numeroProcesso", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string numeroProcesso
 		{
 			get
 			{
-				return this._nomeBeneficiario;
+				return this._numeroProcesso;
 			}
 			set
 			{
-				if ((this._nomeBeneficiario != value))
+				if ((this._numeroProcesso != value))
 				{
-					this._nomeBeneficiario = value;
+					this.OnnumeroProcessoChanging(value);
+					this.SendPropertyChanging();
+					this._numeroProcesso = value;
+					this.SendPropertyChanged("numeroProcesso");
+					this.OnnumeroProcessoChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_contratada", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
+		public string contratada
+		{
+			get
+			{
+				return this._contratada;
+			}
+			set
+			{
+				if ((this._contratada != value))
+				{
+					this.OncontratadaChanging(value);
+					this.SendPropertyChanging();
+					this._contratada = value;
+					this.SendPropertyChanged("contratada");
+					this.OncontratadaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codTabTemp", DbType="VarChar(7) NOT NULL", CanBeNull=false)]
+		public string codTabTemp
+		{
+			get
+			{
+				return this._codTabTemp;
+			}
+			set
+			{
+				if ((this._codTabTemp != value))
+				{
+					this.OncodTabTempChanging(value);
+					this.SendPropertyChanging();
+					this._codTabTemp = value;
+					this.SendPropertyChanged("codTabTemp");
+					this.OncodTabTempChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

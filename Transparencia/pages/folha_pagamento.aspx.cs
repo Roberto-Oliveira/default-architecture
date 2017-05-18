@@ -10,13 +10,14 @@ namespace Transparencia.pages
 {
     public partial class FolhaPagamento : System.Web.UI.Page
     {
-        private List<vw_folha_pagamento_servidor> _fp = new List<vw_folha_pagamento_servidor>();
+        private List<vw_folha_consulta_remuneracao_servidor> _fp = new List<vw_folha_consulta_remuneracao_servidor>();
         private readonly FolhaPagamentoDao _fpDao = new FolhaPagamentoDao();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             BindDataSource();
         }
+
         private void BindDataSource()
         {
             _fp = _fpDao.GetNormalList();
@@ -31,5 +32,6 @@ namespace Transparencia.pages
             dados.Export(gvFolhaServidores.Model, (IEnumerable)gvFolhaServidores.DataSource, "FolhaPagamento.xlsx",
                 ExcelVersion.Excel2013, true, true, "bootstrap-theme");
         }
+
     }
 }

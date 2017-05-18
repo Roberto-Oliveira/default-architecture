@@ -89,6 +89,7 @@
                                 <li><a href="/pages/cadastro_fornecedores.aspx">Cadastro de Fornecedores - DPGE</a></li>
                             </ul>
                         </li>
+                        <li><a href="/pages/tabela_temporalidade.aspx">Tabela de Temporalidade</a></li>
                     </ul>
                 </div>
             </div>

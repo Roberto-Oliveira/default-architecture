@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 21.375" name="Transparencia">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 25.125" name="Transparencia">
   <DataContextMoniker Name="/TransparenciaDataContext" />
   <nestedChildShapes>
     <classShape Id="7430f7fe-3267-4576-ad2c-f2d7588b2e4b" absoluteBounds="5.5, 0.625, 2, 3.1170068359375005">
@@ -98,16 +98,22 @@
         <elementListCompartment Id="9d70cf6b-4a4e-4446-a94d-c3508d4a360c" absoluteBounds="0.64, 18.835, 2.3449999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="bd4bb3b9-b0f9-4424-be00-906d5977c6a7" absoluteBounds="3, 0.625, 2, 4.4631168619791666">
-      <DataClassMoniker Name="/TransparenciaDataContext/vw_folha_pagamento_servidor" />
-      <nestedChildShapes>
-        <elementListCompartment Id="60505232-bd15-49c7-9679-f546f365db1d" absoluteBounds="3.015, 1.085, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="6b0ccf74-6ba5-4604-b1b2-f299a53e659c" absoluteBounds="5.75, 10.375, 2, 1.1939925130208333">
       <DataClassMoniker Name="/TransparenciaDataContext/vw_servidore" />
       <nestedChildShapes>
         <elementListCompartment Id="fa770e01-460e-4d15-b2b0-af0c691cc64f" absoluteBounds="5.765, 10.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e8f7772-465a-4a6d-b500-e213ca93312d" absoluteBounds="4, 20.375, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/TransparenciaDataContext/vw_folha_consulta_remuneracao_servidor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3880ab26-2958-44f7-aee1-a5a8f95c5c13" absoluteBounds="4.015, 20.835, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7545ee0b-1ee5-42c1-826c-cfe79d86fff6" absoluteBounds="0.875, 22.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TransparenciaDataContext/tbl_Temporalidade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd67c0ce-2e8b-4a26-af76-cc59bdeba80e" absoluteBounds="0.89, 23.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

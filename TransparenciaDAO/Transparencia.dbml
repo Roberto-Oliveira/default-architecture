@@ -193,8 +193,14 @@
       <Column Name="descricaoArquivoDownload" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.vw_folha_pagamento_servidor" Member="vw_folha_pagamento_servidors">
-    <Type Name="vw_folha_pagamento_servidor">
+  <Table Name="dbo.vw_servidores" Member="vw_servidores">
+    <Type Name="vw_servidore">
+      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_folha_consulta_remuneracao_servidor" Member="vw_folha_consulta_remuneracao_servidors">
+    <Type Name="vw_folha_consulta_remuneracao_servidor">
       <Column Name="mesCompetencia" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="anoCompetencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
@@ -204,7 +210,7 @@
       <Column Name="cargoComissao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="vencimento" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
       <Column Name="subsidio" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="vantagemsPessoais" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="vantagensPessoais" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
       <Column Name="vantagensCargo" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
       <Column Name="ferias" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
       <Column Name="decimoSalario" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
@@ -216,10 +222,12 @@
       <Column Name="indenizacoes" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.vw_servidores" Member="vw_servidores">
-    <Type Name="vw_servidore">
-      <Column Name="matricula" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="nomeBeneficiario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+  <Table Name="dbo.tbl_Temporalidade" Member="tbl_Temporalidades">
+    <Type Name="tbl_Temporalidade">
+      <Column Name="cod" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="numeroProcesso" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="contratada" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="codTabTemp" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Function Name="dbo.pr_folha_pagamento_servidores" Method="pr_folha_pagamento_servidores">

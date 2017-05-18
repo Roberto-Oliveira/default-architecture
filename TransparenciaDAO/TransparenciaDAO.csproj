@@ -63,6 +63,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="SubsidioDao.cs" />
+    <Compile Include="TemporalidadeDao.cs" />
     <Compile Include="TomadaPrecosDao.cs" />
     <Compile Include="Transparencia.designer.cs">
       <AutoGen>True</AutoGen>
