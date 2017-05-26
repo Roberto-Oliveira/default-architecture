@@ -25,7 +25,7 @@
             <Columns>
                 <ej:Column Width="130" Field="numeroProcesso" HeaderText="Código Processo">
                 </ej:Column>
-                <ej:Column Width="450" Field="contratada" HeaderText="Contratada" AllowGrouping="True">
+                <ej:Column Width="450" Field="contratada" HeaderText="Defensor Público" AllowGrouping="True">
                 </ej:Column>
                 <ej:Column Width="225" Field="codTabTemp" HeaderText="Código Tabela Temporalidade" AllowGrouping="True">
                 </ej:Column>
