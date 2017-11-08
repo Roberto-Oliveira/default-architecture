@@ -13,83 +13,83 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Xml.Serialization;
 
-namespace Generics.DAO
+namespace Generics.RepositoryDao
 {
-    public abstract class GenericDao<T, TDc> where T : class where TDc : DataContext, new()
+    public abstract class GenericDao<TEntity, TDataContext> where TEntity : class where TDataContext : DataContext, new()
     {
-        private readonly TDc _context = new TDc();
+        private readonly TDataContext _context = new TDataContext();
 
         [DataObjectMethod(DataObjectMethodType.Insert, false)]
-        public void Insert(T entity)
+        public void Insert(TEntity entity)
         {
-            _context.GetTable<T>().InsertOnSubmit(entity);
+            _context.GetTable<TEntity>().InsertOnSubmit(entity);
             _context.SubmitChanges();
         }
 
         [DataObjectMethod(DataObjectMethodType.Update, false)]
-        public void Update(T entity)
+        public void Update(TEntity entity)
         {
             _context.Refresh(RefreshMode.KeepCurrentValues, entity);
             _context.SubmitChanges();
         }
 
         [DataObjectMethod(DataObjectMethodType.Delete, false)]
-        public void Delete(T entity)
+        public void Delete(TEntity entity)
         {
-            _context.GetTable<T>().DeleteOnSubmit(entity);
+            _context.GetTable<TEntity>().DeleteOnSubmit(entity);
             _context.SubmitChanges();
         }
 
         [DataObjectMethod(DataObjectMethodType.Delete, false)]
-        public void DeleteAttach(T entity)
+        public void DeleteAttach(TEntity entity)
         {
-            _context.GetTable<T>().Attach(entity);
-            _context.GetTable<T>().DeleteOnSubmit(entity);
+            _context.GetTable<TEntity>().Attach(entity);
+            _context.GetTable<TEntity>().DeleteOnSubmit(entity);
             _context.SubmitChanges();
         }
 
         public virtual ITable GetClass()
         {
-            return _context.GetTable<T>();
+            return _context.GetTable<TEntity>();
         }
 
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public IQueryable<T> GetTable()
+        public IQueryable<TEntity> GetTable()
         {
-            return _context.GetTable<T>();
+            return _context.GetTable<TEntity>();
         }
 
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public IList<T> GetList()
+        public IList<TEntity> GetList()
         {
-            return _context.GetTable<T>().ToList();
+            return _context.GetTable<TEntity>().ToList();
         }
 
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public virtual List<T> GetNormalList()
+        public virtual List<TEntity> GetNormalList()
         {
-            return _context.GetTable<T>().ToList();
+            return _context.GetTable<TEntity>().ToList();
         }
 
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public List<T> GetNormalListWithParameters(int mes, int ano)
+        public List<TEntity> GetNormalListWithParameters(int mes, int ano)
         {
-            return _context.GetTable<T>().ToList();
+            return _context.GetTable<TEntity>().ToList();
         }
 
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public IEnumerable<T> GetListIEnumerable()
+        public IEnumerable<TEntity> GetListIEnumerable()
         {
-            return _context.GetTable<T>().ToList();
+            return _context.GetTable<TEntity>().ToList();
         }
 
 
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public T SearchById(int id)
+        public TEntity SearchById(int id)
         {
-            var parametro = Expression.Parameter(typeof(T), "item");
+            var parametro = Expression.Parameter(typeof(TEntity), "item");
 
-            var expressao = Expression.Lambda<Func<T, bool>>(Expression.Equal(Expression.Property(parametro, typeof(T)
+            var expressao = Expression.Lambda<Func<TEntity, bool>>(Expression.Equal(Expression.Property(parametro, typeof(TEntity)
                                       .GetPrimaryKey().Name),
                             Expression.Constant(id)), parametro);
 
@@ -170,11 +170,6 @@ namespace Generics.DAO
                     hit.Value = "";
                 }
             }
-        }
-
-        public static void TextoAlternativo(object sender, EventArgs e)
-        {
-            ((DropDownList)sender).Items.Insert(0, new ListItem("Selecione...", "-1"));
         }
 
         public static string XmlSerializerObject<T>(this T valor)
