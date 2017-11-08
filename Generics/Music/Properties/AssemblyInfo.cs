@@ -1,15 +1,16 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RepositoryGeneric")]
+[assembly: AssemblyTitle("Music")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RepositoryGeneric")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("Governo do Estado de Mato Grosso do Sul")]
+[assembly: AssemblyProduct("Music")]
+[assembly: AssemblyCopyright("Copyright © Governo do Estado de Mato Grosso do Sul 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d101716f-660f-4028-b485-e805f67810d0")]
+[assembly: Guid("2fd18d4b-65a3-43cf-8e0f-413d3e260fe5")]
 
 // Version information for an assembly consists of the following four values:
 //
